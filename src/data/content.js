@@ -1,0 +1,91 @@
+import services from './services.json';
+
+export const SERVICES = services;
+export const SERVICE_BY = Object.fromEntries(services.map((s) => [s.slug, s]));
+
+export const faqHome = [
+  ['What is Pranic Healing?', 'Pranic Healing is a no-touch energy healing system that cleanses and energizes the body’s energy field (prana) to support physical, emotional and mental wellbeing. It is practised alongside — never instead of — medical care.'],
+  ['Where are the sessions held?', 'Sessions and classes are held in Delhi (Paschim Vihar) and Gurugram (DLF Phase 1). Many one-to-one healing and counseling sessions can also be taken online.'],
+  ['Do I need any prior experience?', 'No. Every session and class is beginner friendly. Sunaina explains each step so you always feel comfortable and informed.'],
+  ['How do I book a session?', 'Use the Contact Us page, call, or message on WhatsApp. You will get a confirmation with the time, place and what to expect.'],
+];
+
+export const faqContact = [
+  ['How quickly will I get a reply?', 'Usually within the same day on WhatsApp, and within 24 hours by email.'],
+  ['Can I book for a family member?', 'Absolutely. Mention their name and concern in the message and we will arrange a suitable slot.'],
+  ['Do you offer sessions on weekends?', 'Yes, weekend slots are available. Please book in advance as they fill quickly.'],
+];
+
+export const SCHEDULE = [
+  { d: '13', m: 'Sep', title: 'Bars Class', where: 'Gurugram · 10 AM – 6 PM', text: 'Access Bars class. Learn to give Access Bars to family and friends.' },
+  { d: 'Thu', m: 'Weekly', title: 'Bars & Body Process Swaps', where: 'Every Thursday · Paschim Vihar, Delhi · 12 PM – 4 PM', text: 'Practise and exchange Access Bars and Body Process in a supportive group.' },
+  { d: 'Sat', m: 'Weekly', title: 'Saturday Session', where: 'Every Saturday · DLF Phase 1, Gurugram · 12 PM – 4 PM', text: 'Weekly group session at the Gurugram centre.' },
+];
+
+export const TESTIMONIALS = [
+  { name: 'Rajat Gupta', role: 'Client', text: 'Almost immediately after our sessions, I noticed a shift in my self belief, clarity, and overall well-being.' },
+  { name: 'Neha Gupta', role: 'Client', text: 'She helped me in over coming my fears also, she was always so kind and helpful to guide and assist in her best possible way.' },
+];
+
+export const VIDEOS = ['if8dsJ7qBAA', '9_TWPhpCfOI'];
+
+// Blog posts. Body blocks: h2 | p | lead | ul | note. Inline: **bold**, [label](/path)
+export const POSTS = [
+  {
+    slug: 'what-is-pranic-healing-and-how-does-it-work',
+    title: 'What Is Pranic Healing and How Does It Work?', seo: 'What Is Pranic Healing & How It Works',
+    img: 'reiki-healing-session-delhi.webp', alt: 'Hands held over a client during an energy healing session',
+    desc: 'Learn what Pranic Healing is, how a session works, who it helps and what to expect — explained simply by Delhi NCR energy healer Sunaina Aggarwal.',
+    excerpt: 'A simple guide to the no-touch energy healing system and what happens in a session.',
+    body: [
+      ['lead', 'Pranic Healing is a no-touch energy healing system based on the idea that the body has an energy field — called *prana* — which can be cleansed and strengthened to support wellbeing.'],
+      ['h2', 'The core idea'],
+      ['p', 'According to Pranic Healing, the physical body is surrounded and interpenetrated by an energy body. When this energy becomes congested or depleted through stress, emotional trauma or illness, we feel tired, tense or unwell. A practitioner scans the energy field, removes used-up energy, and projects fresh prana to the affected area.'],
+      ['h2', 'What happens in a session?'],
+      ['p', 'You sit or lie down comfortably. The healer uses their hands, usually a few inches away from your body, to scan and cleanse. There is no pressure, manipulation or medication. Many clients feel warmth, tingling or deep relaxation; some simply feel calm and sleepy.'],
+      ['h2', 'Who can benefit?'],
+      ['ul', ['People feeling stressed, drained or emotionally heavy', 'Those with sleep disturbance or restlessness', 'Anyone wanting to support recovery alongside medical care', 'People who want to improve focus, calm and positivity']],
+      ['h2', 'An important note'],
+      ['p', 'Pranic Healing is complementary. It does not replace medical diagnosis or treatment. Continue to follow your doctor’s advice and treat healing as additional support.'],
+      ['h2', 'Try a session'],
+      ['p', 'Sunaina Aggarwal, a former Pranic Healing instructor, offers sessions in Delhi and Gurugram and online. Explore [Pranic Healing](/services/healing/#pranic-healing) or [book a session](/contact-us/).'],
+    ],
+  },
+  {
+    slug: 'access-bars-session-what-to-expect',
+    title: 'Access Bars: What to Expect in Your First Session', seo: 'Access Bars: What to Expect',
+    img: 'crystal-healing-sphere.webp', alt: 'Calm healer offering a crystal sphere, symbolising gentle energy work',
+    desc: 'Curious about Access Bars? Find out how the 32-point process works, how long a session lasts and what you may feel, with certified facilitator Sunaina Aggarwal.',
+    excerpt: 'Everything you need to know before your first Access Bars session or class.',
+    body: [
+      ['lead', 'Access Bars is a gentle, hands-on process in which 32 points on the head are lightly touched. These points are said to relate to different areas of life such as awareness, creativity, healing, money and control.'],
+      ['h2', 'How a session works'],
+      ['p', 'You lie down fully clothed. The facilitator places fingertips lightly on points around your head. There is no force or manipulation, and most people simply relax, with many falling asleep. A session usually lasts 60–90 minutes.'],
+      ['h2', 'What might I feel?'],
+      ['p', 'Experiences vary: deep relaxation, a quieter mind, emotional release or feeling lighter. Some feel little during the session and notice changes in sleep or mood over the next few days.'],
+      ['h2', 'How to prepare'],
+      ['ul', ['Wear comfortable clothes', 'Drink water before and after', 'Arrive with an open, relaxed mindset']],
+      ['h2', 'Learn to give Bars'],
+      ['p', 'Access Bars is also taught in a class so you can share it with family and friends. See the [upcoming schedule](/schedules/) or read about [Access Bars sessions](/services/access-bars/).'],
+      ['note', 'Access Bars is complementary and not a substitute for medical treatment.'],
+    ],
+  },
+  {
+    slug: 'feng-shui-tips-for-home-and-office',
+    title: '7 Simple Feng Shui Tips for Your Home and Office', seo: '7 Simple Feng Shui Tips for Home',
+    img: 'energetic-facial-treatment.webp', alt: 'Calm, uncluttered space reflecting Feng Shui principles',
+    desc: 'Seven easy Feng Shui tips to improve energy flow at home and in the workplace — from decluttering to entrance and desk placement — by expert Sunaina Aggarwal.',
+    excerpt: 'Seven practical Feng Shui ideas you can apply this weekend, with no renovation needed.',
+    body: [
+      ['lead', 'Feng Shui is about arranging your space so energy (chi) flows freely. You do not need a renovation — small changes can make rooms feel calmer and more supportive.'],
+      ['h2', '1. Declutter first'], ['p', 'Clutter blocks energy. Remove broken, unused or unloved items, especially near the entrance and under beds.'],
+      ['h2', '2. Keep the entrance welcoming'], ['p', 'The main door is where energy enters. Keep it clean, well lit and free of shoes and boxes.'],
+      ['h2', '3. Position your desk with a view'], ['p', 'Where possible, sit facing the door with a solid wall behind you. It supports focus and a sense of security.'],
+      ['h2', '4. Bring in natural light and plants'], ['p', 'Open curtains daily and add healthy plants. Avoid dried or dying plants.'],
+      ['h2', '5. Fix leaks and broken things'], ['p', 'Dripping taps and broken clocks symbolically drain resources. Repair them promptly.'],
+      ['h2', '6. Balance the five elements'], ['p', 'Wood, fire, earth, metal and water should be present in a balanced way through colours, materials and décor.'],
+      ['h2', '7. Create a calm bedroom'], ['p', 'Keep electronics minimal, use soft lighting and choose a stable bed position.'],
+      ['p', 'For a personalised assessment of your home, shop or office, explore [Feng Shui consultation](/services/feng-shui-home-office/) or [get in touch](/contact-us/).'],
+    ],
+  },
+];

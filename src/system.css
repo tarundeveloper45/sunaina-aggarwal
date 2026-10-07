@@ -1,0 +1,175 @@
+/* =====================================================================
+   DESIGN SYSTEM — one type scale + one spacing scale used everywhere
+   (loaded after styles.css, so these values win)
+   ===================================================================== */
+:root{
+  --fs-h1:clamp(2.1rem,5vw,3.4rem);
+  --fs-h2:clamp(1.7rem,3.4vw,2.5rem);
+  --fs-h3:1.3rem;
+  --fs-lead:1.1rem;
+  --fs-body:1rem;
+  --fs-card:.95rem;
+  --fs-sm:.88rem;
+  --fs-xs:.78rem;
+  --space-section:clamp(56px,7vw,88px);
+  --space-head:clamp(32px,5vw,48px);
+  --gap:clamp(18px,2.5vw,28px);
+  --pad-card:clamp(22px,3vw,30px);
+}
+body{font-size:var(--fs-body);line-height:1.7}
+h1{font-size:var(--fs-h1)}
+h2,.prose h2,.svc-main h2,.svc-detail h2,.sec-head h2{font-size:var(--fs-h2)}
+h3,.card h3,.steps h3,.sched-item h3,.loc h3,.glance h3,.post-card h3,.info-list b,.site-footer h4{font-size:var(--fs-h3)}
+.hero h1{font-size:clamp(2.5rem,6.4vw,4.4rem)}
+.hero h1 span{font-size:clamp(1.05rem,2.2vw,1.45rem)}
+.page-hero h1{font-size:var(--fs-h1)}
+.hero p.lead,.page-hero p,.sec-head p,.prose .lead{font-size:var(--fs-lead)}
+.card p,.steps p,.sched-item p,.post-card p,.loc p,.info-list span,.info-list a,.faq details p,.quote p,.glance dl div,.checks li{font-size:var(--fs-card)}
+.split p,.svc-main p,.prose p,.prose li{font-size:var(--fs-body)}
+.eyebrow{font-size:var(--fs-xs)}
+.crumbs,.field label,.glance-link,.note,.chip-list li,.more,.svc-meta li,.post-card .meta{font-size:var(--fs-sm)}
+.btn{font-size:.95rem}
+.stats b{font-size:clamp(2.2rem,5vw,3rem)}
+.stats span{font-size:var(--fs-sm)}
+section{padding:var(--space-section) 0}
+.cta-sec{padding-top:0}
+.sec-head{margin-bottom:var(--space-head)}
+.grid{gap:var(--gap)}
+.card,.quote,.loc,.glance,form.box{padding:var(--pad-card)}
+.card.svc-card,.card.post-card{padding:0}
+.page-hero{padding:clamp(48px,7vw,76px) 0 clamp(40px,6vw,64px)}
+.steps{gap:var(--gap)}
+h1,h2,h3{margin-bottom:.5em}
+p{margin-bottom:1em}
+
+/* =====================================================================
+   ANIMATION & SCROLL EFFECTS
+   ===================================================================== */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s);will-change:opacity,transform}
+:where(.split)>.reveal:first-child{transform:translateX(-48px)}
+:where(.split)>.reveal:last-child{transform:translateX(48px)}
+:where(.split.rev)>.reveal:first-child{transform:translateX(48px)}
+:where(.split.rev)>.reveal:last-child{transform:translateX(-48px)}
+.reveal.in{opacity:1;transform:none}
+.reveal.done{transition:transform .35s ease,box-shadow .35s ease,opacity .35s;transition-delay:0s;will-change:auto}
+.g3>.reveal:nth-child(3n+2),.g4>.reveal:nth-child(4n+2),.steps>.reveal:nth-child(2){--d:.12s}
+.g3>.reveal:nth-child(3n+3),.g4>.reveal:nth-child(4n+3){--d:.24s}
+.g4>.reveal:nth-child(4n+4){--d:.36s}
+.g2>.reveal:nth-child(even){--d:.14s}
+.steps li{transition:transform .35s ease,box-shadow .35s ease}
+.steps li:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+
+/* hover polish */
+.card:hover{transform:translateY(-8px);box-shadow:0 22px 40px -18px rgba(120,50,10,.35)}
+.card .ico{transition:transform .4s ease}
+.card:hover .ico{transform:rotate(-8deg) scale(1.1)}
+.svc-card,.post-card{overflow:hidden}
+.svc-card img,.post-card img{transition:transform .9s ease}
+.svc-card:hover img,.post-card:hover img{transform:scale(1.07)}
+.btn-primary{position:relative;overflow:hidden}
+.btn-primary::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn-primary:hover::after{left:140%}
+.split .img-frame img{transition:transform .8s ease}
+.split .img-frame:hover img{transform:scale(1.03)}
+
+/* hero entrance, ken-burns and parallax */
+.hero>img{translate:0 var(--py,0px);transform:scale(1.08);animation:kenburns 22s ease-in-out infinite alternate}
+.hero-inner>*{opacity:0;animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) forwards}
+.hero-inner>*:nth-child(1){animation-delay:.1s}
+.hero-inner>*:nth-child(2){animation-delay:.25s}
+.hero-inner>*:nth-child(3){animation-delay:.4s}
+.hero-inner>*:nth-child(4){animation-delay:.55s}
+.hero-inner>*:nth-child(5){animation-delay:.7s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes kenburns{from{transform:scale(1.08)}to{transform:scale(1.2) translateX(-1.5%)}}
+.page-hero{background-size:140% 140%,140% 140%,auto;animation:gradShift 14s ease-in-out infinite alternate}
+@keyframes gradShift{from{background-position:0 0,100% 100%,0 0}to{background-position:30% 20%,70% 80%,0 0}}
+.page-hero .container>*{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
+.page-hero h1{animation-delay:.1s}
+.page-hero p{animation-delay:.22s}
+.page-hero .hero-actions{animation-delay:.34s}
+
+/* floating bits */
+.img-stack .stack-small{animation:floaty 6s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.float .wa{animation:ring 2.6s ease-out infinite}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.bigword{background-position:center var(--bgy,40%)}
+
+/* scroll progress + back to top */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--gold),var(--ember),var(--rose));z-index:300;pointer-events:none}
+.to-top{position:fixed;right:16px;bottom:18px;z-index:90;width:48px;height:48px;border-radius:50%;border:0;background:var(--deep);color:#fff;display:grid;place-items:center;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(14px);transition:.3s;box-shadow:0 8px 20px -6px rgba(0,0,0,.4)}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:var(--ember)}
+.to-top svg{width:20px;height:20px}
+
+/* marquee strip */
+.marquee{overflow:hidden;background:var(--deep);padding:18px 0;white-space:nowrap}
+.marquee-track{display:inline-flex;animation:scroll 38s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee span{font-family:var(--font-head);font-size:1.5rem;color:#F3E3D3;padding:0 26px;display:inline-flex;align-items:center;gap:52px}
+.marquee span::after{content:"✦";color:var(--gold);font-size:1rem}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* testimonial slider */
+.tslider{max-width:820px;margin-inline:auto;position:relative}
+.tview{overflow:hidden;border-radius:var(--radius)}
+.ttrack{display:flex;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.tslide{flex:0 0 100%;padding:6px}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(28px,5vw,48px);text-align:center}
+.tcard::before{content:"“";display:block;font-family:var(--font-head);font-size:5.5rem;line-height:.5;color:var(--gold);margin-bottom:10px}
+.tcard blockquote{margin:0}
+.tcard p{font-family:var(--font-head);font-size:clamp(1.3rem,2.6vw,1.8rem);line-height:1.4;color:var(--deep);font-weight:600;margin-bottom:22px}
+.tcard footer{display:inline-flex;align-items:center;gap:12px;text-align:left}
+.tcard small{display:block;color:var(--muted)}
+.tnav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px}
+.tnav>button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--ember-dark);cursor:pointer;display:grid;place-items:center;transition:.25s}
+.tnav>button:hover{background:var(--ember);color:#fff;border-color:var(--ember)}
+.tnav svg{width:18px;height:18px}
+.tdots{display:flex;gap:8px;align-items:center}
+.tdots button{width:10px;height:10px;padding:0;border-radius:50%;border:0;background:var(--line);transition:.3s;cursor:pointer}
+.tdots button[aria-current=true]{background:var(--ember);width:26px;border-radius:6px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.hero-inner>*,.page-hero .container>*{opacity:1!important;transform:none!important}
+  .hero>img{transform:none;translate:none}
+}
+
+/* =====================================================================
+   RESPONSIVE — phones, tablets, laptops, large screens
+   ===================================================================== */
+@media (min-width:1600px){:root{--max:1320px}body{font-size:1.05rem}}
+@media (max-width:900px){
+  :where(.split)>.reveal:first-child,:where(.split)>.reveal:last-child,:where(.split.rev)>.reveal:first-child,:where(.split.rev)>.reveal:last-child{transform:translateY(34px)}
+  .reveal.in{transform:none}
+  .img-stack .stack-small{left:-6px}
+}
+@media (max-width:640px){
+  .container{width:min(100% - 28px,var(--max))}
+  .hero{min-height:auto}
+  .hero-inner{padding:56px 0 72px}
+  .hero-actions .btn{flex:1 1 100%;justify-content:center}
+  .hero-badges{gap:8px 16px}
+  .img-stack .stack-small{width:42%}
+  .marquee span{font-size:1.15rem;padding:0 16px;gap:32px}
+  .to-top{right:12px;bottom:12px;width:44px;height:44px}
+  .float{left:10px;bottom:12px}
+  .tnav>button{width:40px;height:40px}
+  .loc,.sched-item{padding:20px}
+}
+@media (max-width:380px){
+  :root{--fs-lead:1rem}
+  .logo img{height:40px}
+  .btn{padding:.75em 1.3em}
+  .nav{padding:16px 18px 32px}
+}
+
+/* closed mobile menu must not add to page width */
+@media (max-width:1080px){
+  .nav{visibility:hidden;transition:transform .3s,visibility 0s .3s}
+  .nav.open{visibility:visible;transition:transform .3s,visibility 0s}
+}
+
+/* mobile menu: backdrop-filter would trap the fixed menu inside the header */
+@media (max-width:1080px){.site-header{-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--cream)}.nav{height:calc(100vh - 76px);height:calc(100dvh - 76px)}}

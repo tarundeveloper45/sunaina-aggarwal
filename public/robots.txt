@@ -1,0 +1,6 @@
+# robots.txt for https://www.sunainaaggarwal.com
+User-agent: *
+Disallow:
+Disallow: /cgi-bin/
+
+Sitemap: https://www.sunainaaggarwal.com/sitemap.xml
