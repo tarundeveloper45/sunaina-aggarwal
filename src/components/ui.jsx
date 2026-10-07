@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { SITE, img } from '../config';
 import { Icon } from './Icon';
 
@@ -169,6 +169,89 @@ export function Marquee({ items }) {
         {items.map((t) => <span key={t}>{t}</span>)}
         {items.map((t) => <span key={t + '2'}>{t}</span>)}
       </div>
+    </div>
+  );
+}
+
+// Photo gallery with a simple full-screen viewer (click a photo, arrows / Esc to navigate)
+export function Gallery({ items }) {
+  const [open, setOpen] = useState(-1);
+  const n = items.length;
+
+  useEffect(() => {
+    if (open < 0) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'Escape') setOpen(-1);
+      if (e.key === 'ArrowRight') setOpen((o) => (o + 1) % n);
+      if (e.key === 'ArrowLeft') setOpen((o) => (o - 1 + n) % n);
+    };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
+  }, [open, n]);
+
+  return (
+    <>
+      <div className="gallery">
+        {items.map((g, i) => (
+          <button type="button" className="g-item reveal" key={g.file} onClick={() => setOpen(i)} aria-label={`Open photo: ${g.alt}`}>
+            <img src={img(g.file)} alt={g.alt} width={g.w} height={g.h} loading="lazy" />
+          </button>
+        ))}
+      </div>
+      {open >= 0 && (
+        <div className="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" onClick={() => setOpen(-1)}>
+          <button type="button" className="lb-close" aria-label="Close" onClick={() => setOpen(-1)}>×</button>
+          <button type="button" className="lb-nav lb-prev" aria-label="Previous photo" onClick={(e) => { e.stopPropagation(); setOpen((open - 1 + n) % n); }}><Chevron dir="left" /></button>
+          <img src={img(items[open].file)} alt={items[open].alt} onClick={(e) => e.stopPropagation()} />
+          <button type="button" className="lb-nav lb-next" aria-label="Next photo" onClick={(e) => { e.stopPropagation(); setOpen((open + 1) % n); }}><Chevron dir="right" /></button>
+        </div>
+      )}
+    </>
+  );
+}
+
+// One muted, looping video that plays only while it is on screen. Tap the speaker to hear it.
+const WIDE_VIDEOS = [3]; // landscape clips: shown letter-boxed inside the portrait card
+
+function ClientVideo({ n }) {
+  const ref = useRef(null);
+  const [muted, setMuted] = useState(true);
+  const base = import.meta.env.BASE_URL + 'assets/video/client-testimonial-' + n;
+
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return undefined;
+    v.muted = true;
+    if (!('IntersectionObserver' in window)) return undefined;
+    const io = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) { const p = v.play(); if (p && p.catch) p.catch(() => {}); } else v.pause();
+    }, { threshold: 0.45 });
+    io.observe(v);
+    return () => io.disconnect();
+  }, []);
+
+  const toggle = () => { const v = ref.current; v.muted = !v.muted; setMuted(v.muted); if (!v.muted) { const p = v.play(); if (p && p.catch) p.catch(() => {}); } };
+
+  return (
+    <div className={'vcard reveal' + (WIDE_VIDEOS.includes(n) ? ' wide' : '')}>
+      <video ref={ref} poster={base + '-poster.jpg'} muted loop playsInline autoPlay preload="none" aria-label={`Client video testimonial ${n}`}>
+        <source src={base + '.mp4'} type="video/mp4" />
+      </video>
+      <button type="button" className="vsound" onClick={toggle} aria-label={muted ? 'Turn sound on' : 'Mute video'} aria-pressed={!muted}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M11 5L6 9H3v6h3l5 4z" />
+          {muted ? <path d="M16 9l5 6M21 9l-5 6" /> : <path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" />}
+        </svg>
+      </button>
+    </div>
+  );
+}
+
+export function VideoTestimonials({ count = 4 }) {
+  return (
+    <div className="vgrid">
+      {Array.from({ length: count }, (_, i) => <ClientVideo key={i} n={i + 1} />)}
     </div>
   );
 }

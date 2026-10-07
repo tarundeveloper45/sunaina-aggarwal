@@ -89,3 +89,15 @@ export const POSTS = [
     ],
   },
 ];
+
+export const GALLERY = [
+  { file: 'access-bars-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal giving an Access Bars session to a client' },
+  { file: 'group-healing-class-gurugram.webp', w: 1100, h: 825, alt: 'Group healing class at EL Healing Centre, Gurugram' },
+  { file: 'reiki-healing-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal performing an energy healing session' },
+  { file: 'access-bars-workshop-gurugram.webp', w: 1100, h: 825, alt: 'Access Bars workshop with students at EL Healing Centre' },
+  { file: 'pranic-healing-session-delhi.webp', w: 720, h: 1280, alt: 'Client resting during a healing session in Delhi' },
+  { file: 'healing-session-practice-at-home.webp', w: 960, h: 1280, alt: 'Students practising Access Bars on each other' },
+  { file: 'access-bars-class-students-practising.webp', w: 720, h: 1280, alt: 'Students practising Access Bars in class' },
+  { file: 'counseling-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal in a one-to-one counseling session' },
+  { file: 'access-bars-practitioner-certificate-class.webp', w: 1100, h: 825, alt: 'Student receiving an Access Bars Practitioner certificate' },
+];

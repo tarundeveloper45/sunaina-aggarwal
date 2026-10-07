@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import Seo from '../components/Seo';
 import { Icon } from '../components/Icon';
-import { Cta, Faq, Marquee, Picture, SectionHead, TestimonialSlider, Video } from '../components/ui';
+import { Cta, Faq, Gallery, Marquee, Picture, SectionHead, TestimonialSlider, Video, VideoTestimonials } from '../components/ui';
 import { SITE, img } from '../config';
-import { SERVICES, TESTIMONIALS, VIDEOS, faqHome } from '../data/content';
+import { GALLERY, SERVICES, TESTIMONIALS, VIDEOS, faqHome } from '../data/content';
 
 export default function Home() {
   return (
@@ -51,13 +51,14 @@ export default function Home() {
         <div className="container split">
           <div className="reveal">
             <span className="eyebrow" style={{ color: 'var(--ember)' }}>Meet your healer</span>
-            <h2>Sunaina Aggarwal — Founder, EL Healing Centre</h2>
+            <h2>Sunaina Aggarwal</h2>
+            <p className="founder-role">Founder | EL Healing Centre</p>
             <p><strong>ENERGY CHANGER Sunaina Aggarwal.</strong> The name itself speaks volumes — a lady born with divine energies, a true gift. Sunaina is an intuitive healer who has carried the spark of spiritual healing power since childhood. She is a spiritual coach, healer, inspiration and flourishing entrepreneur, running her personalised venture, <em>EL Healing Centre</em>, based in Delhi/Gurugram.</p>
             <p>Based in Delhi &amp; Gurugram, she has guided thousands of clients and students towards clarity and peace.</p>
             <Link className="btn btn-primary" to="/about-us/">More About Her</Link>
           </div>
           <div className="img-frame reveal">
-            <Picture file="sunaina-aggarwal-pranic-healer-delhi-gurugram.webp" alt="Sunaina Aggarwal, Pranic healer, Reiki expert and founder of EL Healing Centre in Delhi and Gurugram" w={453} h={529} style={{ maxWidth: 460, marginInline: 'auto' }} />
+            <Picture file="sunaina-aggarwal-portrait.webp" alt="Sunaina Aggarwal, Pranic healer, Reiki expert and founder of EL Healing Centre in Delhi and Gurugram" w={720} h={900} style={{ maxWidth: 460, marginInline: 'auto' }} />
           </div>
         </div>
       </section>
@@ -70,7 +71,7 @@ export default function Home() {
               const s = SERVICES.find((x) => x.slug === slug);
               return (
                 <article className="card svc-card reveal" key={slug}>
-                  <Picture file={s.img} alt={s.alt} w={1400} h={933} />
+                  <Picture file={s.img} alt={s.alt} w={1100} h={825} style={s.pos ? { objectPosition: s.pos } : undefined} />
                   <div className="body">
                     <h3>{s.name}</h3><p>{s.tag}</p>
                     <Link className="more" to={`/services/${slug}/`}>Explore {s.name.toLowerCase()}</Link>
@@ -133,7 +134,7 @@ export default function Home() {
             <Link className="btn btn-primary" to="/schedules/">All Schedules</Link>
           </div>
           <div className="img-frame reveal">
-            <Picture file="group-healing-session-gurugram.webp" alt="Clients relaxing during a group healing session at EL Healing Centre, Gurugram" w={584} h={546} />
+            <Picture file="group-healing-class-gurugram.webp" alt="Clients and students at a group healing class at EL Healing Centre, Gurugram" w={1100} h={825} />
           </div>
         </div>
       </section>
@@ -151,13 +152,24 @@ export default function Home() {
 
       <section>
         <div className="container">
-          <SectionHead eyebrow="Testimonials" title="What clients say" />
-          <TestimonialSlider items={TESTIMONIALS} />
-          <p style={{ textAlign: 'center', margin: '34px 0 0' }}><Link className="btn btn-outline" to="/testimonials/">Read More Testimonials</Link></p>
+          <SectionHead eyebrow="Gallery" title="Inside our healing sessions" text="Moments from one-to-one sessions, classes and workshops at our Delhi and Gurugram centres." />
+          <Gallery items={GALLERY} />
         </div>
       </section>
 
       <section className="alt">
+        <div className="container">
+          <SectionHead eyebrow="Testimonials" title="What clients say" />
+          <TestimonialSlider items={TESTIMONIALS} />
+          <div style={{ marginTop: 'var(--space-section)' }}>
+            <SectionHead eyebrow="Video stories" title="Hear it from our clients" />
+            <VideoTestimonials />
+          </div>
+          <p style={{ textAlign: 'center', margin: '40px 0 0' }}><Link className="btn btn-outline" to="/testimonials/">Read More Testimonials</Link></p>
+        </div>
+      </section>
+
+      <section>
         <div className="container">
           <SectionHead eyebrow="Watch" title="Subscribe to our channel" text="Healing talks and guidance from Sunaina Aggarwal." />
           <div className="grid g2">{VIDEOS.map((id, i) => <Video key={id} id={id} n={i + 1} />)}</div>
@@ -167,7 +179,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="alt">
         <div className="container">
           <SectionHead eyebrow="Questions" title="Frequently asked questions" />
           <Faq items={faqHome} />

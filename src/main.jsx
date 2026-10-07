@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './styles.css';
 import './system.css';
+import './media.css';
 
 const root = document.getElementById('root');
 const app = (

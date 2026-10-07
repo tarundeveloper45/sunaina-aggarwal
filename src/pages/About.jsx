@@ -33,7 +33,7 @@ export default function About() {
             <Link className="btn btn-primary" to="/contact-us/">Book a Session</Link>
           </div>
           <div className="img-frame reveal">
-            <Picture file="sunaina-aggarwal-pranic-healer-delhi-gurugram.webp" alt="Sunaina Aggarwal, Pranic healer, Reiki expert and founder of EL Healing Centre in Delhi and Gurugram" w={453} h={529} style={{ maxWidth: 460, marginInline: 'auto' }} />
+            <Picture file="sunaina-aggarwal-portrait.webp" alt="Sunaina Aggarwal, Pranic healer, Reiki expert and founder of EL Healing Centre in Delhi and Gurugram" w={720} h={900} style={{ maxWidth: 460, marginInline: 'auto' }} />
           </div>
         </div>
       </section>
@@ -58,12 +58,23 @@ export default function About() {
             <Link className="btn btn-outline" to="/schedules/">See Schedules</Link>
           </div>
           <div className="img-frame reveal">
-            <Picture file="group-healing-session-gurugram.webp" alt="Students and clients during a healing circle with Sunaina Aggarwal in Gurugram" w={584} h={546} />
+            <Picture file="access-bars-workshop-gurugram.webp" alt="Students and clients during an Access Bars workshop with Sunaina Aggarwal in Gurugram" w={1100} h={825} />
           </div>
         </div>
       </section>
 
       <section className="alt">
+        <div className="container">
+          <SectionHead eyebrow="Training & practice" title="Certified, hands-on and personal" text="Sunaina trains and certifies students in Access Bars and guides one-to-one sessions with care." />
+          <div className="cert-grid">
+            <figure className="reveal"><Picture file="access-bars-practitioner-certificate.webp" alt="Access Bars Practitioner certificate presentation at EL Healing Centre" w={720} h={1280} /><figcaption>Access Bars Practitioner certification</figcaption></figure>
+            <figure className="reveal"><Picture file="access-bars-practitioner-certificate-class.webp" alt="Student receiving an Access Bars Practitioner certificate from Sunaina Aggarwal" w={1100} h={825} /><figcaption>Certificate after an Access Bars class</figcaption></figure>
+            <figure className="reveal"><Picture file="counseling-session-sunaina-aggarwal.webp" alt="Sunaina Aggarwal in a one-to-one counseling session" w={720} h={1280} style={{ objectPosition: '50% 30%' }} /><figcaption>One-to-one counseling session</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section>
         <div className="container">
           <SectionHead eyebrow="Her practice" title="Healing methods Sunaina practises" />
           <div className="grid g3">

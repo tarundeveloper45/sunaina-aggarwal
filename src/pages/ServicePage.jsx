@@ -39,7 +39,7 @@ export default function ServicePage() {
       <section>
         <div className="container svc-layout">
           <div className="svc-main">
-            <Picture className="svc-cover reveal" file={s.img} alt={s.alt} w={1400} h={933} />
+            <Picture className="svc-cover reveal" file={s.img} alt={s.alt} w={1100} h={825} style={s.pos ? { objectPosition: s.pos } : undefined} />
             <h2 className="reveal">About {s.name}</h2>
             {s.intro.map((p) => <p className="reveal" key={p}>{p}</p>)}
             <h2 className="reveal">Who it is for</h2>
