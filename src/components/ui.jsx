@@ -174,7 +174,7 @@ export function Marquee({ items }) {
 }
 
 // Photo gallery with a simple full-screen viewer (click a photo, arrows / Esc to navigate)
-export function Gallery({ items }) {
+export function Gallery({ items, animate = true }) {
   const [open, setOpen] = useState(-1);
   const n = items.length;
 
@@ -194,7 +194,7 @@ export function Gallery({ items }) {
     <>
       <div className="gallery">
         {items.map((g, i) => (
-          <button type="button" className="g-item reveal" key={g.file} onClick={() => setOpen(i)} aria-label={`Open photo: ${g.alt}`}>
+          <button type="button" className={'g-item ' + (animate ? 'reveal' : 'pop')} key={g.file} onClick={() => setOpen(i)} aria-label={`Open photo: ${g.alt}`}>
             <img src={img(g.file)} alt={g.alt} width={g.w} height={g.h} loading="lazy" />
           </button>
         ))}

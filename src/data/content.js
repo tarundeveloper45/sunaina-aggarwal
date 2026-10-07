@@ -101,3 +101,22 @@ export const GALLERY = [
   { file: 'counseling-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal in a one-to-one counseling session' },
   { file: 'access-bars-practitioner-certificate-class.webp', w: 1100, h: 825, alt: 'Student receiving an Access Bars Practitioner certificate' },
 ];
+
+export const GALLERY_CATS = [['all', 'All'], ['sessions', 'Healing sessions'], ['classes', 'Classes & workshops'], ['certificates', 'Certificates'], ['community', 'Community & events']];
+export const GALLERY_ALL = [
+  { cat: 'sessions', file: 'access-bars-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal giving an Access Bars session to a client' },
+  { cat: 'classes', file: 'group-healing-class-gurugram.webp', w: 1100, h: 825, alt: 'Group healing class at EL Healing Centre, Gurugram' },
+  { cat: 'sessions', file: 'reiki-healing-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal performing an energy healing session' },
+  { cat: 'classes', file: 'access-bars-workshop-gurugram.webp', w: 1100, h: 825, alt: 'Access Bars workshop with students at EL Healing Centre' },
+  { cat: 'certificates', file: 'advanced-pranic-healing-course-certificates.webp', w: 1100, h: 825, alt: 'Participants holding Certificates of Attendance for an Advanced Pranic Healing course' },
+  { cat: 'sessions', file: 'pranic-healing-session-delhi.webp', w: 720, h: 1280, alt: 'Client resting during a healing session in Delhi' },
+  { cat: 'classes', file: 'healing-session-practice-at-home.webp', w: 960, h: 1280, alt: 'Students practising Access Bars on each other' },
+  { cat: 'certificates', file: 'pranic-healing-course-students-with-certificates.webp', w: 1100, h: 825, alt: 'Pranic Healing course students with their certificates' },
+  { cat: 'classes', file: 'access-bars-class-students-practising.webp', w: 720, h: 1280, alt: 'Students practising Access Bars in class' },
+  { cat: 'sessions', file: 'counseling-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal in a one-to-one counseling session' },
+  { cat: 'certificates', file: 'access-bars-practitioner-certificate-class.webp', w: 1100, h: 825, alt: 'Student receiving an Access Bars Practitioner certificate' },
+  { cat: 'certificates', file: 'pranic-healing-workshop-participants-certificates.webp', w: 1100, h: 619, alt: 'Pranic Healing workshop participants with certificates' },
+  { cat: 'certificates', file: 'access-bars-practitioner-certificate.webp', w: 720, h: 1280, alt: 'Access Bars Practitioner certificate presentation' },
+  { cat: 'community', file: 'healing-community-event-group-photo.webp', w: 864, h: 1152, alt: 'Group photo of the healing community at an event' },
+  { cat: 'community', file: 'community-outreach-clothes-drive.webp', w: 1100, h: 619, alt: 'Group with a stack of clothes during a community outreach drive' },
+];

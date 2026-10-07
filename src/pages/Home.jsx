@@ -154,6 +154,7 @@ export default function Home() {
         <div className="container">
           <SectionHead eyebrow="Gallery" title="Inside our healing sessions" text="Moments from one-to-one sessions, classes and workshops at our Delhi and Gurugram centres." />
           <Gallery items={GALLERY} />
+          <p style={{ textAlign: 'center', margin: '40px 0 0' }}><Link className="btn btn-outline" to="/gallery/">View Full Gallery</Link></p>
         </div>
       </section>
 

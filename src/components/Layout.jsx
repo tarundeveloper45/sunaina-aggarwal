@@ -9,6 +9,7 @@ const NAV = [
   { t: 'About Us', to: '/about-us/' },
   { t: 'Services', to: '/services/', sub: true },
   { t: 'Schedules', to: '/schedules/' },
+  { t: 'Gallery', to: '/gallery/' },
   { t: 'Testimonials', to: '/testimonials/' },
   { t: 'Blog', to: '/blog/' },
   { t: 'Contact Us', to: '/contact-us/' },
@@ -92,7 +93,7 @@ function Footer() {
           <div>
             <h4>Explore</h4>
             <ul>
-              <li><Link to="/">Home</Link></li><li><Link to="/about-us/">About Us</Link></li><li><Link to="/schedules/">Schedules</Link></li>
+              <li><Link to="/">Home</Link></li><li><Link to="/about-us/">About Us</Link></li><li><Link to="/schedules/">Schedules</Link></li><li><Link to="/gallery/">Gallery</Link></li>
               <li><Link to="/testimonials/">Testimonials</Link></li><li><Link to="/blog/">Blog</Link></li><li><Link to="/contact-us/">Contact Us</Link></li>
             </ul>
           </div>

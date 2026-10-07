@@ -41,3 +41,10 @@
 
 .vcard.wide{background:linear-gradient(160deg,#3a2118,#1B0F0B)}
 .vcard.wide video{object-fit:contain}
+
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:var(--space-head)}
+.filter{border:1.5px solid var(--line);background:#fff;color:var(--ink);padding:.55em 1.3em;border-radius:999px;font:500 var(--fs-sm) var(--font-body);cursor:pointer;transition:.25s}
+.filter:hover{border-color:var(--ember);color:var(--ember-dark)}
+.filter.on{background:var(--ember);border-color:var(--ember);color:#fff}
+.g-item.pop{animation:popIn .55s cubic-bezier(.2,.7,.2,1) both}
+@keyframes popIn{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}

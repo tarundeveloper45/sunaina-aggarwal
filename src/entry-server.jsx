@@ -7,7 +7,7 @@ import { SERVICES, POSTS } from './data/content';
 export const ROUTES = [
   '/', '/about-us/', '/services/',
   ...SERVICES.map((s) => `/services/${s.slug}/`),
-  '/schedules/', '/testimonials/', '/blog/',
+  '/schedules/', '/gallery/', '/testimonials/', '/blog/',
   ...POSTS.map((p) => `/blog/${p.slug}/`),
   '/contact-us/',
 ];
