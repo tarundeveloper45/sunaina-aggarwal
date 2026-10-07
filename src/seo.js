@@ -1,4 +1,4 @@
-import { SITE, abs, img } from './config';
+import { SITE, abs, absImg } from './config';
 
 const strip = (s) => String(s).replace(/<[^>]+>/g, '');
 
@@ -8,8 +8,8 @@ function business() {
     '@id': SITE.domain + '/#business',
     name: SITE.brand,
     url: SITE.domain + '/',
-    logo: abs(img('el-healing-centre-logo.png')),
-    image: abs(img('og-image-el-healing-centre.jpg')),
+    logo: absImg('el-healing-centre-logo.png'),
+    image: absImg('og-image-el-healing-centre.jpg'),
     description: 'Pranic healing, Reiki, Access Bars, crystal healing, counseling, Feng Shui and meditation by Sunaina Aggarwal in Delhi and Gurugram.',
     telephone: SITE.phoneRaw,
     email: SITE.email,
@@ -40,7 +40,7 @@ export function pageMeta(p) {
     desc: p.desc,
     robots: (p.noindex || import.meta.env.VITE_NOINDEX) ? 'noindex,nofollow' : 'index,follow,max-image-preview:large',
     ogType: p.ogType || 'website',
-    ogImage: abs(img(p.ogImage || 'og-image-el-healing-centre.jpg')),
+    ogImage: absImg(p.ogImage || 'og-image-el-healing-centre.jpg'),
     json: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }),
   };
 }

@@ -12,10 +12,12 @@ export const ROUTES = [
   '/contact-us/',
 ];
 
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 export function render(url) {
   globalThis.__SEO__ = null;
   const html = renderToString(
-    <StaticRouter location={url}>
+    <StaticRouter basename={BASE} location={BASE + url}>
       <App />
     </StaticRouter>
   );

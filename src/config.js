@@ -30,7 +30,10 @@ export const SITE = {
 };
 
 export const abs = (path) => SITE.domain + path;
-export const img = (file) => '/assets/img/' + file;
+// Image URL for the page (respects the base path)
+export const img = (file) => import.meta.env.BASE_URL + 'assets/img/' + file;
+// Absolute URL on the real domain (for SEO tags — never includes the base path)
+export const absImg = (file) => SITE.domain + '/assets/img/' + file;
 
 // Order of the Services dropdown
 export const MENU_SERVICES = [

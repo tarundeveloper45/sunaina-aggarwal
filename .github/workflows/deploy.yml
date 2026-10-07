@@ -24,6 +24,7 @@ jobs:
         env:
           # Remove this line when the real domain (sunainaaggarwal.com) goes live, so Google can index the site.
           VITE_NOINDEX: "true"
+          VITE_BASE: /sunaina-aggarwal/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
