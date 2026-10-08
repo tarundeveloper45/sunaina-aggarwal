@@ -33,7 +33,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Marquee items={['Pranic Healing', 'Reiki', 'Access Bars', 'Crystal Healing', 'Counselling', 'Feng Shui', 'Meditation', 'Business Mentoring']} />
+      <Marquee items={['Pranic Healing', 'Access Bars', 'Crystal Healing', 'Counselling', 'Feng Shui', 'Meditation', 'Business Mentoring']} />
 
       <section>
         <div className="container">
@@ -73,7 +73,7 @@ export default function Home() {
             <Link className="btn btn-primary" to="/about-us/">More About Her</Link>
           </div>
           <div className="img-frame reveal">
-            <Picture file="sunaina-aggarwal-portrait.webp" alt="Sunaina Aggarwal, Pranic healer, Reiki expert and founder of EL Healing Centre in Delhi and Gurugram" w={720} h={900} style={{ maxWidth: 460, marginInline: 'auto' }} />
+            <Picture file="sunaina-aggarwal-portrait.webp" alt="Sunaina Aggarwal, Pranic healer and founder of EL Healing Centre in Delhi and Gurugram" w={720} h={900} style={{ maxWidth: 460, marginInline: 'auto' }} />
           </div>
         </div>
       </section>

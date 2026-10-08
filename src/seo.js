@@ -10,12 +10,12 @@ function business() {
     url: SITE.domain + '/',
     logo: absImg('el-healing-centre-logo.png'),
     image: absImg('og-image-el-healing-centre.jpg'),
-    description: 'Pranic healing, Reiki, Access Bars, crystal healing, counseling, Feng Shui and meditation by Sunaina Aggarwal in Delhi and Gurugram.',
+    description: 'Pranic healing, Access Bars, crystal healing, counseling, Feng Shui and meditation by Sunaina Aggarwal in Delhi and Gurugram.',
     telephone: SITE.phoneRaw,
     email: SITE.email,
     address: SITE.locs.map((l) => ({ '@type': 'PostalAddress', streetAddress: l.street, addressLocality: l.locality, addressRegion: l.region, postalCode: l.postal, addressCountry: 'IN' })),
     areaServed: ['Delhi', 'Gurugram', 'Delhi NCR'],
-    founder: { '@type': 'Person', '@id': SITE.domain + '/#sunaina', name: SITE.person, jobTitle: 'Pranic Healer, Reiki Expert & Spiritual Mentor' },
+    founder: { '@type': 'Person', '@id': SITE.domain + '/#sunaina', name: SITE.person, jobTitle: 'Pranic Healer & Spiritual Mentor' },
     priceRange: '₹₹',
   };
   const same = Object.values(SITE.social).filter(Boolean);

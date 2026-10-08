@@ -9,8 +9,8 @@ export function BlogIndex() {
   return (
     <>
       <Seo
-        path="/blog/" title="Healing, Reiki & Feng Shui Blog" crumbs={[['Blog', '/blog/']]}
-        desc="Guides and insights on Pranic Healing, Reiki, Access Bars, Feng Shui, meditation and spiritual wellness from healer Sunaina Aggarwal in Delhi NCR."
+        path="/blog/" title="Healing, Access Bars & Feng Shui Blog" crumbs={[['Blog', '/blog/']]}
+        desc="Guides and insights on Pranic Healing, Access Bars, Feng Shui, meditation and spiritual wellness from healer Sunaina Aggarwal in Delhi NCR."
       />
       <PageHero title="Healing & Wellness Blog" text="Practical guides and insights on energy healing, meditation, Feng Shui and conscious living." crumbs={[['Blog']]} />
       <section>

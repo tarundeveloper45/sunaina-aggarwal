@@ -5,7 +5,7 @@ import { Cta, PageHero, Picture, SectionHead } from '../components/ui';
 import { SITE, abs } from '../config';
 
 const METHODS = [
-  ['hands', 'Pranic & Reiki Healing', 'No-touch and light-touch energy cleansing to restore balance to the body’s energy field.'],
+  ['hands', 'Pranic Healing', 'No-touch energy cleansing to restore balance to the body’s energy field.'],
   ['gem', 'Crystal Healing', 'Using the vibration of natural crystals to clear and re-align the energy centres.'],
   ['bars', 'Access Consciousness', 'Certified Access Bars and Body Process facilitation for deep relaxation and letting go.'],
   ['chat', 'Psychotherapy & Counseling', 'Supportive conversation to understand patterns, relationships and life decisions.'],
@@ -18,8 +18,8 @@ export default function About() {
     <>
       <Seo
         path="/about-us/" title="About Sunaina Aggarwal – Healer & Mentor" crumbs={[['About Us', '/about-us/']]}
-        desc="Meet Sunaina Aggarwal, Pranic Healing instructor, Reiki and Access Bars facilitator, trainer and mentor helping people heal since 2005 in Delhi and Gurugram."
-        schema={[{ '@type': 'Person', '@id': SITE.domain + '/#sunaina', name: SITE.person, jobTitle: 'Pranic Healer, Reiki Expert & Spiritual Mentor', worksFor: { '@id': SITE.domain + '/#business' }, url: abs('/about-us/'), knowsAbout: ['Pranic Healing', 'Reiki', 'Crystal Healing', 'Access Bars', 'Feng Shui', 'Psychotherapy', 'Arhatic Yoga'] }]}
+        desc="Meet Sunaina Aggarwal, Pranic Healing instructor, Access Consciousness facilitator, trainer and mentor helping people heal since 2005 in Delhi and Gurugram."
+        schema={[{ '@type': 'Person', '@id': SITE.domain + '/#sunaina', name: SITE.person, jobTitle: 'Pranic Healer & Spiritual Mentor', worksFor: { '@id': SITE.domain + '/#business' }, url: abs('/about-us/'), knowsAbout: ['Pranic Healing', 'Crystal Healing', 'Access Bars', 'Feng Shui', 'Psychotherapy', 'Arhatic Yoga'] }]}
       />
       <PageHero title="About Sunaina Aggarwal" text="Healer, trainer, mentor and guide — helping people find balance in health, relationships, business and spirit." crumbs={[['About Us']]} />
 
@@ -35,7 +35,7 @@ export default function About() {
             <Link className="btn btn-outline" to="/healers/">Meet our healers</Link>
           </div>
           <div className="img-frame reveal">
-            <Picture file="sunaina-aggarwal-portrait.webp" alt="Sunaina Aggarwal, Pranic healer, Reiki expert and founder of EL Healing Centre in Delhi and Gurugram" w={720} h={900} style={{ maxWidth: 460, marginInline: 'auto' }} />
+            <Picture file="sunaina-aggarwal-portrait.webp" alt="Sunaina Aggarwal, Pranic healer and founder of EL Healing Centre in Delhi and Gurugram" w={720} h={900} style={{ maxWidth: 460, marginInline: 'auto' }} />
           </div>
         </div>
       </section>

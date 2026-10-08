@@ -23,7 +23,7 @@ export default function Contact() {
     <>
       <Seo
         path="/contact-us/" title="Contact Us – Book a Healing Session" faq={faqContact} crumbs={[['Contact Us', '/contact-us/']]}
-        desc="Contact Sunaina Aggarwal to book Pranic Healing, Reiki, Access Bars or counseling in Delhi (Paschim Vihar) and Gurugram (DLF Phase 1). Call or WhatsApp today."
+        desc="Contact Sunaina Aggarwal to book Pranic Healing, Access Bars or counseling in Delhi (Paschim Vihar) and Gurugram (DLF Phase 1). Call or WhatsApp today."
         schema={[{ '@type': 'ContactPage', name: 'Contact EL Healing Centre', url: abs('/contact-us/') }]}
       />
       <PageHero title="Contact Us" text="Book a session, ask a question or enquire about a class — we’re happy to help." crumbs={[['Contact Us']]} />

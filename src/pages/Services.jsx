@@ -8,7 +8,7 @@ export default function Services() {
     <>
       <Seo
         path="/services/" title="Healing & Counseling Services Delhi" crumbs={[['Services', '/services/']]}
-        desc="Explore Pranic Healing, Reiki, Access Bars, counseling, Feng Shui, business mentoring and personalised meditation with Sunaina Aggarwal in Delhi NCR."
+        desc="Explore Pranic Healing, Access Bars, counseling, Feng Shui, business mentoring and personalised meditation with Sunaina Aggarwal in Delhi NCR."
       />
       <PageHero title="Our Services" text="Healing, counselling and guidance for mind, body, home and business. Choose the path that calls to you." crumbs={[['Services']]} />
       <section>

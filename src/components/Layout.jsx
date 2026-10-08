@@ -82,7 +82,7 @@ function Footer() {
         <div className="foot-grid">
           <div>
             <Link className="foot-logo" to="/"><img src={logo} alt="EL Healing Centre logo" width="500" height="138" loading="lazy" /></Link>
-            <p>Pranic healing, Reiki, Access Bars, counseling and spiritual guidance with {SITE.person} — based in Delhi &amp; Gurugram.</p>
+            <p>Pranic healing, Access Bars, counseling and spiritual guidance with {SITE.person} — based in Delhi &amp; Gurugram.</p>
             {socials.length > 0 && (
               <div className="socials">
                 {socials.map(([k, v]) => <a key={k} href={v} target="_blank" rel="noopener noreferrer" aria-label={k}>{SOCIAL_ICONS[k]}</a>)}
@@ -114,7 +114,7 @@ function Footer() {
             <Link className="btn btn-primary" style={{ marginTop: 10 }} to="/contact-us/">Get in Touch</Link>
           </div>
         </div>
-        <p className="disclaimer">Energy healing, Reiki, Access Bars and counseling are complementary wellness practices. They are not a substitute for medical diagnosis, treatment or emergency care. Always consult a qualified doctor for medical conditions.</p>
+        <p className="disclaimer">Energy healing, Access Bars and counseling are complementary wellness practices. They are not a substitute for medical diagnosis, treatment or emergency care. Always consult a qualified doctor for medical conditions.</p>
         <div className="copy"><span>© {new Date().getFullYear()} sunainaaggarwal.com — All rights reserved.</span><span><Link to="/contact-us/">Privacy &amp; enquiries</Link></span></div>
       </div>
     </footer>

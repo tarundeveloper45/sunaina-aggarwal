@@ -56,7 +56,7 @@ export const POSTS = [
   {
     slug: 'what-is-pranic-healing-and-how-does-it-work',
     title: 'What Is Pranic Healing and How Does It Work?', seo: 'What Is Pranic Healing & How It Works',
-    img: 'reiki-healing-session-delhi.webp', alt: 'Hands held over a client during an energy healing session',
+    img: 'energy-healing-session-hands-over-client.webp', alt: 'Hands held over a client during an energy healing session',
     desc: 'Learn what Pranic Healing is, how a session works, who it helps and what to expect — explained simply by Delhi NCR energy healer Sunaina Aggarwal.',
     excerpt: 'A simple guide to the no-touch energy healing system and what happens in a session.',
     body: [
@@ -115,7 +115,7 @@ export const POSTS = [
 export const GALLERY = [
   { file: 'access-bars-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal giving an Access Bars session to a client' },
   { file: 'group-healing-class-gurugram.webp', w: 1100, h: 825, alt: 'Group healing class at EL Healing Centre, Gurugram' },
-  { file: 'reiki-healing-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal performing an energy healing session' },
+  { file: 'energy-healing-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal performing an energy healing session' },
   { file: 'access-bars-workshop-gurugram.webp', w: 1100, h: 825, alt: 'Access Bars workshop with students at EL Healing Centre' },
   { file: 'pranic-healing-session-delhi.webp', w: 720, h: 1280, alt: 'Client resting during a healing session in Delhi' },
   { file: 'healing-session-practice-at-home.webp', w: 960, h: 1280, alt: 'Students practising Access Bars on each other' },
@@ -128,7 +128,7 @@ export const GALLERY_CATS = [['all', 'All'], ['sessions', 'Healing sessions'], [
 export const GALLERY_ALL = [
   { cat: 'sessions', file: 'access-bars-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal giving an Access Bars session to a client' },
   { cat: 'classes', file: 'group-healing-class-gurugram.webp', w: 1100, h: 825, alt: 'Group healing class at EL Healing Centre, Gurugram' },
-  { cat: 'sessions', file: 'reiki-healing-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal performing an energy healing session' },
+  { cat: 'sessions', file: 'energy-healing-session-sunaina-aggarwal.webp', w: 720, h: 1280, alt: 'Sunaina Aggarwal performing an energy healing session' },
   { cat: 'classes', file: 'access-bars-workshop-gurugram.webp', w: 1100, h: 825, alt: 'Access Bars workshop with students at EL Healing Centre' },
   { cat: 'certificates', file: 'advanced-pranic-healing-course-certificates.webp', w: 1100, h: 825, alt: 'Participants holding Certificates of Attendance for an Advanced Pranic Healing course' },
   { cat: 'sessions', file: 'pranic-healing-session-delhi.webp', w: 720, h: 1280, alt: 'Client resting during a healing session in Delhi' },

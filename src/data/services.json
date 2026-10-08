@@ -4,15 +4,15 @@
   "group": "main",
   "ico": "hands",
   "name": "Healing",
-  "title": "Pranic Healing & Reiki in Delhi",
-  "desc": "Book Pranic Healing, Reiki and Crystal Healing sessions with Sunaina Aggarwal in Delhi and Gurugram. Gentle energy healing for body, mind and spirit.",
+  "title": "Pranic & Crystal Healing in Delhi",
+  "desc": "Book Pranic Healing and Crystal Healing sessions with Sunaina Aggarwal in Delhi and Gurugram. Gentle energy healing for body, mind and spirit.",
   "h1": "Healing Services in Delhi & Gurugram",
-  "tag": "Pranic Healing, Reiki and Crystal Healing — gentle energy work to release stress and feel like yourself again.",
+  "tag": "Pranic Healing and Crystal Healing — gentle energy work to release stress and feel like yourself again.",
   "img": "group-healing-class-gurugram.webp",
   "alt": "Clients receiving energy healing at a group class at EL Healing Centre, Gurugram",
   "intro": [
    "Every body carries an energy field. When stress, emotional hurt or illness disturbs it, we feel tired, heavy, anxious or stuck. Healing sessions at EL Healing Centre work on that energy field — calmly, safely and without any invasive procedure.",
-   "Sunaina Aggarwal has practised healing since 2005 and teaches several modalities. Each session begins by understanding your concern, then selecting the right combination of Pranic Healing, Reiki or crystals for you. Clients visit from across Delhi, Gurugram and NCR, and many also book online sessions."
+   "Sunaina Aggarwal has practised healing since 2005 and teaches several modalities. Each session begins by understanding your concern, then selecting the right combination of Pranic Healing or crystals for you. Clients visit from across Delhi, Gurugram and NCR, and many also book online sessions."
   ],
   "methods": [
    [
@@ -20,12 +20,6 @@
     "Pranic Healing",
     "hands",
     "A no-touch system that cleanses used-up energy from the body and energises it with fresh prana. Chosen for stress, low energy, sleep trouble and emotional heaviness, alongside regular medical care."
-   ],
-   [
-    "reiki",
-    "Reiki Healing",
-    "sun",
-    "A gentle hands-on-or-near-body practice where universal life energy is channelled to support relaxation. You rest fully clothed — a lovely first step into energy healing."
    ],
    [
     "crystal-healing",
@@ -203,7 +197,7 @@
   "desc": "No-touch Pranic Healing and aura cleansing with Sunaina Aggarwal in Gurugram and Delhi, in person or by distance. Gentle energy work for vitality and calm.",
   "h1": "Pranic Healing & Aura Cleansing in Delhi NCR",
   "tag": "Cleanse energetic congestion and support the body’s natural recovery.",
-  "img": "reiki-healing-session-sunaina-aggarwal.webp",
+  "img": "energy-healing-session-sunaina-aggarwal.webp",
   "alt": "Sunaina Aggarwal giving a Pranic energy healing session to a client",
   "pos": "50% 25%",
   "intro": [
