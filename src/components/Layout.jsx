@@ -6,10 +6,10 @@ import { Icon, WhatsAppIcon, SOCIAL_ICONS } from './Icon';
 
 const NAV = [
   { t: 'Home', to: '/' },
-  { t: 'About Us', to: '/about-us/' },
-  { t: 'Services', to: '/services/', sub: true },
+  { t: 'About Us', to: '/about-us/', menu: [['About Sunaina', '/about-us/'], ['Photo Gallery', '/gallery/']], match: ['/about-us', '/gallery'] },
+  { t: 'Healers', to: '/healers/' },
+  { t: 'Services', to: '/services/', menu: 'services', match: ['/services'] },
   { t: 'Schedules', to: '/schedules/' },
-  { t: 'Gallery', to: '/gallery/' },
   { t: 'Testimonials', to: '/testimonials/' },
   { t: 'Blog', to: '/blog/' },
   { t: 'Contact Us', to: '/contact-us/' },
@@ -20,21 +20,20 @@ const logo = img('el-healing-centre-logo.webp');
 function Header() {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
-  const [sub, setSub] = useState(false);
+  const [sub, setSub] = useState('');
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => { setOpen(false); setSub(false); document.body.style.overflow = ''; }, [pathname]);
+  useEffect(() => { setOpen(false); setSub(''); document.body.style.overflow = ''; }, [pathname]);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-    const onKey = (e) => { if (e.key === 'Escape') { setOpen(false); setSub(false); document.body.style.overflow = ''; } };
+    const onKey = (e) => { if (e.key === 'Escape') { setOpen(false); setSub(''); document.body.style.overflow = ''; } };
     document.addEventListener('keydown', onKey);
     return () => { window.removeEventListener('scroll', onScroll); document.removeEventListener('keydown', onKey); };
   }, []);
 
   const toggle = () => { const n = !open; setOpen(n); document.body.style.overflow = n ? 'hidden' : ''; };
-  const servicesActive = pathname.startsWith('/services');
 
   return (
     <header className={'site-header' + (scrolled ? ' scrolled' : '')}>
@@ -47,28 +46,28 @@ function Header() {
         </button>
         <nav className={'nav' + (open ? ' open' : '')} id="site-nav" aria-label="Main">
           <ul>
-            {NAV.map((n) =>
-              n.sub ? (
-                <li key={n.t} className={'has-sub' + (sub ? ' open' : '') + (servicesActive ? ' active' : '')}>
-                  <button className="nl" type="button" aria-expanded={sub} aria-haspopup="true" onClick={() => setSub(!sub)}>
+            {NAV.map((n) => {
+              if (!n.menu) {
+                return <li key={n.t}><NavLink className={({ isActive }) => 'nl' + (isActive ? ' active-link' : '')} to={n.to} end={n.to === '/'}>{n.t}</NavLink></li>;
+              }
+              const items = n.menu === 'services'
+                ? [['All Services', '/services/'], ...SERVICE_MENU.map((x) => [x.name, `/services/${x.slug}/`])]
+                : n.menu;
+              const active = n.match.some((m) => pathname.startsWith(m));
+              return (
+                <li key={n.t} className={'has-sub' + (sub === n.t ? ' open' : '') + (active ? ' active' : '')}>
+                  <button className="nl" type="button" aria-expanded={sub === n.t} aria-haspopup="true" onClick={() => setSub(sub === n.t ? '' : n.t)}>
                     {n.t}
                     <svg className="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 1l4 4 4-4" /></svg>
                   </button>
                   <ul className="dropdown">
-                    <li><Link to="/services/">All Services</Link></li>
-                    {SERVICE_MENU.map((s) => (
-                      <li key={s.slug}><Link to={`/services/${s.slug}/`}>{s.name}</Link></li>
-                    ))}
+                    {items.map(([label, to]) => <li key={to}><Link to={to}>{label}</Link></li>)}
                   </ul>
                 </li>
-              ) : (
-                <li key={n.t}>
-                  <NavLink className={({ isActive }) => 'nl' + (isActive ? ' active-link' : '')} to={n.to} end={n.to === '/'}>{n.t}</NavLink>
-                </li>
-              )
-            )}
+              );
+            })}
           </ul>
-          <Link className="btn btn-primary" to="/contact-us/">Book a Session</Link>
+          <Link className="btn btn-primary" to="/book/">Book Now</Link>
         </nav>
       </div>
     </header>
@@ -93,14 +92,14 @@ function Footer() {
           <div>
             <h4>Explore</h4>
             <ul>
-              <li><Link to="/">Home</Link></li><li><Link to="/about-us/">About Us</Link></li><li><Link to="/schedules/">Schedules</Link></li><li><Link to="/gallery/">Gallery</Link></li>
+              <li><Link to="/">Home</Link></li><li><Link to="/about-us/">About Us</Link></li><li><Link to="/healers/">Our Healers</Link></li><li><Link to="/book/">Book a Session</Link></li><li><Link to="/schedules/">Schedules</Link></li><li><Link to="/gallery/">Gallery</Link></li>
               <li><Link to="/testimonials/">Testimonials</Link></li><li><Link to="/blog/">Blog</Link></li><li><Link to="/contact-us/">Contact Us</Link></li>
             </ul>
           </div>
           <div>
             <h4>Services</h4>
             <ul>
-              {['healing', 'access-bars', 'counseling', 'feng-shui-home-office', 'business-mentoring', 'personalised-meditation'].map((s) => (
+              {['healing', 'pranic-healing', 'access-bars', 'counseling', 'feng-shui-home-office', 'business-mentoring'].map((s) => (
                 <li key={s}><Link to={`/services/${s}/`}>{SERVICE_BY[s].name.replace(' For Home And Office', '')}</Link></li>
               ))}
             </ul>

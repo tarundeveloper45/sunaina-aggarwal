@@ -16,11 +16,33 @@ export const faqContact = [
   ['Do you offer sessions on weekends?', 'Yes, weekend slots are available. Please book in advance as they fill quickly.'],
 ];
 
+// Upcoming classes. date = YYYY-MM-DD. Past dates are hidden automatically.
 export const SCHEDULE = [
-  { d: '13', m: 'Sep', title: 'Bars Class', where: 'Gurugram · 10 AM – 6 PM', text: 'Access Bars class. Learn to give Access Bars to family and friends.' },
-  { d: 'Thu', m: 'Weekly', title: 'Bars & Body Process Swaps', where: 'Every Thursday · Paschim Vihar, Delhi · 12 PM – 4 PM', text: 'Practise and exchange Access Bars and Body Process in a supportive group.' },
-  { d: 'Sat', m: 'Weekly', title: 'Saturday Session', where: 'Every Saturday · DLF Phase 1, Gurugram · 12 PM – 4 PM', text: 'Weekly group session at the Gurugram centre.' },
+  { date: '2026-10-09', time: '6:30 pm', title: 'Bars & Body Process Swaps', place: 'Paschim Vihar, New Delhi', centre: 'Delhi', price: 1000, seats: 10, text: 'Practise and exchange Access Bars and Body Process in a supportive group.' },
+  { date: '2026-10-10', time: '11:00 am', title: 'Bars Class', place: 'DLF Phase 1, Gurugram', centre: 'Gurugram', price: 20000, seats: 8, text: 'Access Bars class — learn to give Access Bars to family and friends.' },
+  { date: '2026-10-14', time: '6:30 pm', title: 'Bars & Body Process Swaps', place: 'DLF Phase 1, Gurugram', centre: 'Gurugram', price: 1000, seats: 10, text: 'Practise and exchange Access Bars and Body Process in a supportive group.' },
+  { date: '2026-10-16', time: '6:30 pm', title: 'Bars & Body Process Swaps', place: 'Paschim Vihar, New Delhi', centre: 'Delhi', price: 1000, seats: 10, text: 'Practise and exchange Access Bars and Body Process in a supportive group.' },
+  { date: '2026-10-17', time: '11:00 am', title: 'Bars Class', place: 'DLF Phase 1, Gurugram', centre: 'Gurugram', price: 20000, seats: 8, text: 'Access Bars class — learn to give Access Bars to family and friends.' },
+  { date: '2026-10-21', time: '6:30 pm', title: 'Bars & Body Process Swaps', place: 'DLF Phase 1, Gurugram', centre: 'Gurugram', price: 1000, seats: 10, text: 'Practise and exchange Access Bars and Body Process in a supportive group.' },
 ];
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+export const dateParts = (iso) => { const [y, m, d] = iso.split('-').map(Number); return { day: String(d), month: MONTHS[m - 1], weekday: DAYS[new Date(Date.UTC(y, m - 1, d)).getUTCDay()] }; };
+export const longDate = (iso) => { const p = dateParts(iso); return `${p.weekday} ${p.day} ${p.month}`; };
+
+// Intake concerns (used by the home page and the booking form)
+export const CONCERNS = [
+  { id: 'heavy', label: 'Feeling heavy or stuck', hint: 'Emotional weight, stress, low energy', services: ['pranic-healing', 'access-bars', 'healing'] },
+  { id: 'talk', label: 'I want to talk it through', hint: 'Relationships, decisions, clarity', services: ['counseling'] },
+  { id: 'mind', label: 'My mind won’t switch off', hint: 'Sleep, overthinking, restlessness', services: ['access-bars', 'personalised-meditation'] },
+  { id: 'business', label: 'My business needs direction', hint: 'Growth, blocks, Feng Shui', services: ['business-mentoring', 'feng-shui-home-office'] },
+];
+export const TRIAGE = [
+  { concern: 'mind', ico: 'mind', title: 'Emotional & Mind', text: 'Stress, overthinking, restless sleep, grief or burnout.', next: 'Access Bars & Counseling' },
+  { concern: 'heavy', ico: 'sun', title: 'Physical & Energy', text: 'Fatigue, feeling drained, tension that keeps coming back.', next: 'Pranic Healing & Energetic Facelift' },
+  { concern: 'business', ico: 'home', title: 'Space & Prosperity', text: 'Feeling stuck in work or money, or friction at home or office.', next: 'Feng Shui & Mentoring' },
+];
+
 
 export const TESTIMONIALS = [
   { name: 'Rajat Gupta', role: 'Client', text: 'Almost immediately after our sessions, I noticed a shift in my self belief, clarity, and overall well-being.' },

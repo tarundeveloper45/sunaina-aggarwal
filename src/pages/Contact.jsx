@@ -5,16 +5,16 @@ import { Faq, PageHero, SectionHead } from '../components/ui';
 import { SITE, abs } from '../config';
 import { faqContact } from '../data/content';
 
-const SERVICES_OPT = ['Healing', 'Counselling', 'Access Bars', 'Access Body Process', 'Access Consciousness', 'Personalised Meditation', 'Feng Shui', 'Energetic Facials', 'Business Mentoring', 'Classes / Workshops'];
+const SERVICES_OPT = ['Not sure yet', 'Counselling', 'Healing', 'Pranic Healing', 'Access Bars Session', 'Access Body Process', 'Business Mentoring', 'Personalised Meditation', 'Feng Shui Consultation', 'Energetic Facial & Beauty Treatment', 'Classes / Workshops'];
 
 function sendToWhatsApp(e) {
   e.preventDefault();
   const d = new FormData(e.currentTarget);
   const lines = [
-    'Hello Sunaina, I would like to book a session.',
-    `Name: ${d.get('name')}`, `Phone: ${d.get('phone')}`, `Service: ${d.get('service')}`,
-    `Centre: ${d.get('centre')}`, `Message: ${d.get('message') || '-'}`,
-  ];
+    'Hello Sunaina, I would like to get in touch.',
+    `Name: ${d.get('name')}`, `Mobile: ${d.get('phone')}`, d.get('email') ? `Email: ${d.get('email')}` : null,
+    `Interested in: ${d.get('service')}`, `Centre: ${d.get('centre')}`, `Message: ${d.get('message') || '-'}`,
+  ].filter(Boolean);
   window.open(`https://wa.me/${SITE.wa}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
 }
 
@@ -37,20 +37,22 @@ export default function Contact() {
               <li><span className="ico"><Icon name="phone" /></span><div><b>Call</b><a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a></div></li>
               <li><span className="ico"><Icon name="chat" /></span><div><b>WhatsApp</b><a href={`https://wa.me/${SITE.wa}`} target="_blank" rel="noopener noreferrer">Chat with us</a></div></li>
               <li><span className="ico"><Icon name="mail" /></span><div><b>Email</b><a href={`mailto:${SITE.email}`}>{SITE.email}</a></div></li>
-              <li><span className="ico"><Icon name="clock" /></span><div><b>Hours</b><span>By appointment — see <Link to="/schedules/">schedules</Link></span></div></li>
+              <li><span className="ico"><Icon name="clock" /></span><div><b>Hours</b><span>Gurugram: Mon – Sat, 10 am – 6 pm · Delhi: Thursdays, 12 – 4 pm. By appointment — <Link to="/book/">book a slot</Link></span></div></li>
             </ul>
           </div>
 
           <form className="box reveal" id="enquiry-form" onSubmit={sendToWhatsApp}>
-            <h2>Send an enquiry</h2>
+            <h2>Tell Sunaina what’s going on</h2>
+            <p style={{ color: 'var(--muted)' }}>She replies personally and suggests what fits. Want a specific slot? <Link to="/book/">Use the booking form →</Link></p>
             <div className="row2">
               <div className="field"><label htmlFor="name">Your name</label><input id="name" name="name" required autoComplete="name" /></div>
-              <div className="field"><label htmlFor="phone">Phone number</label><input id="phone" name="phone" type="tel" required autoComplete="tel" /></div>
+              <div className="field"><label htmlFor="phone">Mobile number</label><input id="phone" name="phone" type="tel" required autoComplete="tel" /></div>
             </div>
+            <div className="field"><label htmlFor="email">Email <span style={{ color: 'var(--muted)', fontWeight: 400 }}>(optional)</span></label><input id="email" name="email" type="email" autoComplete="email" /></div>
             <div className="field"><label htmlFor="service">I’m interested in</label>
               <select id="service" name="service">{SERVICES_OPT.map((o) => <option key={o}>{o}</option>)}</select></div>
-            <div className="field"><label htmlFor="centre">Preferred centre</label>
-              <select id="centre" name="centre"><option>Gurugram – DLF Phase 1</option><option>Delhi – Paschim Vihar</option><option>Online</option></select></div>
+            <div className="field"><label htmlFor="centre">Which centre suits you?</label>
+              <select id="centre" name="centre"><option>No preference</option><option>Online</option><option>DLF Phase 1, Gurugram</option><option>Paschim Vihar, New Delhi</option></select></div>
             <div className="field"><label htmlFor="message">Message</label><textarea id="message" name="message" rows="4" /></div>
             <button className="btn btn-primary" type="submit">Send on WhatsApp</button>
             <p style={{ fontSize: '.8rem', color: 'var(--muted)', margin: '14px 0 0' }}>Your enquiry opens in WhatsApp so you can send it directly. We never share your details.</p>

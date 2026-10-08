@@ -57,7 +57,7 @@ export function Cta({ title = 'Ready to begin your healing journey?', text = 'Bo
           <h2>{title}</h2>
           <p>{text}</p>
           <div className="hero-actions">
-            <Link className="btn btn-light" to="/contact-us/">Book a Session</Link>
+            <Link className="btn btn-light" to="/book/">Book a Session</Link>
             <a className="btn btn-ghost" href={`https://wa.me/${SITE.wa}`} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
           </div>
         </div>

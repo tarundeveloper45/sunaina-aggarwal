@@ -103,8 +103,8 @@
    ]
   ],
   "related": [
+   "pranic-healing",
    "access-bars",
-   "access-body-process",
    "energetic-facials"
   ]
  },
@@ -113,15 +113,15 @@
   "group": "main",
   "ico": "chat",
   "name": "Counselling",
-  "title": "Counseling Services in Delhi & Gurugram",
+  "title": "Individual & Couples Counseling Delhi",
   "desc": "Confidential one-to-one counseling with Sunaina Aggarwal in Delhi and Gurugram for stress, relationships and life decisions. Practical, compassionate guidance.",
-  "h1": "Counselling in Delhi & Gurugram",
-  "tag": "Confidential, compassionate guidance for your mind, relationships and life decisions.",
+  "h1": "Individual & Couples Counselling in Delhi & Gurugram",
+  "tag": "Compassionate listening and gentle energetic clearing for you and your relationships.",
   "img": "counseling-session-sunaina-aggarwal.webp",
   "alt": "Sunaina Aggarwal in a one-to-one counseling session with a client",
   "intro": [
-   "Sometimes what you need most is to be heard and guided by someone who sees the whole picture — the thoughts, the emotions and the energy behind them. Counselling at EL Healing Centre blends psychotherapy-based conversation with spiritual insight.",
-   "Sunaina has guided clients through life transitions, relationship challenges and career obstacles for many years. Sessions are private, unhurried and focused on you. You leave with understanding, simple tools and a clear next step — not generic advice."
+   "Relationships and personal identities go through rough seasons. Sunaina combines compassionate listening with subconscious, energetic clearing to help restore closeness, open communication and ease old family patterns.",
+   "Sessions are private, unhurried and focused on you — or on the two of you. You leave with understanding, simple tools and a clear next step, not generic advice."
   ],
   "benefits": [
    [
@@ -150,10 +150,10 @@
    ]
   ],
   "who": [
+   "Couples wanting to rebuild communication and closeness",
    "Anyone feeling overwhelmed, anxious or low",
-   "People facing relationship or family challenges",
-   "Professionals facing career or life decisions",
-   "Seekers who want to deepen their spiritual practice"
+   "People facing family or relationship challenges",
+   "Professionals facing career or life decisions"
   ],
   "glance": [
    [
@@ -195,6 +195,92 @@
   "pos": "50% 30%"
  },
  {
+  "slug": "pranic-healing",
+  "group": "healing",
+  "ico": "hands",
+  "name": "Pranic Healing",
+  "title": "Pranic Healing in Gurugram & Delhi",
+  "desc": "No-touch Pranic Healing and aura cleansing with Sunaina Aggarwal in Gurugram and Delhi, in person or by distance. Gentle energy work for vitality and calm.",
+  "h1": "Pranic Healing & Aura Cleansing in Delhi NCR",
+  "tag": "Cleanse energetic congestion and support the body’s natural recovery.",
+  "img": "reiki-healing-session-sunaina-aggarwal.webp",
+  "alt": "Sunaina Aggarwal giving a Pranic energy healing session to a client",
+  "pos": "50% 25%",
+  "intro": [
+   "Pranic Healing is a precise, no-touch energy discipline that uses prana — universal life force — to support emotional and physical vitality. By scanning your aura and major chakras, Sunaina finds depleted or congested energy, cleanses it and energises the area.",
+   "Sunaina is a former Pranic Healing instructor with many years of practice. Sessions are available in person at our Gurugram and Delhi centres, and as distance energy healing over a call."
+  ],
+  "benefits": [
+   [
+    "Renewed vitality",
+    "Many clients feel lighter and more energetic."
+   ],
+   [
+    "Calm & clarity",
+    "Ease heaviness, restlessness and low mood."
+   ],
+   [
+    "No-touch",
+    "Gentle work done around the body."
+   ],
+   [
+    "Distance healing",
+    "Available online, wherever you are."
+   ],
+   [
+    "Supports recovery",
+    "Complements — never replaces — medical care."
+   ],
+   [
+    "Personalised",
+    "Based on a scan of your energy field."
+   ]
+  ],
+  "who": [
+   "Professionals with fatigue or corporate exhaustion",
+   "People feeling emotionally heavy or low",
+   "Anyone seeking holistic support alongside medical treatment",
+   "Those recovering who want gentle, supportive care"
+  ],
+  "glance": [
+   [
+    "Duration",
+    "45–60 minutes"
+   ],
+   [
+    "Format",
+    "In-person or distance"
+   ],
+   [
+    "Level",
+    "Beginner friendly"
+   ],
+   [
+    "Location",
+    "Delhi, Gurugram & online"
+   ]
+  ],
+  "faq": [
+   [
+    "What happens in a Pranic Healing session?",
+    "You sit or lie down comfortably. The healer scans your energy field with their hands a few inches from your body, cleanses congested energy and then energises it. There is no pressure or manipulation."
+   ],
+   [
+    "Is Pranic Healing a medical treatment?",
+    "No. It is a complementary practice and does not replace diagnosis or treatment. Please continue any care your doctor has advised."
+   ],
+   [
+    "Can I take a session online?",
+    "Yes. Distance Pranic Healing is offered over a call, and the link arrives with your confirmation."
+   ]
+  ],
+  "related": [
+   "access-bars",
+   "healing",
+   "personalised-meditation"
+  ]
+ },
+ {
   "slug": "access-bars",
   "group": "healing",
   "ico": "bars",
@@ -202,12 +288,12 @@
   "title": "Access Bars Session in Gurugram & Delhi",
   "desc": "Book an Access Bars session or class with certified facilitator Sunaina Aggarwal in Gurugram and Delhi. Gentle 32-point process for deep relaxation and calm.",
   "h1": "Access Bars in Gurugram & Delhi",
-  "tag": "A gentle 32-point process for deep relaxation, a quieter mind and a lighter you.",
+  "tag": "Reset your mind. Let go of mental clutter in one gentle session.",
   "img": "access-bars-workshop-gurugram.webp",
   "alt": "Access Bars workshop with students and clients at EL Healing Centre, Gurugram",
   "intro": [
-   "Access Bars is a gentle, hands-on process in which 32 points on the head are lightly touched. These points are said to relate to different areas of life — awareness, creativity, healing, money, control and more. You simply lie down, fully clothed, and relax.",
-   "Sunaina Aggarwal is a certified Access Consciousness facilitator. She offers one-to-one Access Bars sessions and also teaches one-day classes so you can learn to give Bars to family and friends."
+   "There are 32 points on your head that are said to relate to the thoughts, ideas, attitudes and beliefs we hold. Touching these points gently allows the mind to slow down into deep relaxation — without having to re-live the past.",
+   "Sunaina Aggarwal is a certified Access Consciousness facilitator. She offers one-to-one Access Bars sessions at DLF Phase 1, Gurugram and Paschim Vihar, Delhi, and also teaches classes so you can learn to give Bars to family and friends."
   ],
   "benefits": [
    [
@@ -236,19 +322,19 @@
    ]
   ],
   "who": [
-   "Anyone feeling stressed, restless or overwhelmed",
-   "People who overthink or struggle to switch off",
-   "Those new to energy work — no experience needed",
-   "Anyone who wants to learn a simple skill to share with family"
+   "Racing thoughts and mental overload",
+   "Long-standing feelings of unworthiness or guilt",
+   "Everyday stress and feeling overwhelmed",
+   "Restless sleep and difficulty switching off"
   ],
   "glance": [
    [
     "Duration",
-    "60–90 minutes"
+    "60–75 minutes"
    ],
    [
     "Format",
-    "In-person or class"
+    "Fully clothed, on a comfortable treatment bed"
    ],
    [
     "Level",
@@ -256,7 +342,7 @@
    ],
    [
     "Location",
-    "Gurugram & Delhi"
+    "DLF 1 Gurugram or Paschim Vihar Delhi"
    ]
   ],
   "faq": [
@@ -542,12 +628,12 @@
   "title": "Feng Shui Consultant Delhi & Gurugram",
   "desc": "Feng Shui consultation for homes, shops and offices in Delhi and Gurugram with Sunaina Aggarwal. Practical, no-renovation remedies for harmony and prosperity.",
   "h1": "Feng Shui for Home & Office in Delhi NCR",
-  "tag": "Arrange your space so energy flows — with simple, practical remedies.",
+  "tag": "Harmonise your space — for health, prosperity and peace of mind.",
   "img": "energetic-facial-treatment.webp",
   "alt": "Calm uncluttered interior reflecting Feng Shui principles",
   "intro": [
-   "Feng Shui is the traditional Chinese art of arranging a space so that energy (chi) flows smoothly. A well-balanced home or workplace can feel calmer, lighter and more supportive of health, relationships and work.",
-   "Sunaina reviews your layout, entrance, directions and the five elements, then suggests practical corrections — most of which need no construction or heavy renovation."
+   "Your surroundings reflect and shape how you feel. Stagnant corners in a home or office can go hand in hand with stress, friction and a sense of being stuck. Sunaina offers spatial energy audits for homes and workplaces — without disruptive structural changes.",
+   "Most remedies are simple adjustments in placement, colour, direction and elements, explained clearly so you can apply them yourself."
   ],
   "benefits": [
    [
@@ -617,6 +703,20 @@
    "business-mentoring",
    "personalised-meditation",
    "access-bars"
+  ],
+  "methods": [
+   [
+    "home-feng-shui",
+    "Home Sanctum Feng Shui",
+    "home",
+    "For villas, penthouses and apartments: master-bedroom orientation for restful sleep, entrance and kitchen fire–water element balance, and clearing stagnant energy left by past occupants."
+   ],
+   [
+    "office-feng-shui",
+    "Corporate Office & Retail Audits",
+    "brief",
+    "For executive suites, boardrooms and showrooms: desk placement for focus and authority, cash counter and sales-floor direction, and calmer collaboration zones for the team."
+   ]
   ]
  },
  {
@@ -627,37 +727,37 @@
   "title": "Energetic Facials in Gurugram",
   "desc": "Relax with energetic facials and beauty treatments by Sunaina Aggarwal in Gurugram and Delhi. Gentle skin care combined with energy balancing for a natural glow.",
   "h1": "Energetic Facials & Beauty Treatment",
-  "tag": "Gentle skin care meets energy work — leave relaxed, refreshed and glowing.",
+  "tag": "A gentle, hands-on facial using subtle energies — leave relaxed, refreshed and glowing.",
   "img": "energetic-facial-treatment.webp",
   "alt": "Woman relaxing during an energetic facial treatment",
   "intro": [
-   "An energetic facial goes beyond cleansing. Gentle facial techniques are combined with energy balancing so you experience deep relaxation along with skin care.",
-   "Sunaina designs each treatment around your skin and your state of mind that day. It is a restful hour that supports both how you look and how you feel."
+   "The Access Energetic Facelift is a non-invasive, hands-on treatment that works with subtle energies on the face and neck while inviting you to let go of judgements about ageing.",
+   "Clients enjoy a deeply relaxing hour that leaves skin looking fresh and the face softer — with no needles and no downtime. Sunaina tailors each treatment to you."
   ],
   "benefits": [
    [
-    "Relaxing",
+    "Deep relaxation",
     "A calming experience that melts away stress."
    ],
    [
-    "Natural glow",
-    "Gentle care that leaves skin fresh."
+    "Fresh, natural glow",
+    "Skin that looks brighter and rested."
    ],
    [
-    "Energy balancing",
-    "Healing touch combined with beauty care."
+    "Softer expression",
+    "Relaxed face and neck."
+   ],
+   [
+    "No needles",
+    "Gentle, hands-on and non-invasive."
+   ],
+   [
+    "No downtime",
+    "Return to your day right away."
    ],
    [
     "Personalised",
-    "Matched to your skin type and needs."
-   ],
-   [
-    "Gentle",
-    "No harsh procedures."
-   ],
-   [
-    "Self-care time",
-    "An hour just for you."
+    "Matched to you and how you feel that day."
    ]
   ],
   "who": [
@@ -712,12 +812,13 @@
   "title": "Business Mentoring & Coaching in Gurugram",
   "desc": "Business mentoring by Sunaina Aggarwal in Gurugram and Delhi. Gain clarity, clear mindset blocks and balance workplace energy with practical guidance.",
   "h1": "Business Mentoring in Gurugram & Delhi",
-  "tag": "Clarity, focus and healthier workplace energy for founders and professionals.",
+  "tag": "Shift from stress and scarcity to clarity, focus and confident growth.",
   "img": "crystal-healing-sphere.webp",
   "alt": "Mentor offering a crystal sphere as a symbol of clarity for business owners",
   "intro": [
-   "Running a business is demanding. When decisions feel heavy, the team feels scattered or progress stalls, the cause is often mindset, energy or unclear direction rather than strategy alone.",
-   "Business mentoring with Sunaina combines honest conversation, mindset work and energy balancing, supported by Feng Shui insights for your workplace. It is practical, confidential and focused on the next right step."
+   "Many entrepreneurs build their businesses from stress, friction and anxiety. Business mentoring with Sunaina helps founders, professionals and business owners align their vision with ease — working with mindset blocks around money, visibility and self-doubt.",
+   "Sessions combine honest conversation, mindset work and energy balancing, supported by Feng Shui insights for your workplace. It is practical, confidential and focused on the next right step.",
+   "Corporate wellness enquiry: bespoke workshops for organisations in Cyber City Gurugram, DLF Phase 1–5 and Delhi NCR are available on reservation. Call +91 98102 66631."
   ],
   "benefits": [
    [

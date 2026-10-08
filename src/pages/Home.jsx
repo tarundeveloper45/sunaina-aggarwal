@@ -1,31 +1,34 @@
 import { Link } from 'react-router-dom';
+import { HealerCard, useUpcoming } from '../components/people';
 import Seo from '../components/Seo';
 import { Icon } from '../components/Icon';
 import { Cta, Faq, Gallery, Marquee, Picture, SectionHead, TestimonialSlider, Video, VideoTestimonials } from '../components/ui';
 import { SITE, img } from '../config';
-import { GALLERY, SERVICES, TESTIMONIALS, VIDEOS, faqHome } from '../data/content';
+import { GALLERY, SERVICES, TESTIMONIALS, TRIAGE, VIDEOS, faqHome, longDate } from '../data/content';
+import { HEALERS } from '../data/healers';
 
 export default function Home() {
+  const upcoming = useUpcoming().slice(0, 3);
   return (
     <>
       <Seo
         path="/" noSuffix faq={faqHome}
-        title="Sunaina Aggarwal | Pranic Healer & Reiki Expert, Delhi NCR"
-        desc="Experience transformative healing with Sunaina Aggarwal. Pranic Healing, Reiki, Access Bars, counseling and spiritual wellness in Delhi and Gurugram."
+        title="Sunaina Aggarwal | Energy Healing & Access Bars, Delhi NCR"
+        desc="Find calm and clarity with Sunaina Aggarwal — Access Bars facilitator, Pranic healer and counselor in Gurugram and Delhi NCR. Book a 1:1 session today."
       />
 
       <section className="hero">
         <img src={img('energy-healing-hands-banner.webp')} alt="Two hands reaching toward a glowing ball of healing energy" width="1920" height="1294" fetchpriority="high" />
         <div className="container">
           <div className="hero-inner">
-            <span className="eyebrow">EL Healing Centre · Delhi &amp; Gurugram</span>
-            <h1>Energy &amp; Healing<span>Pranic Healer, Reiki Expert &amp; Spiritual Mentor in Delhi NCR</span></h1>
-            <p className="lead">Heal yourself with deep analysis of the issue — not just the symptom. Gentle, personalised energy healing and counseling with Sunaina Aggarwal.</p>
+            <span className="eyebrow">EL Healing Centre · Delhi, Gurugram &amp; Online</span>
+            <h1>Release What Weighs You Down. Awaken Clarity, Vitality, and Ease.</h1>
+            <p className="lead">Step into a safe sanctuary of conscious transformation. Through energetic alignment, subconscious release and personalised counseling, Sunaina Aggarwal guides you out of mental overload and into peace, health and a more easeful life.</p>
             <div className="hero-actions">
-              <Link className="btn btn-primary" to="/contact-us/">Book a Session</Link>
-              <Link className="btn btn-ghost" to="/services/">Explore Services</Link>
+              <Link className="btn btn-primary" to="/book/">Book Your 1:1 Consultation</Link>
+              <Link className="btn btn-ghost" to="/services/">Explore Healing Modalities</Link>
             </div>
-            <ul className="hero-badges"><li>Practising since 2005</li><li>Trainer &amp; mentor since 2008</li><li>In-person &amp; online</li></ul>
+            <ul className="hero-badges"><li>20+ years of practice</li><li>Delhi &amp; Gurugram centres</li><li>Trainer &amp; mentor since 2008</li></ul>
           </div>
         </div>
       </section>
@@ -34,15 +37,27 @@ export default function Home() {
 
       <section>
         <div className="container">
-          <SectionHead eyebrow="Heal yourself" title="Experience the power of healing with deep analysis of the issue" text="True healing begins when we understand what is really going on beneath the surface — in the mind, the emotions and the energy body." />
-          <div className="grid g3">
-            {[
-              ['mind', 'Mind', 'The mind is a beautiful being. Discover how to re-fix your patterns, calm overthinking and build a positive, peaceful mental space through meditation and guidance.'],
-              ['heart', 'Mental Health', 'Becoming more aware of the present moment, and truly being in it, can help you enjoy the world around you. Counseling and energy work support emotional balance.'],
-              ['leaf', 'Body', 'The body is where your soul lives. It holds stress, emotion and memory. Healing helps release what no longer serves you — so you feel light, rested and well.'],
-            ].map(([ic, h, t]) => (
-              <article className="card center reveal" key={h}><div className="ico"><Icon name={ic} /></div><h3>{h}</h3><p>{t}</p></article>
-            ))}
+          <div className="split">
+            <div className="reveal">
+              <span className="eyebrow" style={{ color: 'var(--ember)' }}>The gentle science of healing</span>
+              <h2>You don’t have to carry the struggle alone</h2>
+              <p>Life can gather invisible baggage: chronic stress, friction in relationships, restless sleep, or tension that check-ups cannot explain. At EL Healing Centre we look at the energetic patterns that keep those blocks in place — and release them gently.</p>
+              <p><strong>Transformation doesn’t require endless suffering — ease is your natural state.</strong></p>
+              <Link className="btn btn-outline" to="/about-us/">About Sunaina</Link>
+            </div>
+            <div className="reveal">
+              <SectionHead eyebrow="Where are you feeling stuck today?" title="Choose your concern" />
+              <div style={{ display: 'grid', gap: 16 }}>
+                {TRIAGE.map((t) => (
+                  <Link className="card rel" to={`/book/?concern=${t.concern}`} key={t.title} style={{ textAlign: 'left' }}>
+                    <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+                      <div className="ico" style={{ margin: 0, flex: 'none' }}><Icon name={t.ico} /></div>
+                      <div><h3 style={{ marginBottom: 4 }}>{t.title}</h3><p>{t.text}</p><span className="next">{t.next}</span></div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -65,6 +80,17 @@ export default function Home() {
 
       <section>
         <div className="container">
+          <SectionHead eyebrow="Practitioners" title="Who would you like to sit with?" text="Each practitioner keeps their own diary. Open a profile to see their sessions and book a time." />
+          <div className="grid g3 hgrid">{HEALERS.slice(0, 3).map((h) => <HealerCard key={h.slug} h={h} />)}</div>
+          <p style={{ textAlign: 'center', margin: '40px 0 0' }}>
+            <Link className="btn btn-primary" to="/healers/">Meet all {HEALERS.length} practitioners</Link>{' '}
+            <Link className="btn btn-outline" to="/book/">Find my session</Link>
+          </p>
+        </div>
+      </section>
+
+      <section className="alt">
+        <div className="container">
           <SectionHead eyebrow="Find what’s right for you" title="Healing & counseling services" text="Would you like to choose something that ignites enthusiasm within you, that gives you confidence, that creates space to explore? Start with the path that calls to you." />
           <div className="grid g3">
             {['healing', 'counseling', 'energetic-facials'].map((slug) => {
@@ -86,7 +112,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="alt">
+      <section>
         <div className="container split rev">
           <div className="reveal">
             <span className="eyebrow" style={{ color: 'var(--ember)' }}>Inner balance</span>
@@ -114,7 +140,7 @@ export default function Home() {
           <div className="stats reveal">
             <div><b className="count" data-to="2005">2005</b><span>Healing professionally since</span></div>
             <div><b className="count" data-to="2008">2008</b><span>Training &amp; mentoring since</span></div>
-            <div><b className="count" data-to="9">9</b><span>Healing &amp; guidance services</span></div>
+            <div><b className="count" data-to="10">10</b><span>Healing &amp; guidance services</span></div>
             <div><b className="count" data-to="2">2</b><span>Centres: Delhi &amp; Gurugram</span></div>
           </div>
         </div>
@@ -126,11 +152,11 @@ export default function Home() {
             <span className="eyebrow" style={{ color: 'var(--ember)' }}>There’s a class for everyone</span>
             <h2>Come find yours</h2>
             <p>From Access Bars classes to weekly Bars &amp; Body Process swaps, there is a format that fits every schedule and level.</p>
-            <ul className="checks">
-              <li><strong>Bars Class</strong> — Gurugram, 10 AM – 6 PM</li>
-              <li><strong>Bars &amp; Body Process swaps</strong> — every Thursday, Paschim Vihar, Delhi, 12 – 4 PM</li>
-              <li><strong>Every Saturday</strong> — DLF 1, Gurugram, 12 – 4 PM</li>
-            </ul>
+            {upcoming.length > 0 ? (
+              <ul className="checks">
+                {upcoming.map((c) => <li key={c.date + c.title}><strong>{longDate(c.date)}, {c.time}</strong> — {c.title}, {c.place}</li>)}
+              </ul>
+            ) : <p>New classes are announced regularly — message us for the next date.</p>}
             <Link className="btn btn-primary" to="/schedules/">All Schedules</Link>
           </div>
           <div className="img-frame reveal">

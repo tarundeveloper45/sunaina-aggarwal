@@ -31,7 +31,7 @@ export default function ServicePage() {
       />
       <PageHero title={s.h1} text={s.tag} crumbs={heroCrumbs}>
         <div className="hero-actions" style={{ justifyContent: 'center', marginTop: 24 }}>
-          <Link className="btn btn-primary" to="/contact-us/">Book a Session</Link>
+          <Link className="btn btn-primary" to={`/book/?service=${s.slug}`}>Book a Session</Link>
           <a className="btn btn-outline" href={`https://wa.me/${SITE.wa}`} target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
         </div>
       </PageHero>
@@ -49,7 +49,7 @@ export default function ServicePage() {
           <aside className="glance reveal">
             <h3>At a glance</h3>
             <dl>{s.glance.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
-            <Link className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} to="/contact-us/">Book Now</Link>
+            <Link className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} to={`/book/?service=${s.slug}`}>Book Now</Link>
             <a className="glance-link" href={`tel:${SITE.phoneRaw}`}>or call {SITE.phone}</a>
           </aside>
         </div>

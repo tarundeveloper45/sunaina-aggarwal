@@ -9,6 +9,9 @@ import Testimonials from './pages/Testimonials';
 import { BlogIndex, BlogPost } from './pages/Blog';
 import Contact from './pages/Contact';
 import GalleryPage from './pages/GalleryPage';
+import Healers from './pages/Healers';
+import HealerProfile from './pages/HealerProfile';
+import Book from './pages/Book';
 import NotFound from './pages/NotFound';
 
 export default function App() {
@@ -21,6 +24,9 @@ export default function App() {
         <Route path="services/:slug" element={<ServicePage />} />
         <Route path="schedules" element={<Schedules />} />
         <Route path="gallery" element={<GalleryPage />} />
+        <Route path="healers" element={<Healers />} />
+        <Route path="healers/:slug" element={<HealerProfile />} />
+        <Route path="book" element={<Book />} />
         <Route path="testimonials" element={<Testimonials />} />
         <Route path="blog" element={<BlogIndex />} />
         <Route path="blog/:slug" element={<BlogPost />} />

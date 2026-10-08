@@ -5,6 +5,7 @@ import App from './App';
 import './styles.css';
 import './system.css';
 import './media.css';
+import './booking.css';
 
 const root = document.getElementById('root');
 const app = (

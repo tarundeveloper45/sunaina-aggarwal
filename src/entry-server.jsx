@@ -3,10 +3,12 @@ import { StaticRouter } from 'react-router-dom/server';
 import App from './App';
 import { headHtml } from './seo';
 import { SERVICES, POSTS } from './data/content';
+import { HEALERS } from './data/healers';
 
 export const ROUTES = [
   '/', '/about-us/', '/services/',
   ...SERVICES.map((s) => `/services/${s.slug}/`),
+  '/healers/', ...HEALERS.map((h) => `/healers/${h.slug}/`), '/book/',
   '/schedules/', '/gallery/', '/testimonials/', '/blog/',
   ...POSTS.map((p) => `/blog/${p.slug}/`),
   '/contact-us/',

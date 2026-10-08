@@ -27,10 +27,12 @@ export default function About() {
         <div className="container split">
           <div className="reveal">
             <h2>Want to know about her?</h2>
+            <p className="lead">Sunaina Aggarwal is an Access Consciousness certified facilitator, Pranic Healing practitioner, Feng Shui consultant and business mentor based in the National Capital Region. Her practice rests on one belief: healing should be gentle, empowering and evident in the quality of your daily life.</p>
             <p>Sunaina started healing as a child. Professionally, she began her career in 2005 and there has been no looking back. She has learned and practised <strong>Pranic Healing, Crystal Healing, Psychotherapy</strong> and <strong>Arhatic Yoga</strong>, and is a former Pranic Healing instructor. Since 2008 she has been a trainer, mentor and guide, changing the lives of many people for the better.</p>
             <p>Her experience spans health healing, relationship healing, mental wellbeing, business healing and spiritual growth. When people felt lost, they came to her to find direction through the help of energies. When people struggled with jobs or business problems, she supported them through healing and her Feng Shui expertise. Many clients have shared how relationship energy shifted for the better after working with her.</p>
             <p>Today she is a healer for health as well as a facilitator, trainer and mentor for students who wish to learn these healing arts themselves.</p>
-            <Link className="btn btn-primary" to="/contact-us/">Book a Session</Link>
+            <Link className="btn btn-primary" to="/book/">Book a Session</Link>{' '}
+            <Link className="btn btn-outline" to="/healers/">Meet our healers</Link>
           </div>
           <div className="img-frame reveal">
             <Picture file="sunaina-aggarwal-portrait.webp" alt="Sunaina Aggarwal, Pranic healer, Reiki expert and founder of EL Healing Centre in Delhi and Gurugram" w={720} h={900} style={{ maxWidth: 460, marginInline: 'auto' }} />
