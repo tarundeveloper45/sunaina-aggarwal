@@ -10,6 +10,7 @@ import './booking2.css';
 import './profile.css';
 import './fixes.css';
 import './clean.css';
+import './mobile.css';
 
 const root = document.getElementById('root');
 const app = (

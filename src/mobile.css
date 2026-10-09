@@ -1,0 +1,38 @@
+/* =====================================================================
+   MOBILE: card grids become swipeable sliders (snap, with the next card peeking),
+   and long copy gets a "Read more / Read less" toggle.
+   ===================================================================== */
+.swipe-m{display:grid;gap:16px}
+.rm-btn{display:none}
+
+@media (max-width:640px){
+  /* ---- horizontal sliders ---- */
+  main .grid.g3,main .grid.g4,main .hgrid,main .steps,main .vgrid,main .cert-grid,main .swipe-m{
+    display:flex;grid-template-columns:none;
+    overflow-x:auto;overflow-y:hidden;
+    scroll-snap-type:x mandatory;scroll-padding-inline:14px;
+    gap:14px;margin-inline:-14px;padding:6px 14px 20px;max-width:none;
+    -webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;
+  }
+  main .grid.g3::-webkit-scrollbar,main .grid.g4::-webkit-scrollbar,main .hgrid::-webkit-scrollbar,main .steps::-webkit-scrollbar,
+  main .vgrid::-webkit-scrollbar,main .cert-grid::-webkit-scrollbar,main .swipe-m::-webkit-scrollbar{display:none}
+  main .grid.g3>*,main .grid.g4>*,main .hgrid>*,main .steps>*,main .swipe-m>*{flex:0 0 80%;max-width:340px;scroll-snap-align:start;margin:0}
+  main .vgrid>*{flex:0 0 62%;max-width:260px;scroll-snap-align:start}
+  main .cert-grid>*{flex:0 0 78%;max-width:320px;scroll-snap-align:start}
+  main .cert-grid{max-width:none;margin-inline:-14px}
+  /* items inside a slider are always visible (no scroll-reveal fade) */
+  main .grid.g3>.reveal,main .grid.g4>.reveal,main .hgrid>.reveal,main .steps>.reveal,main .vgrid>.reveal,main .cert-grid>.reveal,main .swipe-m>.reveal,
+  main .steps.reveal{opacity:1;transform:none}
+  main .steps>li{list-style:none}
+  /* the healer / service cards fill the slide */
+  main .hgrid>.hcard,main .grid.g3>.card,main .grid.g4>.card{height:auto}
+  main .grid.g3>.svc-card img,main .grid.g3>.post-card img{aspect-ratio:4/3}
+
+  /* ---- read more / read less ---- */
+  .rm-body{position:relative;overflow:hidden;transition:max-height .5s ease}
+  .rm:not(.open) .rm-body{max-height:13.5em;-webkit-mask-image:linear-gradient(#000 62%,transparent);mask-image:linear-gradient(#000 62%,transparent)}
+  .rm.open .rm-body{max-height:120em}
+  .rm-btn{display:inline-flex;align-items:center;gap:6px;margin:4px 0 18px;padding:0;background:none;border:0;color:var(--ember-dark);font:600 var(--fs-card) var(--font-body);cursor:pointer}
+  .rm-btn::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .3s}
+  .rm.open .rm-btn::after{transform:rotate(-135deg) translateY(-2px)}
+}

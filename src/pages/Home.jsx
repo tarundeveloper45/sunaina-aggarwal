@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { HealerCard, useUpcoming } from '../components/people';
 import Seo from '../components/Seo';
 import { Icon } from '../components/Icon';
-import { Cta, Faq, Gallery, Marquee, Picture, SectionHead, TestimonialSlider, Video, VideoTestimonials } from '../components/ui';
+import { Cta, Faq, Gallery, Marquee, Picture, ReadMore, SectionHead, TestimonialSlider, Video, VideoTestimonials } from '../components/ui';
 import { SITE, img } from '../config';
 import { GALLERY, SERVICES, TESTIMONIALS, TRIAGE, VIDEOS, faqHome, longDate } from '../data/content';
 import { HEALERS } from '../data/healers';
@@ -77,7 +77,7 @@ export default function Home() {
             </div>
             <div className="reveal">
               <SectionHead eyebrow="Where are you feeling stuck today?" title="Choose your concern" />
-              <div style={{ display: 'grid', gap: 16 }}>
+              <div className="swipe-m">
                 {TRIAGE.map((t) => (
                   <Link className="card rel" to={`/book/?concern=${t.concern}`} key={t.title} style={{ textAlign: 'left' }}>
                     <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
@@ -98,8 +98,10 @@ export default function Home() {
             <span className="eyebrow" style={{ color: 'var(--ember)' }}>The founder</span>
             <h2>Founded by Sunaina Aggarwal</h2>
             <p className="founder-role">Founder | EL Healing Centre</p>
+            <ReadMore>
             <p><strong>ENERGY CHANGER Sunaina Aggarwal.</strong> The name itself speaks volumes — a lady born with divine energies, a true gift. Sunaina is an intuitive healer who has carried the spark of spiritual healing power since childhood. She is a spiritual coach, healer, inspiration and flourishing entrepreneur, running her personalised venture, <em>EL Healing Centre</em>, based in Delhi/Gurugram.</p>
             <p>Today EL Healing Centre is a circle of practitioners she has trained and gathered, so that more people can find the right healer for them.</p>
+            </ReadMore>
             <Link className="btn btn-primary" to="/healers/sunaina-aggarwal/">View her profile</Link>{' '}
             <Link className="btn btn-outline" to="/about-us/">More about her</Link>
           </div>

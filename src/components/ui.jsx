@@ -256,6 +256,17 @@ export function VideoTestimonials({ count = 4 }) {
   );
 }
 
+// On phones the text is clamped with a "Read more" toggle; on larger screens it is shown in full.
+export function ReadMore({ children }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className={'rm' + (open ? ' open' : '')}>
+      <div className="rm-body">{children}</div>
+      <button type="button" className="rm-btn" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? 'Read less' : 'Read more'}</button>
+    </div>
+  );
+}
+
 export const Picture = ({ file, alt, w, h, eager, style, className }) => (
   <img src={img(file)} alt={alt} width={w} height={h} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={eager ? 'high' : undefined} style={style} className={className} />
 );
