@@ -6,6 +6,8 @@ import './styles.css';
 import './system.css';
 import './media.css';
 import './booking.css';
+import './booking2.css';
+import './profile.css';
 
 const root = document.getElementById('root');
 const app = (

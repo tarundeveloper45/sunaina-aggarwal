@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HealerCard, useUpcoming } from '../components/people';
 import Seo from '../components/Seo';
@@ -7,35 +8,64 @@ import { SITE, img } from '../config';
 import { GALLERY, SERVICES, TESTIMONIALS, TRIAGE, VIDEOS, faqHome, longDate } from '../data/content';
 import { HEALERS } from '../data/healers';
 
+const HOME_FILTERS = ['All', 'Pranic Healing', 'Access Bars', 'Counselling'];
+const BOOK_STEPS = [['Choose a healer', 'Browse profiles and pick who you would like to sit with.'], ['Pick a service', 'See what each healer offers, with duration and fees.'], ['Select a date', 'Choose a day that works for you.'], ['Choose a time', 'Pick Gurugram, Delhi or online, and a time.'], ['Share your details', 'Send your request — we confirm personally.']];
+
+function HomeHealers() {
+  const [f, setF] = useState('All');
+  const list = f === 'All' ? HEALERS : HEALERS.filter((h) => h.tags.includes(f));
+  return (
+    <section>
+      <div className="container">
+        <SectionHead eyebrow="Our healers" title="Who would you like to sit with?" text="Every practitioner keeps their own diary. Open a profile to see their sessions, or book straight away." />
+        <div className="filters" role="group" aria-label="Filter healers by speciality">
+          {HOME_FILTERS.map((x) => <button type="button" key={x} className={'filter' + (f === x ? ' on' : '')} aria-pressed={f === x} onClick={() => setF(x)}>{x}</button>)}
+        </div>
+        <div className="grid g4 hgrid">{list.map((h) => <HealerCard key={h.slug} h={h} compact />)}</div>
+        <p style={{ textAlign: 'center', margin: '36px 0 0' }}>
+          <Link className="btn btn-primary" to="/healers/">See all healers</Link>{' '}
+          <Link className="btn btn-outline" to="/book/">Find my session</Link>
+        </p>
+        <div style={{ marginTop: 'var(--space-section)' }}>
+          <SectionHead eyebrow="How booking works" title="Five simple steps to your session" />
+          <ol className="steps steps5 reveal">{BOOK_STEPS.map(([t, d]) => <li key={t}><h3>{t}</h3><p>{d}</p></li>)}</ol>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const upcoming = useUpcoming().slice(0, 3);
   return (
     <>
       <Seo
         path="/" noSuffix faq={faqHome}
-        title="Sunaina Aggarwal | Energy Healing & Access Bars, Delhi NCR"
-        desc="Find calm and clarity with Sunaina Aggarwal — Access Bars facilitator, Pranic healer and counselor in Gurugram and Delhi NCR. Book a 1:1 session today."
+        title="EL Healing Centre | Book Healers in Delhi & Gurugram"
+        desc="Meet and book experienced Pranic healers, Access Bars facilitators and counselors at EL Healing Centre in Delhi and Gurugram. Choose a healer, service and time."
       />
 
       <section className="hero">
         <img src={img('energy-healing-hands-banner.webp')} alt="Two hands reaching toward a glowing ball of healing energy" width="1920" height="1294" fetchpriority="high" />
         <div className="container">
           <div className="hero-inner">
-            <span className="eyebrow">EL Healing Centre · Delhi, Gurugram &amp; Online</span>
-            <h1>Release What Weighs You Down. Awaken Clarity, Vitality, and Ease.</h1>
-            <p className="lead">Step into a safe sanctuary of conscious transformation. Through energetic alignment, subconscious release and personalised counseling, Sunaina Aggarwal guides you out of mental overload and into peace, health and a more easeful life.</p>
+            <span className="eyebrow">A circle of {HEALERS.length} healers · Delhi, Gurugram &amp; Online</span>
+            <h1>Sit with the healer who feels right for you.</h1>
+            <p className="lead">EL Healing Centre brings together experienced Pranic healers, Access Bars facilitators and counselors across Delhi and Gurugram — and online. Browse their profiles, choose a session and book a time that suits you.</p>
             <div className="hero-actions">
-              <Link className="btn btn-primary" to="/book/">Book Your 1:1 Consultation</Link>
-              <Link className="btn btn-ghost" to="/services/">Explore Healing Modalities</Link>
+              <Link className="btn btn-primary" to="/healers/">Meet our healers</Link>
+              <Link className="btn btn-ghost" to="/book/">Book a session</Link>
             </div>
-            <ul className="hero-badges"><li>20+ years of practice</li><li>Delhi &amp; Gurugram centres</li><li>Trainer &amp; mentor since 2008</li></ul>
+            <ul className="hero-badges"><li>{HEALERS.length} practitioners</li><li>Delhi &amp; Gurugram centres</li><li>Online sessions</li></ul>
           </div>
         </div>
       </section>
 
-      <Marquee items={['Pranic Healing', 'Access Bars', 'Crystal Healing', 'Counselling', 'Feng Shui', 'Meditation', 'Business Mentoring']} />
+<Marquee items={['Pranic Healing', 'Access Bars', 'Crystal Healing', 'Counselling', 'Feng Shui', 'Meditation', 'Business Mentoring']} />
 
-      <section>
+      <HomeHealers />
+
+      <section className="alt">
         <div className="container">
           <div className="split">
             <div className="reveal">
@@ -43,7 +73,7 @@ export default function Home() {
               <h2>You don’t have to carry the struggle alone</h2>
               <p>Life can gather invisible baggage: chronic stress, friction in relationships, restless sleep, or tension that check-ups cannot explain. At EL Healing Centre we look at the energetic patterns that keep those blocks in place — and release them gently.</p>
               <p><strong>Transformation doesn’t require endless suffering — ease is your natural state.</strong></p>
-              <Link className="btn btn-outline" to="/about-us/">About Sunaina</Link>
+              <Link className="btn btn-outline" to="/about-us/">About EL Healing Centre</Link>
             </div>
             <div className="reveal">
               <SectionHead eyebrow="Where are you feeling stuck today?" title="Choose your concern" />
@@ -62,30 +92,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="alt">
+      <section>
         <div className="container split">
           <div className="reveal">
-            <span className="eyebrow" style={{ color: 'var(--ember)' }}>Meet your healer</span>
-            <h2>Sunaina Aggarwal</h2>
+            <span className="eyebrow" style={{ color: 'var(--ember)' }}>The founder</span>
+            <h2>Founded by Sunaina Aggarwal</h2>
             <p className="founder-role">Founder | EL Healing Centre</p>
             <p><strong>ENERGY CHANGER Sunaina Aggarwal.</strong> The name itself speaks volumes — a lady born with divine energies, a true gift. Sunaina is an intuitive healer who has carried the spark of spiritual healing power since childhood. She is a spiritual coach, healer, inspiration and flourishing entrepreneur, running her personalised venture, <em>EL Healing Centre</em>, based in Delhi/Gurugram.</p>
-            <p>Based in Delhi &amp; Gurugram, she has guided thousands of clients and students towards clarity and peace.</p>
-            <Link className="btn btn-primary" to="/about-us/">More About Her</Link>
+            <p>Today EL Healing Centre is a circle of practitioners she has trained and gathered, so that more people can find the right healer for them.</p>
+            <Link className="btn btn-primary" to="/healers/sunaina-aggarwal/">View her profile</Link>{' '}
+            <Link className="btn btn-outline" to="/about-us/">More about her</Link>
           </div>
           <div className="img-frame reveal">
             <Picture file="sunaina-aggarwal-portrait.webp" alt="Sunaina Aggarwal, Pranic healer and founder of EL Healing Centre in Delhi and Gurugram" w={720} h={900} style={{ maxWidth: 460, marginInline: 'auto' }} />
           </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="container">
-          <SectionHead eyebrow="Practitioners" title="Who would you like to sit with?" text="Each practitioner keeps their own diary. Open a profile to see their sessions and book a time." />
-          <div className="grid g3 hgrid">{HEALERS.slice(0, 3).map((h) => <HealerCard key={h.slug} h={h} />)}</div>
-          <p style={{ textAlign: 'center', margin: '40px 0 0' }}>
-            <Link className="btn btn-primary" to="/healers/">Meet all {HEALERS.length} practitioners</Link>{' '}
-            <Link className="btn btn-outline" to="/book/">Find my session</Link>
-          </p>
         </div>
       </section>
 
@@ -138,10 +158,10 @@ export default function Home() {
       <section className="dark">
         <div className="container">
           <div className="stats reveal">
-            <div><b className="count" data-to="2005">2005</b><span>Healing professionally since</span></div>
-            <div><b className="count" data-to="2008">2008</b><span>Training &amp; mentoring since</span></div>
+            <div><b className="count" data-to={HEALERS.length}>{HEALERS.length}</b><span>Healers in the circle</span></div>
+            <div><b className="count" data-to="20" data-suffix="+">20+</b><span>Years of practice (our founder)</span></div>
             <div><b className="count" data-to="10">10</b><span>Healing &amp; guidance services</span></div>
-            <div><b className="count" data-to="2">2</b><span>Centres: Delhi &amp; Gurugram</span></div>
+            <div><b className="count" data-to="2">2</b><span>Centres, plus online</span></div>
           </div>
         </div>
       </section>

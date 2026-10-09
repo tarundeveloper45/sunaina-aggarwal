@@ -4,6 +4,8 @@ import { Icon } from '../components/Icon';
 import { Cta, Faq, PageHero, Picture, SectionHead } from '../components/ui';
 import { SITE, abs } from '../config';
 import { SERVICE_BY } from '../data/content';
+import { HealerCard } from '../components/people';
+import { HEALERS } from '../data/healers';
 import NotFound from './NotFound';
 
 const STEPS = [
@@ -19,6 +21,7 @@ export default function ServicePage() {
   if (!s) return <NotFound />;
 
   const path = `/services/${s.slug}/`;
+  const offering = HEALERS.filter((h) => h.services.includes(s.slug));
   const hub = s.group === 'main' ? null : s.group === 'healing' ? ['Healing', '/services/healing/'] : ['Counselling', '/services/counseling/'];
   const crumbs = hub ? [['Services', '/services/'], hub, [s.name, path]] : [['Services', '/services/'], [s.name, path]];
   const heroCrumbs = hub ? [['Services', '/services/'], hub, [s.name]] : [['Services', '/services/'], [s.name]];
@@ -102,7 +105,16 @@ export default function ServicePage() {
         </div>
       </section>
 
-      <Cta title={`Ready to book ${s.name}?`} text="Share your concern and Sunaina will guide you to the right session." />
+      {offering.length > 0 && (
+        <section className={s.methods ? '' : 'alt'}>
+          <div className="container">
+            <SectionHead eyebrow="Choose your healer" title={`Healers who offer ${s.name}`} text="Open a profile to learn more, or book straight away." />
+            <div className="grid g3 hgrid">{offering.map((h) => <HealerCard key={h.slug} h={h} />)}</div>
+          </div>
+        </section>
+      )}
+
+      <Cta title={`Ready to book ${s.name}?`} text="Choose a healer, a date and a time — we confirm every request personally." />
     </>
   );
 }

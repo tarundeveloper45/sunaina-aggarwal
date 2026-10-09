@@ -9,9 +9,9 @@ export function Avatar({ h, large }) {
   return <span className={'avatar-ini' + (large ? ' lg' : '')} aria-hidden="true">{h.initials}</span>;
 }
 
-export function HealerCard({ h }) {
+export function HealerCard({ h, compact }) {
   return (
-    <article className="hcard reveal">
+    <article className={'hcard reveal' + (compact ? ' compact' : '')}>
       <Link className="hc-top" to={`/healers/${h.slug}/`} aria-label={`View ${h.name}'s profile`}>
         <Avatar h={h} />
         <span><h3>{h.name}</h3><span className="hc-role">{h.role}</span></span>

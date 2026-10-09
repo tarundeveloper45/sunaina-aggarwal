@@ -16,7 +16,7 @@ export default function Healers() {
         path="/healers/" title="Our Healers & Practitioners" crumbs={[['Healers', '/healers/']]}
         desc="Meet the healers at EL Healing Centre — Pranic Healing, Access Bars and counseling practitioners in Delhi and Gurugram. View profiles and book a session."
       />
-      <PageHero title="Who would you like to sit with?" text="Meet the practitioners of EL Healing Centre. Open a profile to see their sessions, and book with the person who feels right for you." crumbs={[['Healers']]} />
+      <PageHero title="Who would you like to sit with?" text="Meet the circle of practitioners at EL Healing Centre. Open a profile to see their sessions, fees and approach, then book with the person who feels right for you." crumbs={[['Healers']]} />
       <section>
         <div className="container">
           <div className="filters" role="group" aria-label="Filter healers by speciality">
