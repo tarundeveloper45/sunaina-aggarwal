@@ -195,7 +195,7 @@ export function Gallery({ items, animate = true }) {
       <div className="gallery">
         {items.map((g, i) => (
           <button type="button" className={'g-item ' + (animate ? 'reveal' : 'pop')} key={g.file} onClick={() => setOpen(i)} aria-label={`Open photo: ${g.alt}`}>
-            <img src={img(g.file)} alt={g.alt} width={g.w} height={g.h} loading="lazy" />
+            <img src={img(g.file)} alt={g.alt} width={g.w} height={g.h} loading="lazy" decoding="async" />
           </button>
         ))}
       </div>
@@ -257,5 +257,5 @@ export function VideoTestimonials({ count = 4 }) {
 }
 
 export const Picture = ({ file, alt, w, h, eager, style, className }) => (
-  <img src={img(file)} alt={alt} width={w} height={h} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} style={style} className={className} />
+  <img src={img(file)} alt={alt} width={w} height={h} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={eager ? 'high' : undefined} style={style} className={className} />
 );

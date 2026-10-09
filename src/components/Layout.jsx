@@ -176,22 +176,27 @@ function PageEffects() {
 
   useEffect(() => {
     const root = document.documentElement;
+    const bar = document.querySelector('.progress');
     const top = document.querySelector('.to-top');
-    let raf = 0;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let heroImg = document.querySelector('.hero > img');
+    let raf = 0, topOn = false, lastP = -1, lastY = -1;
     const update = () => {
       raf = 0;
       const y = window.scrollY, max = root.scrollHeight - window.innerHeight;
-      root.style.setProperty('--p', max > 0 ? Math.min(y / max, 1).toFixed(4) : 0);
-      root.style.setProperty('--py', (y < 1400 ? y * 0.22 : 0).toFixed(1) + 'px');
-      root.style.setProperty('--bgy', (40 + (y % 3000) / 60).toFixed(1) + '%');
-      if (top) top.classList.toggle('show', y > 700);
+      const p = max > 0 ? Math.min(y / max, 1) : 0;
+      if (bar && Math.abs(p - lastP) > 0.001) { bar.style.transform = 'scaleX(' + p.toFixed(4) + ')'; lastP = p; }
+      if (heroImg && !reduce && y < 1200 && y !== lastY) { heroImg.style.transform = 'translate3d(0,' + (y * 0.18).toFixed(1) + 'px,0) scale(1.06)'; lastY = y; }
+      const on = y > 700;
+      if (top && on !== topOn) { top.classList.toggle('show', on); topOn = on; }
     };
     const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
+    heroImg = document.querySelector('.hero > img');
     update();
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
+    window.addEventListener('resize', onScroll, { passive: true });
     return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); if (raf) cancelAnimationFrame(raf); };
-  }, []);
+  }, [pathname]);
   return null;
 }
 

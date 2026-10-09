@@ -1,0 +1,49 @@
+/* =====================================================================
+   CLEAN-UP + SMOOTH SCROLL PASS
+   Lighter shadows, fewer decorations, and no always-running paint-heavy animations.
+   ===================================================================== */
+:root{--shadow:0 8px 28px -14px rgba(80,35,10,.22)}
+
+/* header: solid, no live blur (blur repaints on every scroll frame) */
+.site-header{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(255,248,240,.98)}
+
+/* hero: static image, parallax is applied in JS with a GPU transform */
+.hero>img{translate:none;animation:none;transform:scale(1.06);will-change:transform;backface-visibility:hidden}
+
+/* page hero: calm static gradient (animating gradients repaints every frame) */
+.page-hero{animation:none;background-size:auto;background:linear-gradient(180deg,#FBEBDA 0%,#FFF3E6 100%)}
+.page-hero .container>*{animation-duration:.6s}
+
+/* floating buttons: no looping glow */
+.float .wa{animation:none}
+.float a{box-shadow:0 6px 16px -6px rgba(0,0,0,.35)}
+
+/* quieter cards and images */
+.card:hover,.hcard:hover{transform:translateY(-4px);box-shadow:0 16px 32px -18px rgba(120,50,10,.3)}
+.img-frame::after{display:none}
+.btn-primary::after{display:none}
+.btn-primary{box-shadow:0 6px 16px -8px rgba(212,80,26,.6)}
+.split img,.svc-cover,.gallery .g-item{box-shadow:0 8px 24px -14px rgba(80,35,10,.28)}
+
+/* gentler reveal */
+.reveal{transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);will-change:auto}
+:where(.split)>.reveal:first-child{transform:translateX(-28px)}
+:where(.split)>.reveal:last-child{transform:translateX(28px)}
+:where(.split.rev)>.reveal:first-child{transform:translateX(28px)}
+:where(.split.rev)>.reveal:last-child{transform:translateX(-28px)}
+.reveal.in{transform:none}
+@media (max-width:900px){
+  :where(.split)>.reveal:first-child,:where(.split)>.reveal:last-child,:where(.split.rev)>.reveal:first-child,:where(.split.rev)>.reveal:last-child{transform:translateY(20px)}
+  .reveal.in{transform:none}
+}
+
+/* marquee on its own layer */
+.marquee-track{will-change:transform}
+
+/* skip rendering of off-screen sections until they are near the viewport */
+main>section:not(.hero):not(.page-hero){content-visibility:auto;contain-intrinsic-size:auto 640px}
+
+/* progress bar: transform set from JS on this element only */
+.progress{transform:scaleX(0);will-change:transform}
+
+@media (prefers-reduced-motion:reduce){.hero>img{transform:none}}
