@@ -100,7 +100,8 @@
    "pranic-healing",
    "access-bars",
    "energetic-facials"
-  ]
+  ],
+  "pos": "50% 35%"
  },
  {
   "slug": "counseling",
@@ -199,7 +200,7 @@
   "tag": "Cleanse energetic congestion and support the body’s natural recovery.",
   "img": "energy-healing-session-sunaina-aggarwal.webp",
   "alt": "Sunaina Aggarwal giving a Pranic energy healing session to a client",
-  "pos": "50% 25%",
+  "pos": "50% 22%",
   "intro": [
    "Pranic Healing is a precise, no-touch energy discipline that uses prana — universal life force — to support emotional and physical vitality. By scanning your aura and major chakras, Sunaina finds depleted or congested energy, cleanses it and energises the area.",
    "Sunaina is a former Pranic Healing instructor with many years of practice. Sessions are available in person at our Gurugram and Delhi centres, and as distance energy healing over a call."
@@ -357,7 +358,8 @@
    "access-body-process",
    "access-consciousness-facilitator",
    "personalised-meditation"
-  ]
+  ],
+  "pos": "50% 30%"
  },
  {
   "slug": "access-consciousness-facilitator",

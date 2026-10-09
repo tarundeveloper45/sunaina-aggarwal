@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Seo from '../components/Seo';
 import { Icon } from '../components/Icon';
 import { Cta, PageHero, Picture, SectionHead } from '../components/ui';
-import { SITE, abs } from '../config';
+import { SITE, abs, dims } from '../config';
 
 const METHODS = [
   ['hands', 'Pranic Healing', 'No-touch energy cleansing to restore balance to the body’s energy field.'],
@@ -71,7 +71,7 @@ export default function About() {
           <div className="cert-grid">
             <figure className="reveal"><Picture file="access-bars-practitioner-certificate.webp" alt="Access Bars Practitioner certificate presentation at EL Healing Centre" w={720} h={1280} /><figcaption>Access Bars Practitioner certification</figcaption></figure>
             <figure className="reveal"><Picture file="access-bars-practitioner-certificate-class.webp" alt="Student receiving an Access Bars Practitioner certificate from Sunaina Aggarwal" w={1100} h={825} /><figcaption>Certificate after an Access Bars class</figcaption></figure>
-            <figure className="reveal"><Picture file="counseling-session-sunaina-aggarwal.webp" alt="Sunaina Aggarwal in a one-to-one counseling session" w={720} h={1280} style={{ objectPosition: '50% 30%' }} /><figcaption>One-to-one counseling session</figcaption></figure>
+            <figure className="reveal"><Picture file="counseling-session-sunaina-aggarwal.webp" alt="Sunaina Aggarwal in a one-to-one counseling session" w={dims('counseling-session-sunaina-aggarwal.webp')[0]} h={dims('counseling-session-sunaina-aggarwal.webp')[1]} /><figcaption>One-to-one counseling session</figcaption></figure>
           </div>
         </div>
       </section>
