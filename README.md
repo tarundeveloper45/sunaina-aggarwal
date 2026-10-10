@@ -5,16 +5,19 @@ React 18 + Vite + React Router. Every page is pre-rendered to static HTML at bui
 ## Commands
 - `npm install` – first time only
 - `npm run dev` – local development (http://localhost:5173)
-- `npm run build` – creates the `dist/` folder (19 pages, 404.html, sitemap.xml)
+- `npm run build` – creates the `dist/` folder
 - `npm run preview` – open the built site locally
 
-## Go live (cPanel)
-Upload the **contents of `dist/`** into `public_html` (including the hidden `.htaccess`).
+## Adding people and services (the site is data-driven)
+- **New practitioner** (healer, astrologer, tarot reader, numerologist, …): add one object to `HEALERS` in `src/data/healers.js` (instructions are in the comment under the list). The profile page, list, filters, booking step and sitemap update automatically. Put an optional photo in `public/assets/img/`.
+- **New service**: add one object to `src/data/services.json` (copy an existing entry), add its slug to `MENU_SERVICES` in `src/config.js`, then add the slug to the `services` of the practitioners who offer it.
+- **Classes / swaps**: `SCHEDULE` in `src/data/content.js` (past dates hide themselves).
 
 ## Where to edit
 - `src/config.js` – phone, WhatsApp, email, social links, addresses, maps
 - `src/data/content.js` – FAQs, schedule, testimonials, videos, blog posts
-- `src/data/services.json` – all 9 service pages
 - `src/pages/` – page layouts, `src/components/` – header, footer, shared parts
-- `src/styles.css` – all styling
-- `public/assets/img/` – images
+- `src/*.css` – styling
+
+## Go live
+Push to GitHub – the workflow in `.github/workflows/deploy.yml` builds and publishes the site.

@@ -6,14 +6,14 @@ import { Icon } from '../components/Icon';
 import { Cta, Faq, Gallery, Marquee, Picture, ReadMore, SectionHead, TestimonialSlider, Video, VideoTestimonials } from '../components/ui';
 import { SITE, img } from '../config';
 import { GALLERY, SERVICES, TESTIMONIALS, TRIAGE, VIDEOS, faqHome, longDate } from '../data/content';
-import { HEALERS } from '../data/healers';
+import { HEALERS, filterTags } from '../data/healers';
 
-const HOME_FILTERS = ['All', 'Pranic Healing', 'Access Bars', 'Counselling'];
+const HOME_FILTERS = ['All', ...filterTags(5)];
 const BOOK_STEPS = [['Choose a healer', 'Browse profiles and pick who you would like to sit with.'], ['Pick a service', 'See what each healer offers, with duration and fees.'], ['Select a date', 'Choose a day that works for you.'], ['Choose a time', 'Pick Gurugram, Delhi or online, and a time.'], ['Share your details', 'Send your request — we confirm personally.']];
 
 function HomeHealers() {
   const [f, setF] = useState('All');
-  const list = f === 'All' ? HEALERS : HEALERS.filter((h) => h.tags.includes(f));
+  const list = (f === 'All' ? HEALERS : HEALERS.filter((h) => h.tags.includes(f))).slice(0, 8);
   return (
     <section>
       <div className="container">
@@ -41,17 +41,17 @@ export default function Home() {
     <>
       <Seo
         path="/" noSuffix faq={faqHome}
-        title="EL Healing Centre | Book Healers in Delhi & Gurugram"
-        desc="Meet and book experienced Pranic healers, Access Bars facilitators and counselors at EL Healing Centre in Delhi and Gurugram. Choose a healer, service and time."
+        title="EL Healing Centre | Book Healers & Guides, Delhi NCR"
+        desc="Book experienced healers, counselors, tarot readers, astrologers and numerologists at EL Healing Centre in Delhi and Gurugram. Choose a practitioner, service and time."
       />
 
       <section className="hero">
         <img src={img('energy-healing-hands-banner.webp')} alt="Two hands reaching toward a glowing ball of healing energy" width="1920" height="1294" fetchpriority="high" />
         <div className="container">
           <div className="hero-inner">
-            <span className="eyebrow">A circle of {HEALERS.length} healers · Delhi, Gurugram &amp; Online</span>
-            <h1>Sit with the healer who feels right for you.</h1>
-            <p className="lead">EL Healing Centre brings together experienced Pranic healers, Access Bars facilitators and counselors across Delhi and Gurugram — and online. Browse their profiles, choose a session and book a time that suits you.</p>
+            <span className="eyebrow">A circle of {HEALERS.length} practitioners · Delhi, Gurugram &amp; Online</span>
+            <h1>Find the healer or guide who feels right for you.</h1>
+            <p className="lead">EL Healing Centre brings together experienced healers, counselors, tarot readers, astrologers and numerologists across Delhi and Gurugram — and online. Browse their profiles, choose a session and book a time that suits you.</p>
             <div className="hero-actions">
               <Link className="btn btn-primary" to="/healers/">Meet our healers</Link>
               <Link className="btn btn-ghost" to="/book/">Book a session</Link>
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </section>
 
-<Marquee items={['Pranic Healing', 'Access Bars', 'Crystal Healing', 'Counselling', 'Feng Shui', 'Meditation', 'Business Mentoring']} />
+<Marquee items={['Pranic Healing', 'Access Bars', 'Counselling', 'Astrology', 'Tarot', 'Numerology', 'Feng Shui', 'Meditation', 'Business Mentoring']} />
 
       <HomeHealers />
 
@@ -160,9 +160,9 @@ export default function Home() {
       <section className="dark">
         <div className="container">
           <div className="stats reveal">
-            <div><b className="count" data-to={HEALERS.length}>{HEALERS.length}</b><span>Healers in the circle</span></div>
+            <div><b className="count" data-to={HEALERS.length}>{HEALERS.length}</b><span>Practitioners in the circle</span></div>
             <div><b className="count" data-to="20" data-suffix="+">20+</b><span>Years of practice (our founder)</span></div>
-            <div><b className="count" data-to="10">10</b><span>Healing &amp; guidance services</span></div>
+            <div><b className="count" data-to={SERVICES.length}>{SERVICES.length}</b><span>Healing &amp; guidance services</span></div>
             <div><b className="count" data-to="2">2</b><span>Centres, plus online</span></div>
           </div>
         </div>

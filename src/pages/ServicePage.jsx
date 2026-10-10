@@ -47,7 +47,7 @@ export default function ServicePage() {
             {s.intro.map((p) => <p className="reveal" key={p}>{p}</p>)}
             <h2 className="reveal">Who it is for</h2>
             <ul className="checks reveal">{s.who.map((w) => <li key={w}>{w}</li>)}</ul>
-            <p className="note">This is a complementary wellness practice and not a substitute for medical diagnosis or treatment.</p>
+            <p className="note">{s.note || 'This is a complementary wellness practice and not a substitute for medical diagnosis or treatment.'}</p>
           </div>
           <aside className="glance reveal">
             <h3>At a glance</h3>
@@ -105,14 +105,16 @@ export default function ServicePage() {
         </div>
       </section>
 
-      {offering.length > 0 && (
-        <section className={s.methods ? '' : 'alt'}>
-          <div className="container">
-            <SectionHead eyebrow="Choose your healer" title={`Healers who offer ${s.name}`} text="Open a profile to learn more, or book straight away." />
+      <section className={s.methods ? '' : 'alt'}>
+        <div className="container">
+          <SectionHead eyebrow="Choose your practitioner" title={offering.length ? `Who offers ${s.name}` : `Book ${s.name}`} text={offering.length ? 'Open a profile to learn more, or book straight away.' : 'Tell us what you are looking for and we will match you with a suitable practitioner.'} />
+          {offering.length > 0 ? (
             <div className="grid g3 hgrid">{offering.map((h) => <HealerCard key={h.slug} h={h} />)}</div>
-          </div>
-        </section>
-      )}
+          ) : (
+            <p style={{ textAlign: 'center' }}><Link className="btn btn-primary" to={`/book/?service=${s.slug}`}>Book {s.name}</Link></p>
+          )}
+        </div>
+      </section>
 
       <Cta title={`Ready to book ${s.name}?`} text="Choose a healer, a date and a time — we confirm every request personally." />
     </>

@@ -7,7 +7,7 @@ import { Icon, WhatsAppIcon, SOCIAL_ICONS } from './Icon';
 const NAV = [
   { t: 'Home', to: '/' },
   { t: 'About Us', to: '/about-us/', menu: [['About Sunaina', '/about-us/'], ['Photo Gallery', '/gallery/']], match: ['/about-us', '/gallery'] },
-  { t: 'Healers', to: '/healers/' },
+  { t: 'Practitioners', to: '/healers/' },
   { t: 'Services', to: '/services/', menu: 'services', match: ['/services'] },
   { t: 'Schedules', to: '/schedules/' },
   { t: 'Testimonials', to: '/testimonials/' },
@@ -82,7 +82,7 @@ function Footer() {
         <div className="foot-grid">
           <div>
             <Link className="foot-logo" to="/"><img src={logo} alt="EL Healing Centre logo" width="500" height="138" loading="lazy" /></Link>
-            <p>A circle of experienced healers offering Pranic healing, Access Bars, counseling and spiritual guidance in Delhi &amp; Gurugram — and online. Founded by {SITE.person}.</p>
+            <p>A circle of experienced healers and guides — Pranic healing, Access Bars, counseling, astrology, tarot and numerology — in Delhi &amp; Gurugram and online. Founded by {SITE.person}.</p>
             {socials.length > 0 && (
               <div className="socials">
                 {socials.map(([k, v]) => <a key={k} href={v} target="_blank" rel="noopener noreferrer" aria-label={k}>{SOCIAL_ICONS[k]}</a>)}
@@ -92,7 +92,7 @@ function Footer() {
           <div>
             <h4>Explore</h4>
             <ul>
-              <li><Link to="/">Home</Link></li><li><Link to="/about-us/">About Us</Link></li><li><Link to="/healers/">Our Healers</Link></li><li><Link to="/book/">Book a Session</Link></li><li><Link to="/schedules/">Schedules</Link></li><li><Link to="/gallery/">Gallery</Link></li>
+              <li><Link to="/">Home</Link></li><li><Link to="/about-us/">About Us</Link></li><li><Link to="/healers/">Our Practitioners</Link></li><li><Link to="/book/">Book a Session</Link></li><li><Link to="/schedules/">Schedules</Link></li><li><Link to="/gallery/">Gallery</Link></li>
               <li><Link to="/testimonials/">Testimonials</Link></li><li><Link to="/blog/">Blog</Link></li><li><Link to="/contact-us/">Contact Us</Link></li>
             </ul>
           </div>
@@ -114,7 +114,7 @@ function Footer() {
             <Link className="btn btn-primary" style={{ marginTop: 10 }} to="/contact-us/">Get in Touch</Link>
           </div>
         </div>
-        <p className="disclaimer">Energy healing, Access Bars and counseling are complementary wellness practices. They are not a substitute for medical diagnosis, treatment or emergency care. Always consult a qualified doctor for medical conditions.</p>
+        <p className="disclaimer">Energy healing, Access Bars and counseling are complementary wellness practices and are not a substitute for medical diagnosis, treatment or emergency care. Astrology, tarot and numerology are offered for guidance and reflection only, with no guaranteed outcomes. Always consult a qualified professional for medical, legal or financial matters.</p>
         <div className="copy"><span>© {new Date().getFullYear()} sunainaaggarwal.com — All rights reserved.</span><span><Link to="/contact-us/">Privacy &amp; enquiries</Link></span></div>
       </div>
     </footer>

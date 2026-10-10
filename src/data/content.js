@@ -36,10 +36,12 @@ export const CONCERNS = [
   { id: 'talk', label: 'I want to talk it through', hint: 'Relationships, decisions, clarity', services: ['counseling'] },
   { id: 'mind', label: 'My mind won’t switch off', hint: 'Sleep, overthinking, restlessness', services: ['access-bars', 'personalised-meditation'] },
   { id: 'business', label: 'My business needs direction', hint: 'Growth, blocks, Feng Shui', services: ['business-mentoring', 'feng-shui-home-office'] },
+  { id: 'direction', label: 'I want guidance on my path', hint: 'Career, timing, big decisions', services: ['astrology', 'tarot-reading', 'numerology'] },
 ];
 export const TRIAGE = [
   { concern: 'mind', ico: 'mind', title: 'Emotional & Mind', text: 'Stress, overthinking, restless sleep, grief or burnout.', next: 'Access Bars & Counseling' },
   { concern: 'heavy', ico: 'sun', title: 'Physical & Energy', text: 'Fatigue, feeling drained, tension that keeps coming back.', next: 'Pranic Healing & Energetic Facelift' },
+  { concern: 'direction', ico: 'star', title: 'Guidance & Direction', text: 'Big decisions, timing or a change ahead — and you want perspective.', next: 'Astrology, Tarot & Numerology' },
   { concern: 'business', ico: 'home', title: 'Space & Prosperity', text: 'Feeling stuck in work or money, or friction at home or office.', next: 'Feng Shui & Mentoring' },
 ];
 

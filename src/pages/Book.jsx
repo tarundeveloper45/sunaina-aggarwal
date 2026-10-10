@@ -155,6 +155,7 @@ export default function Book() {
                         <span className="opt-t"><b>{h.name}</b><small>{h.role}</small><small>Since {h.since} · from {rupees(h.price)}</small></span>
                       </button>
                     ))}
+                    {healers.length === 0 && <p className="bk-hint" style={{ gridColumn: '1 / -1' }}>No practitioner is listed for this service yet — choose “Match me” and we will arrange the right person.</p>}
                     <button type="button" className={'opt hp' + (f.healer === 'any' ? ' on' : '')} onClick={() => pickHealer('any')}>
                       <span className="opt-ico"><Icon name="spark" /></span>
                       <span className="opt-t"><b>Match me with a healer</b><small>We will suggest the right person for your concern</small></span>

@@ -885,5 +885,266 @@
    "personalised-meditation",
    "access-consciousness-facilitator"
   ]
+ },
+ {
+  "slug": "astrology",
+  "group": "main",
+  "ico": "star",
+  "name": "Astrology",
+  "title": "Astrology Consultation Delhi NCR",
+  "desc": "Book a Vedic astrology consultation in Delhi, Gurugram or online. Understand your birth chart, timing and life direction with an experienced astrologer.",
+  "h1": "Astrology Consultation in Delhi NCR",
+  "tag": "Understand your birth chart and the seasons of your life with an experienced astrologer.",
+  "img": "chakra-meditation-healing.webp",
+  "alt": "Meditating figure beneath a glowing sun, representing astrology and life direction",
+  "pos": "50% 35%",
+  "intro": [
+   "Astrology reads your birth chart — the sky at the moment and place you were born — to reflect on your strengths, patterns and the timing of different life seasons. Many people consult an astrologer when facing a decision, a transition, or simply to understand themselves better.",
+   "A consultation is a conversation: your practitioner explains what your chart suggests in plain language, helps you see options, and answers your questions. It is offered for guidance and reflection, not as a promise of outcomes."
+  ],
+  "benefits": [
+   [
+    "Birth-chart reading",
+    "A clear walk-through of your chart and what stands out."
+   ],
+   [
+    "Career & direction",
+    "Perspective on work, study and big decisions."
+   ],
+   [
+    "Relationships",
+    "Insight into patterns and compatibility."
+   ],
+   [
+    "Timing",
+    "Understand favourable and challenging periods."
+   ],
+   [
+    "Plain language",
+    "No jargon — explained so it makes sense."
+   ],
+   [
+    "Online or in person",
+    "Consult from anywhere."
+   ]
+  ],
+  "who": [
+   "Anyone at a crossroads in career or life",
+   "People curious about their birth chart",
+   "Couples and families seeking perspective",
+   "Those planning an important event or beginning"
+  ],
+  "glance": [
+   [
+    "Duration",
+    "45–60 minutes"
+   ],
+   [
+    "Format",
+    "In-person or online"
+   ],
+   [
+    "You will need",
+    "Date, time and place of birth"
+   ],
+   [
+    "Location",
+    "Delhi, Gurugram & online"
+   ]
+  ],
+  "faq": [
+   [
+    "What do I need for an astrology consultation?",
+    "Your date, exact time and place of birth. If you do not know the time, share what you can — your astrologer will advise."
+   ],
+   [
+    "Will astrology predict my future exactly?",
+    "No. Astrology is a tool for reflection and guidance. It can highlight tendencies and timing, but it does not guarantee outcomes, and you always remain free to choose."
+   ],
+   [
+    "Can I consult online?",
+    "Yes. Online consultations are available, and the video link arrives with your confirmation."
+   ]
+  ],
+  "related": [
+   "numerology",
+   "tarot-reading",
+   "personalised-meditation"
+  ],
+  "note": "Astrology, tarot and numerology are offered for guidance and reflection. They are not a substitute for medical, legal or financial advice, and no outcome is guaranteed."
+ },
+ {
+  "slug": "tarot-reading",
+  "group": "main",
+  "ico": "cards",
+  "name": "Tarot Reading",
+  "title": "Tarot Reading in Delhi & Gurugram",
+  "desc": "Book a tarot card reading in Delhi, Gurugram or online. Gain clarity and a fresh perspective on love, work and choices with an experienced tarot reader.",
+  "h1": "Tarot Card Reading in Delhi NCR",
+  "tag": "Clarity and a fresh perspective through a guided tarot reading.",
+  "img": "crystal-healing-sphere.webp",
+  "alt": "Hand holding a clear crystal sphere, symbolising insight and guidance",
+  "pos": "50% 40%",
+  "intro": [
+   "Tarot is a centuries-old set of symbolic cards that people use as a mirror — to explore a question, see a situation from new angles and hear their own intuition more clearly. A reading is not fortune-telling; it is a guided conversation shaped by the cards you draw.",
+   "Bring a question about love, work, a decision or simply how you are feeling. Your tarot reader interprets the cards with you, and you leave with perspective and practical next steps."
+  ],
+  "benefits": [
+   [
+    "A fresh perspective",
+    "See your situation from new angles."
+   ],
+   [
+    "Clarity on decisions",
+    "Weigh options with a calmer mind."
+   ],
+   [
+    "Relationships & work",
+    "Reflect on love, career and change."
+   ],
+   [
+    "Guided conversation",
+    "Questions welcome throughout."
+   ],
+   [
+    "Quick and focused",
+    "Short sessions for a specific question."
+   ],
+   [
+    "Online or in person",
+    "Read in the room or over video."
+   ]
+  ],
+  "who": [
+   "People facing a decision or a change",
+   "Anyone wanting a fresh view on love or work",
+   "Those curious to try tarot for the first time",
+   "Seekers who enjoy reflective practices"
+  ],
+  "glance": [
+   [
+    "Duration",
+    "30–45 minutes"
+   ],
+   [
+    "Format",
+    "In-person or online"
+   ],
+   [
+    "Preparation",
+    "Bring a question in mind"
+   ],
+   [
+    "Location",
+    "Delhi, Gurugram & online"
+   ]
+  ],
+  "faq": [
+   [
+    "How should I prepare for a tarot reading?",
+    "Come with a question or a theme — for example love, work or a decision. Open, relaxed and honest is all you need."
+   ],
+   [
+    "Can tarot tell me exactly what will happen?",
+    "No. Tarot is a tool for reflection and guidance, not a guarantee. It helps you think through choices; the decisions remain yours."
+   ],
+   [
+    "Do you offer online readings?",
+    "Yes. Readings can be done over a video call, and the link arrives with your confirmation."
+   ]
+  ],
+  "related": [
+   "astrology",
+   "numerology",
+   "counseling"
+  ],
+  "note": "Astrology, tarot and numerology are offered for guidance and reflection. They are not a substitute for medical, legal or financial advice, and no outcome is guaranteed."
+ },
+ {
+  "slug": "numerology",
+  "group": "main",
+  "ico": "numbers",
+  "name": "Numerology",
+  "title": "Numerology Reading Delhi & Gurugram",
+  "desc": "Book a numerology reading in Delhi, Gurugram or online. Explore your life path, name and personal year numbers with an experienced numerologist.",
+  "h1": "Numerology Reading in Delhi NCR",
+  "tag": "Discover the patterns in your name and date of birth.",
+  "img": "counseling-session-sunaina-aggarwal.webp",
+  "alt": "One-to-one guidance session in a calm consulting room",
+  "pos": "50% 30%",
+  "intro": [
+   "Numerology looks at the numbers in your date of birth and name — such as your life path number and personal year — to reflect on your temperament, strengths and the themes of the year ahead.",
+   "A reading is a friendly, practical conversation. Your numerologist explains what your numbers suggest and how you might use that insight in everyday decisions. It is offered for guidance and self-understanding, not as a guarantee."
+  ],
+  "benefits": [
+   [
+    "Life path number",
+    "Understand your core temperament and strengths."
+   ],
+   [
+    "Name & birth date",
+    "Explore what the numbers in your name suggest."
+   ],
+   [
+    "Personal year",
+    "Reflect on the themes of the year ahead."
+   ],
+   [
+    "Self-understanding",
+    "Put words to patterns you already feel."
+   ],
+   [
+    "Plain language",
+    "Explained simply, with examples."
+   ],
+   [
+    "Online or in person",
+    "Quick, focused sessions."
+   ]
+  ],
+  "who": [
+   "People curious about their numbers",
+   "Anyone planning a new beginning or a new year",
+   "Those wanting a simple tool for reflection",
+   "Parents, couples and friends exploring together"
+  ],
+  "glance": [
+   [
+    "Duration",
+    "30–45 minutes"
+   ],
+   [
+    "Format",
+    "In-person or online"
+   ],
+   [
+    "You will need",
+    "Full name and date of birth"
+   ],
+   [
+    "Location",
+    "Delhi, Gurugram & online"
+   ]
+  ],
+  "faq": [
+   [
+    "What do I need for a numerology reading?",
+    "Your full name as you use it and your date of birth."
+   ],
+   [
+    "Is numerology scientific?",
+    "Numerology is a traditional practice and is not a science. Many people find it a thoughtful way to reflect on themselves."
+   ],
+   [
+    "Can I take it online?",
+    "Yes. Readings can be done over a video call, with the link sent on confirmation."
+   ]
+  ],
+  "related": [
+   "astrology",
+   "tarot-reading",
+   "counseling"
+  ],
+  "note": "Astrology, tarot and numerology are offered for guidance and reflection. They are not a substitute for medical, legal or financial advice, and no outcome is guaranteed."
  }
 ]

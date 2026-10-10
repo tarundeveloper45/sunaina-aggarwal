@@ -42,4 +42,5 @@ export const absImg = (file) => SITE.domain + '/assets/img/' + file;
 export const MENU_SERVICES = [
   'counseling', 'healing', 'pranic-healing', 'access-bars', 'access-consciousness-facilitator', 'access-body-process',
   'personalised-meditation', 'feng-shui-home-office', 'energetic-facials', 'business-mentoring',
+  'astrology', 'tarot-reading', 'numerology',
 ];

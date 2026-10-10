@@ -3,22 +3,25 @@ import { Link } from 'react-router-dom';
 import Seo from '../components/Seo';
 import { HealerCard } from '../components/people';
 import { Cta, PageHero } from '../components/ui';
-import { HEALERS } from '../data/healers';
+import { HEALERS, filterTags } from '../data/healers';
 
-const FILTERS = ['All', 'Pranic Healing', 'Access Bars', 'Reiki', 'Counselling'];
+const FILTERS = ['All', ...filterTags()];
 
 export default function Healers() {
   const [f, setF] = useState('All');
-  const list = f === 'All' ? HEALERS : HEALERS.filter((h) => h.tags.includes(f));
+  const [q, setQ] = useState('');
+  const needle = q.trim().toLowerCase();
+  const list = HEALERS.filter((h) => (f === 'All' || h.tags.includes(f)) && (!needle || (h.name + ' ' + h.role + ' ' + h.tags.join(' ')).toLowerCase().includes(needle)));
   return (
     <>
       <Seo
-        path="/healers/" title="Our Healers & Practitioners" crumbs={[['Healers', '/healers/']]}
-        desc="Meet the healers at EL Healing Centre — Pranic Healing, Access Bars and counseling practitioners in Delhi and Gurugram. View profiles and book a session."
+        path="/healers/" title="Our Practitioners & Healers" crumbs={[['Healers', '/healers/']]}
+        desc="Meet the practitioners at EL Healing Centre — healers, counselors, tarot readers, astrologers and numerologists in Delhi and Gurugram. View profiles and book."
       />
-      <PageHero title="Who would you like to sit with?" text="Meet the circle of practitioners at EL Healing Centre. Open a profile to see their sessions, fees and approach, then book with the person who feels right for you." crumbs={[['Healers']]} />
+      <PageHero title="Who would you like to sit with?" text="Meet our circle of healers and guides. Open a profile to see their sessions and fees, then book with the person who feels right for you." crumbs={[['Healers']]} />
       <section>
         <div className="container">
+          <div className="search"><input type="search" placeholder="Search by name or speciality…" aria-label="Search practitioners" value={q} onChange={(e) => setQ(e.target.value)} /></div>
           <div className="filters" role="group" aria-label="Filter healers by speciality">
             {FILTERS.map((x) => <button type="button" key={x} className={'filter' + (f === x ? ' on' : '')} aria-pressed={f === x} onClick={() => setF(x)}>{x}</button>)}
           </div>
