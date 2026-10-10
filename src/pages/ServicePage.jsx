@@ -47,6 +47,13 @@ export default function ServicePage() {
             {s.intro.map((p) => <p className="reveal" key={p}>{p}</p>)}
             <h2 className="reveal">Who it is for</h2>
             <ul className="checks reveal">{s.who.map((w) => <li key={w}>{w}</li>)}</ul>
+            {s.extra && (
+              <div className="extra-imgs reveal">
+                {s.extra.map(([file, alt, caption]) => (
+                  <figure key={file}><Picture file={file} alt={alt} w={dims(file)[0]} h={dims(file)[1]} /><figcaption>{caption}</figcaption></figure>
+                ))}
+              </div>
+            )}
             <p className="note">{s.note || 'This is a complementary wellness practice and not a substitute for medical diagnosis or treatment.'}</p>
           </div>
           <aside className="glance reveal">

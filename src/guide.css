@@ -1,0 +1,17 @@
+/* Astrology / Tarot / Numerology: home section + extra illustrations on service pages */
+.guide-card{padding:0;overflow:hidden;display:flex;flex-direction:column;text-align:center}
+.guide-img{display:block;aspect-ratio:4/5;overflow:hidden;background:#111}
+.guide-img img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform .8s ease}
+.guide-card:hover .guide-img img{transform:scale(1.05)}
+.guide-card .body{padding:22px 22px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+.guide-card h3{margin:0}
+.guide-card p{margin:0 0 6px}
+.guide-actions{margin-top:auto;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding-top:10px}
+.guide-actions .btn{padding:.55em 1.3em;font-size:var(--fs-sm)}
+
+.extra-imgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--gap);margin:26px 0}
+.extra-imgs figure{margin:0}
+.extra-imgs img{width:100%;height:auto;border-radius:var(--radius);box-shadow:0 8px 24px -14px rgba(80,35,10,.28);background:var(--sand)}
+.extra-imgs figcaption{text-align:center;color:var(--muted);font-size:var(--fs-sm);margin-top:10px}
+.extra-imgs{grid-template-columns:repeat(auto-fit,minmax(240px,520px));justify-content:center}
+.extra-imgs figure{max-width:520px;margin-inline:auto}

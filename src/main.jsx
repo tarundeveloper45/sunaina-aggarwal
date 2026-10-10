@@ -11,6 +11,7 @@ import './profile.css';
 import './fixes.css';
 import './clean.css';
 import './mobile.css';
+import './guide.css';
 
 const root = document.getElementById('root');
 const app = (

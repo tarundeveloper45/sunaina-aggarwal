@@ -895,9 +895,8 @@
   "desc": "Book a Vedic astrology consultation in Delhi, Gurugram or online. Understand your birth chart, timing and life direction with an experienced astrologer.",
   "h1": "Astrology Consultation in Delhi NCR",
   "tag": "Understand your birth chart and the seasons of your life with an experienced astrologer.",
-  "img": "chakra-meditation-healing.webp",
-  "alt": "Meditating figure beneath a glowing sun, representing astrology and life direction",
-  "pos": "50% 35%",
+  "img": "celestial-astrology-chart-poster.webp",
+  "alt": "Celestial astrology chart showing the twelve zodiac signs around the sun and moon",
   "intro": [
    "Astrology reads your birth chart — the sky at the moment and place you were born — to reflect on your strengths, patterns and the timing of different life seasons. Many people consult an astrologer when facing a decision, a transition, or simply to understand themselves better.",
    "A consultation is a conversation: your practitioner explains what your chart suggests in plain language, helps you see options, and answers your questions. It is offered for guidance and reflection, not as a promise of outcomes."
@@ -971,7 +970,14 @@
    "tarot-reading",
    "personalised-meditation"
   ],
-  "note": "Astrology, tarot and numerology are offered for guidance and reflection. They are not a substitute for medical, legal or financial advice, and no outcome is guaranteed."
+  "note": "Astrology, tarot and numerology are offered for guidance and reflection. They are not a substitute for medical, legal or financial advice, and no outcome is guaranteed.",
+  "extra": [
+   [
+    "zodiac-signs-wheel-chart.webp",
+    "The twelve zodiac signs with their rulers and elements",
+    "The zodiac: signs, rulers and elements"
+   ]
+  ]
  },
  {
   "slug": "tarot-reading",
@@ -982,9 +988,8 @@
   "desc": "Book a tarot card reading in Delhi, Gurugram or online. Gain clarity and a fresh perspective on love, work and choices with an experienced tarot reader.",
   "h1": "Tarot Card Reading in Delhi NCR",
   "tag": "Clarity and a fresh perspective through a guided tarot reading.",
-  "img": "crystal-healing-sphere.webp",
-  "alt": "Hand holding a clear crystal sphere, symbolising insight and guidance",
-  "pos": "50% 40%",
+  "img": "tarot-the-high-priestess-card.webp",
+  "alt": "The High Priestess tarot card from the Rider-Waite deck",
   "intro": [
    "Tarot is a centuries-old set of symbolic cards that people use as a mirror — to explore a question, see a situation from new angles and hear their own intuition more clearly. A reading is not fortune-telling; it is a guided conversation shaped by the cards you draw.",
    "Bring a question about love, work, a decision or simply how you are feeling. Your tarot reader interprets the cards with you, and you leave with perspective and practical next steps."
@@ -1058,7 +1063,14 @@
    "numerology",
    "counseling"
   ],
-  "note": "Astrology, tarot and numerology are offered for guidance and reflection. They are not a substitute for medical, legal or financial advice, and no outcome is guaranteed."
+  "note": "Astrology, tarot and numerology are offered for guidance and reflection. They are not a substitute for medical, legal or financial advice, and no outcome is guaranteed.",
+  "extra": [
+   [
+    "tarot-cards-astrological-houses-wheel.webp",
+    "Tarot cards arranged around the twelve astrological houses and zodiac signs",
+    "Tarot meets the twelve houses of the chart"
+   ]
+  ]
  },
  {
   "slug": "numerology",
@@ -1069,9 +1081,8 @@
   "desc": "Book a numerology reading in Delhi, Gurugram or online. Explore your life path, name and personal year numbers with an experienced numerologist.",
   "h1": "Numerology Reading in Delhi NCR",
   "tag": "Discover the patterns in your name and date of birth.",
-  "img": "counseling-session-sunaina-aggarwal.webp",
-  "alt": "One-to-one guidance session in a calm consulting room",
-  "pos": "50% 30%",
+  "img": "numerology-number-grid-poster.webp",
+  "alt": "Numerology poster showing the numbers one to nine with their planetary symbols",
   "intro": [
    "Numerology looks at the numbers in your date of birth and name — such as your life path number and personal year — to reflect on your temperament, strengths and the themes of the year ahead.",
    "A reading is a friendly, practical conversation. Your numerologist explains what your numbers suggest and how you might use that insight in everyday decisions. It is offered for guidance and self-understanding, not as a guarantee."
@@ -1145,6 +1156,13 @@
    "tarot-reading",
    "counseling"
   ],
-  "note": "Astrology, tarot and numerology are offered for guidance and reflection. They are not a substitute for medical, legal or financial advice, and no outcome is guaranteed."
+  "note": "Astrology, tarot and numerology are offered for guidance and reflection. They are not a substitute for medical, legal or financial advice, and no outcome is guaranteed.",
+  "extra": [
+   [
+    "numerology-for-beginners-poster.webp",
+    "Numerology for beginners — numbers one to nine arranged in a circle under a starry sky",
+    "Numerology for beginners"
+   ]
+  ]
  }
 ]

@@ -4,7 +4,7 @@ import { HealerCard, useUpcoming } from '../components/people';
 import Seo from '../components/Seo';
 import { Icon } from '../components/Icon';
 import { Cta, Faq, Gallery, Marquee, Picture, ReadMore, SectionHead, TestimonialSlider, Video, VideoTestimonials } from '../components/ui';
-import { SITE, img } from '../config';
+import { SITE, dims, img } from '../config';
 import { GALLERY, SERVICES, TESTIMONIALS, TRIAGE, VIDEOS, faqHome, longDate } from '../data/content';
 import { HEALERS, filterTags } from '../data/healers';
 
@@ -135,6 +135,31 @@ export default function Home() {
       </section>
 
       <section>
+        <div className="container">
+          <SectionHead eyebrow="Guidance & insight" title="Astrology, Tarot & Numerology" text="Reflective tools for clarity on your path. Consult an astrologer, tarot reader or numerologist — in person or online." />
+          <div className="grid g3 guide-grid">
+            {['astrology', 'tarot-reading', 'numerology'].map((slug) => {
+              const g = SERVICES.find((x) => x.slug === slug);
+              return (
+                <article className="card guide-card reveal" key={slug}>
+                  <Link to={`/services/${slug}/`} className="guide-img" aria-label={g.name}><Picture file={g.img} alt={g.alt} w={dims(g.img)[0]} h={dims(g.img)[1]} /></Link>
+                  <div className="body">
+                    <h3>{g.name}</h3>
+                    <p>{g.tag}</p>
+                    <div className="guide-actions">
+                      <Link className="btn btn-outline" to={`/services/${slug}/`}>Learn more</Link>
+                      <Link className="btn btn-primary" to={`/book/?service=${slug}`}>Book</Link>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+          <p className="bk-hint" style={{ textAlign: 'center', marginTop: 22 }}>Offered for guidance and reflection only — not a substitute for medical, legal or financial advice.</p>
+        </div>
+      </section>
+
+      <section className="alt">
         <div className="container split rev">
           <div className="reveal">
             <span className="eyebrow" style={{ color: 'var(--ember)' }}>Inner balance</span>
