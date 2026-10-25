@@ -11,3 +11,8 @@
 .search{max-width:460px;margin:0 auto 18px}
 .search input{width:100%;padding:13px 18px 13px 44px;border:1.5px solid var(--line);border-radius:999px;font:inherit;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236A5A50' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5'/%3E%3C/svg%3E") 16px center/18px no-repeat;color:var(--ink)}
 .search input:focus{outline:none;border-color:var(--ember)}
+
+/* About: session formats under the stats */
+.formats{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;list-style:none;padding:0;margin:36px 0 0}
+.formats li{display:inline-flex;align-items:center;gap:10px;padding:.6em 1.3em;border:1px solid rgba(255,255,255,.25);border-radius:999px;color:#F3E3D3;font-size:var(--fs-card)}
+.formats svg{width:20px;height:20px;color:var(--gold)}

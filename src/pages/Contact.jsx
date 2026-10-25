@@ -37,7 +37,7 @@ export default function Contact() {
               <li><span className="ico"><Icon name="phone" /></span><div><b>Call</b><a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a></div></li>
               <li><span className="ico"><Icon name="chat" /></span><div><b>WhatsApp</b><a href={`https://wa.me/${SITE.wa}`} target="_blank" rel="noopener noreferrer">Chat with us</a></div></li>
               <li><span className="ico"><Icon name="mail" /></span><div><b>Email</b><a href={`mailto:${SITE.email}`}>{SITE.email}</a></div></li>
-              <li><span className="ico"><Icon name="clock" /></span><div><b>Hours</b><span>Gurugram: Mon – Sat, 10 am – 6 pm · Delhi: Thursdays, 12 – 4 pm. By appointment — <Link to="/book/">book a slot</Link></span></div></li>
+              <li><span className="ico"><Icon name="clock" /></span><div><b>Hours</b><span>Gurugram: Mon – Sat, 12 – 4 pm · Delhi: Thursdays, 12 – 4 pm. By appointment — <Link to="/book/">book a slot</Link></span></div></li>
             </ul>
           </div>
 

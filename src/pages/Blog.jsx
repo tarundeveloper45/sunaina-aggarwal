@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import Seo from '../components/Seo';
 import { Crumbs, Cta, PageHero, Picture, Rich } from '../components/ui';
-import { SITE, abs } from '../config';
+import { SITE, abs, dims } from '../config';
 import { POSTS } from '../data/content';
 import NotFound from './NotFound';
 
@@ -18,7 +18,7 @@ export function BlogIndex() {
           <div className="grid g3">
             {POSTS.map((p) => (
               <article className="card post-card reveal" key={p.slug}>
-                <Link to={`/blog/${p.slug}/`}><Picture file={p.img} alt={p.alt} w={1400} h={933} /></Link>
+                <Link to={`/blog/${p.slug}/`}><Picture file={p.img} alt={p.alt} w={dims(p.img)[0]} h={dims(p.img)[1]} /></Link>
                 <div className="body">
                   <span className="meta">Guide · {SITE.published}</span>
                   <h3><Link to={`/blog/${p.slug}/`}>{p.title}</Link></h3>
@@ -57,7 +57,7 @@ export function BlogPost() {
       </section>
       <section>
         <div className="container article">
-          <Picture className="cover" file={p.img} alt={p.alt} w={1400} h={933} eager />
+          <Picture className="cover" file={p.img} alt={p.alt} w={dims(p.img)[0]} h={dims(p.img)[1]} eager />
           <div className="prose">
             {p.body.map(([type, v], i) => {
               if (type === 'h2') return <h2 key={i}>{v}</h2>;

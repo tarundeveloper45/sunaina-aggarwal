@@ -50,7 +50,7 @@ export default function Book() {
   }, [healer]);
   const suggested = concern ? concern.services : [];
   const healers = f.service && !params.get('healer') ? HEALERS.filter((h) => h.services.includes(f.service)) : HEALERS;
-  const fee = healer ? healer.price : 3000;
+  const fee = healer ? healer.price : 1500;
   const places = f.date ? placesOn(f.date) : [];
   const slots = f.date && f.place ? slotsFor(f.place, f.date) : [];
   const placeShort = (PLACES.find((p) => p.id === f.place) || {}).short || '';
@@ -206,7 +206,7 @@ export default function Book() {
                       );
                     })}
                   </div>
-                  <p className="bk-hint">Gurugram: Mon – Sat · Delhi: Thursdays · Online: every day.</p>
+                  <p className="bk-hint">Gurugram: Mon – Sat, 12 – 4 pm · Delhi: Thursdays, 12 – 4 pm · Online: every day.</p>
                 </div>
               )}
 

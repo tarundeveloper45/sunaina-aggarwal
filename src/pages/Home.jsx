@@ -115,7 +115,7 @@ export default function Home() {
         <div className="container">
           <SectionHead eyebrow="Find what’s right for you" title="Healing & counseling services" text="Would you like to choose something that ignites enthusiasm within you, that gives you confidence, that creates space to explore? Start with the path that calls to you." />
           <div className="grid g3">
-            {['healing', 'counseling', 'energetic-facials'].map((slug) => {
+            {['counseling', 'healing', 'energetic-facials'].map((slug) => {
               const s = SERVICES.find((x) => x.slug === slug);
               return (
                 <article className="card svc-card reveal" key={slug}>

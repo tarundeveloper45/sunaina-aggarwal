@@ -10,7 +10,7 @@ const METHODS = [
   ['bars', 'Access Consciousness', 'Certified Access Bars and Body Process facilitation for deep relaxation and letting go.'],
   ['chat', 'Psychotherapy & Counseling', 'Supportive conversation to understand patterns, relationships and life decisions.'],
   ['home', 'Feng Shui', 'Harmonising homes and workplaces so that energy supports prosperity and peace.'],
-  ['lotus', 'Arhatic Yoga & Meditation', 'Personalised meditations and breath practices for calm, clarity and spiritual growth.'],
+  ['star', 'Astrology', 'Birth-chart guidance for clarity on career, relationships and timing.'],
 ];
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
       <Seo
         path="/about-us/" title="About Sunaina Aggarwal – Healer & Mentor" crumbs={[['About Us', '/about-us/']]}
         desc="Meet Sunaina Aggarwal, Pranic Healing instructor, Access Consciousness facilitator, trainer and mentor helping people heal since 2005 in Delhi and Gurugram."
-        schema={[{ '@type': 'Person', '@id': SITE.domain + '/#sunaina', name: SITE.person, jobTitle: 'Pranic Healer & Spiritual Mentor', worksFor: { '@id': SITE.domain + '/#business' }, url: abs('/about-us/'), knowsAbout: ['Pranic Healing', 'Crystal Healing', 'Access Bars', 'Feng Shui', 'Psychotherapy', 'Arhatic Yoga'] }]}
+        schema={[{ '@type': 'Person', '@id': SITE.domain + '/#sunaina', name: SITE.person, jobTitle: 'Pranic Healer & Spiritual Mentor', worksFor: { '@id': SITE.domain + '/#business' }, url: abs('/about-us/'), knowsAbout: ['Pranic Healing', 'Crystal Healing', 'Access Bars', 'Feng Shui', 'Psychotherapy', 'Astrology'] }]}
       />
       <PageHero title="About Sunaina Aggarwal" text="Healer, trainer, mentor and guide — helping people find balance in health, relationships, business and spirit." crumbs={[['About Us']]} />
 
@@ -45,11 +45,16 @@ export default function About() {
       <section className="dark">
         <div className="container">
           <div className="stats reveal">
+            <div><b className="count" data-to="11047" data-suffix="+" data-fmt="in">11,047+</b><span>Students trained</span></div>
+            <div><b className="count" data-to="208000" data-suffix="+" data-fmt="in">2,08,000+</b><span>Healing sessions done successfully</span></div>
             <div><b className="count" data-to="20" data-suffix="+">20+</b><span>Years of healing practice</span></div>
             <div><b className="count" data-to="2008">2008</b><span>Teaching since</span></div>
-            <div><b className="count" data-to="6">6</b><span>Healing disciplines</span></div>
-            <div><b>1:1</b><span>Personalised sessions</span></div>
           </div>
+          <ul className="formats reveal" aria-label="Session formats">
+            <li><Icon name="chat" />Psychotherapy sessions</li>
+            <li><Icon name="heart" />Couple sessions</li>
+            <li><Icon name="hands" />Group sessions</li>
+          </ul>
         </div>
       </section>
 

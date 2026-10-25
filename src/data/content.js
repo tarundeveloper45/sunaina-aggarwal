@@ -58,7 +58,7 @@ export const POSTS = [
   {
     slug: 'what-is-pranic-healing-and-how-does-it-work',
     title: 'What Is Pranic Healing and How Does It Work?', seo: 'What Is Pranic Healing & How It Works',
-    img: 'energy-healing-session-hands-over-client.webp', alt: 'Hands held over a client during an energy healing session',
+    img: 'pranic-healing-session-delhi.webp', alt: 'Sunaina Aggarwal giving a healing session to a client in Delhi',
     desc: 'Learn what Pranic Healing is, how a session works, who it helps and what to expect — explained simply by Delhi NCR energy healer Sunaina Aggarwal.',
     excerpt: 'A simple guide to the no-touch energy healing system and what happens in a session.',
     body: [
@@ -78,7 +78,7 @@ export const POSTS = [
   {
     slug: 'access-bars-session-what-to-expect',
     title: 'Access Bars: What to Expect in Your First Session', seo: 'Access Bars: What to Expect',
-    img: 'crystal-healing-sphere.webp', alt: 'Calm healer offering a crystal sphere, symbolising gentle energy work',
+    img: 'access-bars-workshop-gurugram.webp', alt: 'Students and clients at an Access Bars workshop in Gurugram',
     desc: 'Curious about Access Bars? Find out how the 32-point process works, how long a session lasts and what you may feel, with certified facilitator Sunaina Aggarwal.',
     excerpt: 'Everything you need to know before your first Access Bars session or class.',
     body: [
@@ -97,7 +97,7 @@ export const POSTS = [
   {
     slug: 'feng-shui-tips-for-home-and-office',
     title: '7 Simple Feng Shui Tips for Your Home and Office', seo: '7 Simple Feng Shui Tips for Home',
-    img: 'energetic-facial-treatment.webp', alt: 'Calm, uncluttered space reflecting Feng Shui principles',
+    img: 'healing-session-practice-at-home.webp', alt: 'A calm, uncluttered room set up at home',
     desc: 'Seven easy Feng Shui tips to improve energy flow at home and in the workplace — from decluttering to entrance and desk placement — by expert Sunaina Aggarwal.',
     excerpt: 'Seven practical Feng Shui ideas you can apply this weekend, with no renovation needed.',
     body: [

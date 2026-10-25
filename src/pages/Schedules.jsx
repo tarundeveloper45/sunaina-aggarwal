@@ -42,7 +42,7 @@ export default function Schedules() {
 
           <h2 style={{ marginTop: 50 }}>Regular hours at our centres</h2>
           <div className="grid g2" style={{ marginTop: 18 }}>
-            <div className="card"><h3>Gurugram</h3><p>E-5/6, DLF Phase 1, Gurugram<br /><strong>Mon – Sat, 10 am – 6 pm</strong> (by appointment)</p></div>
+            <div className="card"><h3>Gurugram</h3><p>E-5/6, DLF Phase 1, Gurugram<br /><strong>Mon – Sat, 12 pm – 4 pm</strong> (by appointment)</p></div>
             <div className="card"><h3>Delhi</h3><p>Paschim Vihar, New Delhi<br /><strong>Thursdays, 12 pm – 4 pm</strong> (by appointment)</p></div>
           </div>
 

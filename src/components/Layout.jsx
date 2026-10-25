@@ -99,7 +99,7 @@ function Footer() {
           <div>
             <h4>Services</h4>
             <ul>
-              {['healing', 'pranic-healing', 'access-bars', 'counseling', 'feng-shui-home-office', 'business-mentoring'].map((s) => (
+              {['counseling', 'healing', 'pranic-healing', 'access-bars', 'feng-shui-home-office', 'business-mentoring'].map((s) => (
                 <li key={s}><Link to={`/services/${s}/`}>{SERVICE_BY[s].name.replace(' For Home And Office', '')}</Link></li>
               ))}
             </ul>
@@ -163,7 +163,7 @@ function PageEffects() {
         const el = e.target, to = +el.dataset.to, suf = el.dataset.suffix || '', t0 = performance.now(), dur = 1600;
         const tick = (t) => {
           const p = Math.min((t - t0) / dur, 1), v = Math.round(to * (1 - Math.pow(1 - p, 3)));
-          el.textContent = v + suf;
+          el.textContent = (el.dataset.fmt ? v.toLocaleString('en-IN') : v) + suf;
           if (p < 1) requestAnimationFrame(tick);
         };
         el.textContent = '0' + suf;

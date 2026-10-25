@@ -1,5 +1,91 @@
 [
  {
+  "slug": "counseling",
+  "group": "main",
+  "ico": "chat",
+  "name": "Counselling",
+  "title": "Individual & Couples Counseling Delhi",
+  "desc": "Confidential one-to-one counseling with Sunaina Aggarwal in Delhi and Gurugram for stress, relationships and life decisions. Practical, compassionate guidance.",
+  "h1": "Individual & Couples Counselling in Delhi & Gurugram",
+  "tag": "Compassionate listening and gentle energetic clearing for you and your relationships.",
+  "img": "counseling-session-sunaina-aggarwal.webp",
+  "alt": "Sunaina Aggarwal in a one-to-one counseling session with a client",
+  "intro": [
+   "Relationships and personal identities go through rough seasons. Sunaina combines compassionate listening with subconscious, energetic clearing to help restore closeness, open communication and ease old family patterns.",
+   "Sessions are private, unhurried and focused on you — or on the two of you. You leave with understanding, simple tools and a clear next step, not generic advice."
+  ],
+  "benefits": [
+   [
+    "Be heard",
+    "A safe, non-judgemental space to talk openly."
+   ],
+   [
+    "Clarity",
+    "Understand thought patterns and emotional triggers."
+   ],
+   [
+    "Relationship insight",
+    "Navigate family and partner challenges."
+   ],
+   [
+    "Practical tools",
+    "Strategies that fit your everyday life."
+   ],
+   [
+    "Combined approach",
+    "Pair talk-based counselling with energy healing."
+   ],
+   [
+    "Confidential",
+    "Your conversations stay private."
+   ]
+  ],
+  "who": [
+   "Couples wanting to rebuild communication and closeness",
+   "Anyone feeling overwhelmed, anxious or low",
+   "People facing family or relationship challenges",
+   "Professionals facing career or life decisions"
+  ],
+  "glance": [
+   [
+    "Duration",
+    "60 minutes"
+   ],
+   [
+    "Format",
+    "In-person or online"
+   ],
+   [
+    "Level",
+    "Confidential 1:1"
+   ],
+   [
+    "Location",
+    "Delhi, Gurugram & online"
+   ]
+  ],
+  "faq": [
+   [
+    "How is counselling different from healing?",
+    "Counselling works through conversation — thought patterns, relationships and decisions. Healing works on the energetic level. Many clients combine both."
+   ],
+   [
+    "Is everything I share confidential?",
+    "Yes. Your conversations are private and handled with care and respect."
+   ],
+   [
+    "Do you provide medical or psychiatric treatment?",
+    "No. Counselling here is supportive guidance, not a replacement for a psychiatrist or doctor. If you need clinical care you will be encouraged to consult a qualified professional."
+   ]
+  ],
+  "related": [
+   "business-mentoring",
+   "feng-shui-home-office",
+   "personalised-meditation"
+  ],
+  "pos": "50% 30%"
+ },
+ {
   "slug": "healing",
   "group": "main",
   "ico": "hands",
@@ -102,92 +188,6 @@
    "energetic-facials"
   ],
   "pos": "50% 35%"
- },
- {
-  "slug": "counseling",
-  "group": "main",
-  "ico": "chat",
-  "name": "Counselling",
-  "title": "Individual & Couples Counseling Delhi",
-  "desc": "Confidential one-to-one counseling with Sunaina Aggarwal in Delhi and Gurugram for stress, relationships and life decisions. Practical, compassionate guidance.",
-  "h1": "Individual & Couples Counselling in Delhi & Gurugram",
-  "tag": "Compassionate listening and gentle energetic clearing for you and your relationships.",
-  "img": "counseling-session-sunaina-aggarwal.webp",
-  "alt": "Sunaina Aggarwal in a one-to-one counseling session with a client",
-  "intro": [
-   "Relationships and personal identities go through rough seasons. Sunaina combines compassionate listening with subconscious, energetic clearing to help restore closeness, open communication and ease old family patterns.",
-   "Sessions are private, unhurried and focused on you — or on the two of you. You leave with understanding, simple tools and a clear next step, not generic advice."
-  ],
-  "benefits": [
-   [
-    "Be heard",
-    "A safe, non-judgemental space to talk openly."
-   ],
-   [
-    "Clarity",
-    "Understand thought patterns and emotional triggers."
-   ],
-   [
-    "Relationship insight",
-    "Navigate family and partner challenges."
-   ],
-   [
-    "Practical tools",
-    "Strategies that fit your everyday life."
-   ],
-   [
-    "Combined approach",
-    "Pair talk-based counselling with energy healing."
-   ],
-   [
-    "Confidential",
-    "Your conversations stay private."
-   ]
-  ],
-  "who": [
-   "Couples wanting to rebuild communication and closeness",
-   "Anyone feeling overwhelmed, anxious or low",
-   "People facing family or relationship challenges",
-   "Professionals facing career or life decisions"
-  ],
-  "glance": [
-   [
-    "Duration",
-    "60 minutes"
-   ],
-   [
-    "Format",
-    "In-person or online"
-   ],
-   [
-    "Level",
-    "Confidential 1:1"
-   ],
-   [
-    "Location",
-    "Delhi, Gurugram & online"
-   ]
-  ],
-  "faq": [
-   [
-    "How is counselling different from healing?",
-    "Counselling works through conversation — thought patterns, relationships and decisions. Healing works on the energetic level. Many clients combine both."
-   ],
-   [
-    "Is everything I share confidential?",
-    "Yes. Your conversations are private and handled with care and respect."
-   ],
-   [
-    "Do you provide medical or psychiatric treatment?",
-    "No. Counselling here is supportive guidance, not a replacement for a psychiatrist or doctor. If you need clinical care you will be encouraged to consult a qualified professional."
-   ]
-  ],
-  "related": [
-   "business-mentoring",
-   "feng-shui-home-office",
-   "personalised-meditation"
-  ],
-  "pos": "50% 30%"
  },
  {
   "slug": "pranic-healing",
@@ -455,8 +455,8 @@
   "desc": "Explore Access Body Process with Sunaina Aggarwal in Delhi and Gurugram. A gentle hands-on method to release stored stress and judgements about the body.",
   "h1": "Access Body Process in Delhi & Gurugram",
   "tag": "A caring, hands-on process to change how you relate to your body.",
-  "img": "energetic-facial-treatment.webp",
-  "alt": "Relaxed client lying down during a gentle body-focused healing session",
+  "img": "access-bars-class-students-practising.webp",
+  "alt": "Students practising a hands-on body process in class",
   "intro": [
    "The Access Body Process works with your relationship to your body. It is a gentle, hands-on method that helps release judgements, stored stress and unhelpful beliefs about health, weight, ageing, pain and more.",
    "It is often taken as a follow-up to Access Bars. Sunaina offers one-to-one sessions as well as classes so you can learn simple body-care techniques to use at home."
@@ -529,7 +529,8 @@
    "access-bars",
    "energetic-facials",
    "access-consciousness-facilitator"
-  ]
+  ],
+  "pos": "50% 30%"
  },
  {
   "slug": "personalised-meditation",
@@ -540,8 +541,8 @@
   "desc": "Get a meditation practice designed for you by Sunaina Aggarwal — calm, focus, sleep or healing — using Arhatic Yoga and breathwork in Delhi and Gurugram.",
   "h1": "Personalised Meditation in Delhi & Gurugram",
   "tag": "No two minds are alike — your meditation should not be generic either.",
-  "img": "energy-healing-hands-banner.webp",
-  "alt": "Two hands reaching toward a glowing ball of energy, symbolising meditation and healing",
+  "img": "chakra-meditation-healing.webp",
+  "alt": "Meditating figure with glowing chakra points beneath a golden sun",
   "intro": [
    "Many people try meditation and give up because the method does not suit them. Personalised meditation starts with you — your goal, your temperament and your daily routine — and builds a practice that fits.",
    "Drawing on Arhatic Yoga, breathwork and guided visualisation, Sunaina designs a practice for calm, focus, better sleep, emotional healing or spiritual growth. You learn it in session and receive simple steps to continue at home."
@@ -614,7 +615,8 @@
    "access-bars",
    "business-mentoring",
    "energetic-facials"
-  ]
+  ],
+  "pos": "50% 35%"
  },
  {
   "slug": "feng-shui-home-office",
@@ -625,8 +627,8 @@
   "desc": "Feng Shui consultation for homes, shops and offices in Delhi and Gurugram with Sunaina Aggarwal. Practical, no-renovation remedies for harmony and prosperity.",
   "h1": "Feng Shui for Home & Office in Delhi NCR",
   "tag": "Harmonise your space — for health, prosperity and peace of mind.",
-  "img": "energetic-facial-treatment.webp",
-  "alt": "Calm uncluttered interior reflecting Feng Shui principles",
+  "img": "healing-session-practice-at-home.webp",
+  "alt": "A calm home room set up for a healing session",
   "intro": [
    "Your surroundings reflect and shape how you feel. Stagnant corners in a home or office can go hand in hand with stress, friction and a sense of being stuck. Sunaina offers spatial energy audits for homes and workplaces — without disruptive structural changes.",
    "Most remedies are simple adjustments in placement, colour, direction and elements, explained clearly so you can apply them yourself."
@@ -713,7 +715,8 @@
     "brief",
     "For executive suites, boardrooms and showrooms: desk placement for focus and authority, cash counter and sales-floor direction, and calmer collaboration zones for the team."
    ]
-  ]
+  ],
+  "pos": "50% 35%"
  },
  {
   "slug": "energetic-facials",
@@ -724,8 +727,8 @@
   "desc": "Relax with energetic facials and beauty treatments by Sunaina Aggarwal in Gurugram and Delhi. Gentle skin care combined with energy balancing for a natural glow.",
   "h1": "Energetic Facials & Beauty Treatment",
   "tag": "A gentle, hands-on facial using subtle energies — leave relaxed, refreshed and glowing.",
-  "img": "energetic-facial-treatment.webp",
-  "alt": "Woman relaxing during an energetic facial treatment",
+  "img": "access-bars-session-sunaina-aggarwal.webp",
+  "alt": "Sunaina Aggarwal giving a gentle hands-on energy treatment to a client",
   "intro": [
    "The Access Energetic Facelift is a non-invasive, hands-on treatment that works with subtle energies on the face and neck while inviting you to let go of judgements about ageing.",
    "Clients enjoy a deeply relaxing hour that leaves skin looking fresh and the face softer — with no needles and no downtime. Sunaina tailors each treatment to you."
@@ -798,7 +801,8 @@
    "access-body-process",
    "access-bars",
    "personalised-meditation"
-  ]
+  ],
+  "pos": "50% 28%"
  },
  {
   "slug": "business-mentoring",
@@ -809,8 +813,8 @@
   "desc": "Business mentoring by Sunaina Aggarwal in Gurugram and Delhi. Gain clarity, clear mindset blocks and balance workplace energy with practical guidance.",
   "h1": "Business Mentoring in Gurugram & Delhi",
   "tag": "Shift from stress and scarcity to clarity, focus and confident growth.",
-  "img": "crystal-healing-sphere.webp",
-  "alt": "Mentor offering a crystal sphere as a symbol of clarity for business owners",
+  "img": "counseling-session-sunaina-aggarwal.webp",
+  "alt": "A one-to-one mentoring conversation at a desk",
   "intro": [
    "Many entrepreneurs build their businesses from stress, friction and anxiety. Business mentoring with Sunaina helps founders, professionals and business owners align their vision with ease — working with mindset blocks around money, visibility and self-doubt.",
    "Sessions combine honest conversation, mindset work and energy balancing, supported by Feng Shui insights for your workplace. It is practical, confidential and focused on the next right step.",
@@ -884,7 +888,8 @@
    "feng-shui-home-office",
    "personalised-meditation",
    "access-consciousness-facilitator"
-  ]
+  ],
+  "pos": "50% 30%"
  },
  {
   "slug": "astrology",
@@ -988,8 +993,8 @@
   "desc": "Book a tarot card reading in Delhi, Gurugram or online. Gain clarity and a fresh perspective on love, work and choices with an experienced tarot reader.",
   "h1": "Tarot Card Reading in Delhi NCR",
   "tag": "Clarity and a fresh perspective through a guided tarot reading.",
-  "img": "tarot-the-high-priestess-card.webp",
-  "alt": "The High Priestess tarot card from the Rider-Waite deck",
+  "img": "tarot-reading-cards-on-table.webp",
+  "alt": "A tarot reader laying out cards on a table during a reading",
   "intro": [
    "Tarot is a centuries-old set of symbolic cards that people use as a mirror — to explore a question, see a situation from new angles and hear their own intuition more clearly. A reading is not fortune-telling; it is a guided conversation shaped by the cards you draw.",
    "Bring a question about love, work, a decision or simply how you are feeling. Your tarot reader interprets the cards with you, and you leave with perspective and practical next steps."
@@ -1065,6 +1070,16 @@
   ],
   "note": "Astrology, tarot and numerology are offered for guidance and reflection. They are not a substitute for medical, legal or financial advice, and no outcome is guaranteed.",
   "extra": [
+   [
+    "tarot-reading-session-with-client.webp",
+    "A tarot reading in progress with a client at the table",
+    "A tarot reading in progress"
+   ],
+   [
+    "tarot-the-high-priestess-card.webp",
+    "The High Priestess tarot card from the Rider-Waite deck",
+    "The High Priestess"
+   ],
    [
     "tarot-cards-astrological-houses-wheel.webp",
     "Tarot cards arranged around the twelve astrological houses and zodiac signs",

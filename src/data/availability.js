@@ -1,8 +1,8 @@
 // Centres and the hours they are open for sessions. A booking is a *request* that the team confirms
 // on WhatsApp, so these are the times people can ask for, not live diary slots.
 export const PLACES = [
-  { id: 'Gurugram – DLF Phase 1', short: 'Gurugram', note: 'DLF Phase 1 · Mon – Sat', days: [1, 2, 3, 4, 5, 6], from: 10, to: 18 },
-  { id: 'Delhi – Paschim Vihar', short: 'Delhi', note: 'Paschim Vihar · Thursdays', days: [4], from: 12, to: 16 },
+  { id: 'Gurugram – DLF Phase 1', short: 'Gurugram', note: 'DLF Phase 1 · Mon – Sat, 12 – 4 pm', days: [1, 2, 3, 4, 5, 6], from: 12, to: 16 },
+  { id: 'Delhi – Paschim Vihar', short: 'Delhi', note: 'Paschim Vihar · Thursdays, 12 – 4 pm', days: [4], from: 12, to: 16 },
   { id: 'Online (video call)', short: 'Online', note: 'Video link sent on confirmation', days: [0, 1, 2, 3, 4, 5, 6], from: 10, to: 19 },
 ];
 
