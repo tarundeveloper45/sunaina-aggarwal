@@ -11,7 +11,7 @@
   "img": "counseling-session-sunaina-aggarwal.webp",
   "alt": "Sunaina Aggarwal in a one-to-one counseling session with a client",
   "intro": [
-   "Relationships and personal identities go through rough seasons. Sunaina combines compassionate listening with subconscious, energetic clearing to help restore closeness, open communication and ease old family patterns.",
+   "Relationships and personal identities go through rough seasons. Our counsellor combines compassionate listening with subconscious, energetic clearing to help restore closeness, open communication and ease old family patterns.",
    "Sessions are private, unhurried and focused on you — or on the two of you. You leave with understanding, simple tools and a clear next step, not generic advice."
   ],
   "benefits": [
@@ -83,19 +83,27 @@
    "feng-shui-home-office",
    "personalised-meditation"
   ],
-  "pos": "50% 30%"
+  "pos": "50% 30%",
+  "prices": {
+   "sunaina": {
+    "amount": 6000
+   },
+   "others": {
+    "amount": 2000
+   }
+  }
  },
  {
   "slug": "healing",
   "group": "main",
   "ico": "hands",
-  "name": "Healing",
+  "name": "Healing Practice Sessions",
   "title": "Pranic & Crystal Healing in Delhi",
   "desc": "Book Pranic Healing and Crystal Healing sessions with Sunaina Aggarwal in Delhi and Gurugram. Gentle energy healing for body, mind and spirit.",
-  "h1": "Healing Services in Delhi & Gurugram",
+  "h1": "Healing Practice Sessions in Delhi & Gurugram",
   "tag": "Pranic Healing and Crystal Healing — gentle energy work to release stress and feel like yourself again.",
-  "img": "group-healing-class-gurugram.webp",
-  "alt": "Clients receiving energy healing at a group class at EL Healing Centre, Gurugram",
+  "img": "chakra-energy-healing-session.webp",
+  "alt": "Client resting during an energy healing session, with the chakras shown as glowing crystals",
   "intro": [
    "Every body carries an energy field. When stress, emotional hurt or illness disturbs it, we feel tired, heavy, anxious or stuck. Healing sessions at EL Healing Centre work on that energy field — calmly, safely and without any invasive procedure.",
    "Sunaina Aggarwal has practised healing since 2005 and teaches several modalities. Each session begins by understanding your concern, then selecting the right combination of Pranic Healing or crystals for you. Clients visit from across Delhi, Gurugram and NCR, and many also book online sessions."
@@ -149,7 +157,7 @@
   "glance": [
    [
     "Duration",
-    "45–60 minutes"
+    "30 minutes"
    ],
    [
     "Format",
@@ -187,7 +195,13 @@
    "access-bars",
    "energetic-facials"
   ],
-  "pos": "50% 35%"
+  "pos": "50% 40%",
+  "prices": {
+   "sunaina": {
+    "amount": 1500,
+    "duration": "30 minutes"
+   }
+  }
  },
  {
   "slug": "pranic-healing",
@@ -198,9 +212,9 @@
   "desc": "No-touch Pranic Healing and aura cleansing with Sunaina Aggarwal in Gurugram and Delhi, in person or by distance. Gentle energy work for vitality and calm.",
   "h1": "Pranic Healing & Aura Cleansing in Delhi NCR",
   "tag": "Cleanse energetic congestion and support the body’s natural recovery.",
-  "img": "energy-healing-session-sunaina-aggarwal.webp",
-  "alt": "Sunaina Aggarwal giving a Pranic energy healing session to a client",
-  "pos": "50% 22%",
+  "img": "pranic-healing-energy-hands-over-client.webp",
+  "alt": "Healer’s hands held over a relaxed client during an energy healing session",
+  "pos": "50% 35%",
   "intro": [
    "Pranic Healing is a precise, no-touch energy discipline that uses prana — universal life force — to support emotional and physical vitality. By scanning your aura and major chakras, Sunaina finds depleted or congested energy, cleanses it and energises the area.",
    "Sunaina is a former Pranic Healing instructor with many years of practice. Sessions are available in person at our Gurugram and Delhi centres, and as distance energy healing over a call."
@@ -273,7 +287,17 @@
    "access-bars",
    "healing",
    "personalised-meditation"
-  ]
+  ],
+  "prices": {
+   "sunaina": {
+    "amount": 7500,
+    "from": true
+   },
+   "others": {
+    "amount": 1500,
+    "from": true
+   }
+  }
  },
  {
   "slug": "access-bars",
@@ -288,7 +312,7 @@
   "alt": "Access Bars workshop with students and clients at EL Healing Centre, Gurugram",
   "intro": [
    "There are 32 points on your head that are said to relate to the thoughts, ideas, attitudes and beliefs we hold. Touching these points gently allows the mind to slow down into deep relaxation — without having to re-live the past.",
-   "Sunaina Aggarwal is a certified Access Consciousness facilitator. She offers one-to-one Access Bars sessions at DLF Phase 1, Gurugram and Paschim Vihar, Delhi, and also teaches classes so you can learn to give Bars to family and friends."
+   "Sunaina Aggarwal is a certified Access Consciousness facilitator. She and other Access Bars facilitators offer one-to-one sessions at DLF Phase 1, Gurugram and Paschim Vihar, Delhi, and also teach classes so you can learn to give Bars to family and friends."
   ],
   "benefits": [
    [
@@ -355,96 +379,111 @@
    ]
   ],
   "related": [
-   "access-body-process",
-   "access-consciousness-facilitator",
-   "personalised-meditation"
+   "symphony-of-possibilities",
+   "energetic-synthesis-of-being",
+   "access-body-process"
   ],
-  "pos": "50% 30%"
+  "pos": "50% 30%",
+  "prices": {
+   "sunaina": {
+    "amount": 15000
+   },
+   "others": {
+    "amount": 3000
+   }
+  }
  },
  {
-  "slug": "access-consciousness-facilitator",
   "group": "healing",
-  "ico": "spark",
-  "name": "Access Consciousness Certified Facilitator",
-  "title": "Access Consciousness Facilitator Delhi",
-  "desc": "Work with Sunaina Aggarwal, certified Access Consciousness facilitator in Delhi NCR. Practical tools and questions to move from limitation to possibility.",
-  "h1": "Access Consciousness Certified Facilitator",
-  "tag": "Practical tools and questions that help you move from limitation to possibility.",
-  "img": "access-bars-practitioner-certificate-class.webp",
-  "alt": "Student receiving an Access Bars Practitioner certificate from Sunaina Aggarwal",
-  "intro": [
-   "Access Consciousness is a set of simple tools, questions and processes designed to help you become more aware and make clearer choices in every area of life — money, relationships, work, body and wellbeing.",
-   "As a certified facilitator, Sunaina shares these tools through one-to-one sessions and workshops. The approach is light, practical and non-judgemental: you leave with questions and techniques you can use every day, not just insight."
-  ],
   "benefits": [
    [
-    "Clarity in choices",
-    "Learn to ask questions that open new possibilities."
+    "Deep relaxation",
+    "A quiet, restful hour."
    ],
    [
-    "Less self-judgement",
-    "Let go of limiting beliefs about yourself."
+    "Calm & balance",
+    "Ease tension and emotional heaviness."
    ],
    [
-    "Practical tools",
-    "Simple techniques you can use on your own."
+    "Gentle",
+    "Fully clothed; no pressure or manipulation."
    ],
    [
-    "Better relationships",
-    "See patterns with family, partners and colleagues."
+    "Beginner friendly",
+    "No experience needed."
    ],
    [
-    "Work & money ease",
-    "Shift how you relate to success and abundance."
+    "Complementary",
+    "Works alongside regular medical care."
    ],
    [
-    "Community",
-    "Join classes with like-minded people."
+    "Personal",
+    "Unhurried and tailored to how you feel."
    ]
   ],
   "who": [
-   "People feeling stuck in work, money or relationships",
-   "Seekers who want practical, daily-use tools",
-   "Anyone curious about consciousness and awareness",
-   "Past Access Bars clients who want to go deeper"
+   "People feeling tired, tense or emotionally heavy",
+   "Anyone new to energy healing",
+   "Those wanting a quiet, restorative hour",
+   "People supporting recovery alongside medical care"
   ],
   "glance": [
    [
     "Duration",
-    "60–90 minutes"
+    "45–60 minutes"
    ],
    [
     "Format",
-    "Session or workshop"
+    "In-person"
    ],
    [
     "Level",
-    "All levels"
+    "Beginner friendly"
    ],
    [
     "Location",
-    "Delhi NCR & online"
+    "Delhi, Gurugram"
    ]
   ],
   "faq": [
    [
-    "Is Access Consciousness a religion?",
-    "No. It is a set of practical tools and processes. It does not require any particular belief."
+    "What happens in a Reiki session?",
+    "You lie down fully clothed. The practitioner places hands lightly on or near your body. Most people simply rest."
    ],
    [
-    "Do I need to take Access Bars first?",
-    "Not necessary, but Bars is a popular starting point for many people."
+    "Is Reiki a medical treatment?",
+    "No. It is a complementary practice and does not replace diagnosis or treatment."
    ],
    [
-    "Can I attend online?",
-    "Yes. Many sessions and talks can be taken online."
+    "How should I prepare?",
+    "Wear comfortable clothes and arrive relaxed. No other preparation is needed."
    ]
   ],
   "related": [
-   "access-bars",
-   "access-body-process",
-   "business-mentoring"
-  ]
+   "pranic-healing",
+   "healing",
+   "access-bars"
+  ],
+  "note": "This is a complementary wellness practice and not a substitute for medical diagnosis or treatment.",
+  "slug": "reiki",
+  "ico": "sun",
+  "name": "Reiki",
+  "title": "Reiki Healing Sessions in Delhi NCR",
+  "desc": "Book a gentle Reiki healing session with an experienced practitioner at EL Healing Centre in Delhi and Gurugram. A calm, hands-on-or-near-body practice for relaxation.",
+  "h1": "Reiki Healing in Delhi & Gurugram",
+  "tag": "A calm, gentle practice for deep relaxation and balance.",
+  "img": "healing-singing-bowls-crystals-banner.webp",
+  "alt": "Singing bowls, crystals and candles arranged for a calm healing session at sunrise",
+  "pos": "50% 50%",
+  "intro": [
+   "Reiki is a gentle practice in which a practitioner places hands lightly on or near the body to channel universal life energy and support deep relaxation. You rest fully clothed while the session unfolds quietly.",
+   "Many people choose Reiki when they feel tired, tense or emotionally heavy, or as a first step into energy healing. It is complementary and never a replacement for medical care."
+  ],
+  "prices": {
+   "others": {
+    "amount": 3000
+   }
+  }
  },
  {
   "slug": "access-body-process",
@@ -455,11 +494,9 @@
   "desc": "Explore Access Body Process with Sunaina Aggarwal in Delhi and Gurugram. A gentle hands-on method to release stored stress and judgements about the body.",
   "h1": "Access Body Process in Delhi & Gurugram",
   "tag": "A caring, hands-on process to change how you relate to your body.",
-  "img": "access-bars-class-students-practising.webp",
-  "alt": "Students practising a hands-on body process in class",
   "intro": [
    "The Access Body Process works with your relationship to your body. It is a gentle, hands-on method that helps release judgements, stored stress and unhelpful beliefs about health, weight, ageing, pain and more.",
-   "It is often taken as a follow-up to Access Bars. Sunaina offers one-to-one sessions as well as classes so you can learn simple body-care techniques to use at home."
+   "It is often taken as a follow-up to Access Bars. EL Healing Centre offers one-to-one sessions as well as classes so you can learn simple body-care techniques to use at home."
   ],
   "benefits": [
    [
@@ -496,7 +533,7 @@
   "glance": [
    [
     "Duration",
-    "60–90 minutes"
+    "30–40 minutes"
    ],
    [
     "Format",
@@ -528,9 +565,204 @@
   "related": [
    "access-bars",
    "energetic-facials",
-   "access-consciousness-facilitator"
+   "pranic-healing"
   ],
-  "pos": "50% 30%"
+  "prices": {
+   "sunaina": {
+    "amount": 8000,
+    "duration": "30–40 minutes"
+   },
+   "others": {
+    "amount": 3000,
+    "duration": "30–40 minutes"
+   }
+  }
+ },
+ {
+  "group": "healing",
+  "benefits": [
+   [
+    "A space to relax",
+    "Gentle, hands-on facilitation in a calm room."
+   ],
+   [
+    "Body awareness",
+    "Become more aware of your body and energy."
+   ],
+   [
+    "New perspectives",
+    "See familiar patterns and limits differently."
+   ],
+   [
+    "More choice",
+    "Open to change and new opportunities."
+   ],
+   [
+    "Personal & unique",
+    "Every session is different and tailored to you."
+   ],
+   [
+    "Gentle",
+    "Fully clothed and unhurried."
+   ]
+  ],
+  "who": [
+   "Anyone feeling stuck in familiar patterns",
+   "People curious about Access Consciousness",
+   "Those wanting a restful, reflective experience",
+   "Access Bars clients ready for something deeper"
+  ],
+  "glance": [
+   [
+    "Duration",
+    "45 minutes"
+   ],
+   [
+    "Format",
+    "Hands-on, one-to-one"
+   ],
+   [
+    "Level",
+    "All levels"
+   ],
+   [
+    "Location",
+    "Delhi, Gurugram"
+   ]
+  ],
+  "faq": [
+   [
+    "What is Symphony of Possibilities?",
+    "An energetic experience from Access Consciousness in which gentle, hands-on facilitation invites you to explore new possibilities and perspectives."
+   ],
+   [
+    "Do I need to prepare?",
+    "No. Wear comfortable clothes and arrive as you are."
+   ],
+   [
+    "Is it a medical treatment?",
+    "No. It is a complementary wellness experience and does not replace medical care."
+   ]
+  ],
+  "related": [
+   "energetic-synthesis-of-being",
+   "access-bars",
+   "access-body-process"
+  ],
+  "note": "This is a complementary wellness practice and not a substitute for medical diagnosis or treatment.",
+  "slug": "symphony-of-possibilities",
+  "ico": "spark",
+  "name": "Symphony of Possibilities (SOP)",
+  "title": "Symphony of Possibilities (SOP) Session",
+  "desc": "Symphony of Possibilities (SOP) is an Access Consciousness energetic experience to explore new perspectives beyond familiar patterns. Sessions in Delhi and Gurugram.",
+  "h1": "Symphony of Possibilities (SOP)",
+  "tag": "Explore new perspectives. Expand your possibilities.",
+  "img": "symphony-of-possibilities-session.webp",
+  "alt": "A facilitator’s hands held over a relaxed client during a Symphony of Possibilities session",
+  "pos": "50% 40%",
+  "intro": [
+   "Symphony of Possibilities is an energetic experience from Access Consciousness that invites you to explore new possibilities beyond familiar thoughts, patterns, and limitations. Through gentle, hands-on energetic facilitation, the session offers a space to relax, become more aware of your body, and discover different perspectives on life.",
+   "It encourages you to move beyond what you believe is possible and become more open to change, choice, and new opportunities. Each experience is unique, offering a personal space to receive, explore, and connect with greater awareness of yourself and the possibilities available to you."
+  ],
+  "prices": {
+   "sunaina": {
+    "amount": 12000,
+    "duration": "45 minutes"
+   }
+  }
+ },
+ {
+  "group": "healing",
+  "benefits": [
+   [
+    "Deeper connection",
+    "With yourself, your body and the energies around you."
+   ],
+   [
+    "Tailored to you",
+    "Each session follows what you wish to explore."
+   ],
+   [
+    "Awareness",
+    "Notice limits, patterns and possibilities."
+   ],
+   [
+    "New choices",
+    "Space for fresh perspectives."
+   ],
+   [
+    "Gentle process",
+    "Subtle hand movements and conversation."
+   ],
+   [
+    "Reconnect",
+    "Return to your own innate awareness."
+   ]
+  ],
+  "who": [
+   "People who want to understand themselves more deeply",
+   "Anyone feeling disconnected from their body",
+   "Those curious about Access Consciousness",
+   "Clients ready to go beyond Access Bars"
+  ],
+  "glance": [
+   [
+    "Duration",
+    "45 minutes"
+   ],
+   [
+    "Format",
+    "Hands-on and verbal, one-to-one"
+   ],
+   [
+    "Level",
+    "All levels"
+   ],
+   [
+    "Location",
+    "Delhi, Gurugram"
+   ]
+  ],
+  "faq": [
+   [
+    "What is Energetic Synthesis of Being (ESB)?",
+    "A modality from Access Consciousness that uses subtle hand movements and verbal processes to help you explore your connection with yourself, your body and your energies."
+   ],
+   [
+    "What will happen in the session?",
+    "You rest comfortably while the facilitator works with subtle hand movements and invites you to explore what you wish. Every session is different."
+   ],
+   [
+    "Is it a medical treatment?",
+    "No. It is a complementary wellness practice and does not replace medical care."
+   ]
+  ],
+  "related": [
+   "symphony-of-possibilities",
+   "access-bars",
+   "access-body-process"
+  ],
+  "note": "This is a complementary wellness practice and not a substitute for medical diagnosis or treatment.",
+  "slug": "energetic-synthesis-of-being",
+  "ico": "lotus",
+  "name": "Energetic Synthesis of Being (ESB)",
+  "title": "Energetic Synthesis of Being (ESB) Session",
+  "desc": "Energetic Synthesis of Being (ESB) is an Access Consciousness modality to reconnect with yourself, your body and the energies around you. Sessions in Delhi and Gurugram.",
+  "h1": "Energetic Synthesis of Being (ESB)",
+  "tag": "Explore. Release. Reconnect.",
+  "img": "energetic-synthesis-of-being-session.webp",
+  "alt": "A facilitator holding her hands above a relaxed client during an Energetic Synthesis of Being session",
+  "pos": "50% 40%",
+  "intro": [
+   "Energetic Synthesis of Being is a modality from Access Consciousness that invites you to explore a deeper connection with yourself, your body, and the energies around you. Through subtle hand movements and verbal processes, each session is unique and tailored to what you would like to explore.",
+   "ESB encourages you to become more aware of the limitations, patterns, and possibilities in your life, opening space for new perspectives and choices. It is an invitation to embrace more of who you are, reconnect with your innate awareness, and explore what else may be possible for you."
+  ],
+  "prices": {
+   "sunaina": {
+    "amount": 12000,
+    "duration": "45 minutes"
+   }
+  }
  },
  {
   "slug": "personalised-meditation",
@@ -541,11 +773,11 @@
   "desc": "Get a meditation practice designed for you by Sunaina Aggarwal — calm, focus, sleep or healing — using Arhatic Yoga and breathwork in Delhi and Gurugram.",
   "h1": "Personalised Meditation in Delhi & Gurugram",
   "tag": "No two minds are alike — your meditation should not be generic either.",
-  "img": "chakra-meditation-healing.webp",
-  "alt": "Meditating figure with glowing chakra points beneath a golden sun",
+  "img": "personalised-meditation-guided-session.webp",
+  "alt": "A guided one-to-one personalised meditation session in a calm, light room",
   "intro": [
    "Many people try meditation and give up because the method does not suit them. Personalised meditation starts with you — your goal, your temperament and your daily routine — and builds a practice that fits.",
-   "Drawing on Arhatic Yoga, breathwork and guided visualisation, Sunaina designs a practice for calm, focus, better sleep, emotional healing or spiritual growth. You learn it in session and receive simple steps to continue at home."
+   "Drawing on Arhatic Yoga, breathwork and guided visualisation, our team designs a practice for calm, focus, better sleep, emotional healing or spiritual growth. You learn it in session and receive simple steps to continue at home."
   ],
   "benefits": [
    [
@@ -616,7 +848,12 @@
    "business-mentoring",
    "energetic-facials"
   ],
-  "pos": "50% 35%"
+  "pos": "50% 45%",
+  "prices": {
+   "sunaina": {
+    "amount": 5000
+   }
+  }
  },
  {
   "slug": "feng-shui-home-office",
@@ -627,10 +864,10 @@
   "desc": "Feng Shui consultation for homes, shops and offices in Delhi and Gurugram with Sunaina Aggarwal. Practical, no-renovation remedies for harmony and prosperity.",
   "h1": "Feng Shui for Home & Office in Delhi NCR",
   "tag": "Harmonise your space — for health, prosperity and peace of mind.",
-  "img": "healing-session-practice-at-home.webp",
-  "alt": "A calm home room set up for a healing session",
+  "img": "feng-shui-home-office-objects.webp",
+  "alt": "Feng Shui objects — plant, money tree, crystal ball, laughing Buddha and compass — on a wooden table",
   "intro": [
-   "Your surroundings reflect and shape how you feel. Stagnant corners in a home or office can go hand in hand with stress, friction and a sense of being stuck. Sunaina offers spatial energy audits for homes and workplaces — without disruptive structural changes.",
+   "Your surroundings reflect and shape how you feel. Stagnant corners in a home or office can go hand in hand with stress, friction and a sense of being stuck. EL Healing Centre offers spatial energy audits for homes and workplaces — without disruptive structural changes.",
    "Most remedies are simple adjustments in placement, colour, direction and elements, explained clearly so you can apply them yourself."
   ],
   "benefits": [
@@ -716,7 +953,17 @@
     "For executive suites, boardrooms and showrooms: desk placement for focus and authority, cash counter and sales-floor direction, and calmer collaboration zones for the team."
    ]
   ],
-  "pos": "50% 35%"
+  "pos": "50% 50%",
+  "prices": {
+   "sunaina": {
+    "amount": 21000,
+    "from": true
+   },
+   "others": {
+    "amount": 3500,
+    "from": true
+   }
+  }
  },
  {
   "slug": "energetic-facials",
@@ -727,11 +974,9 @@
   "desc": "Relax with energetic facials and beauty treatments by Sunaina Aggarwal in Gurugram and Delhi. Gentle skin care combined with energy balancing for a natural glow.",
   "h1": "Energetic Facials & Beauty Treatment",
   "tag": "A gentle, hands-on facial using subtle energies — leave relaxed, refreshed and glowing.",
-  "img": "access-bars-session-sunaina-aggarwal.webp",
-  "alt": "Sunaina Aggarwal giving a gentle hands-on energy treatment to a client",
   "intro": [
    "The Access Energetic Facelift is a non-invasive, hands-on treatment that works with subtle energies on the face and neck while inviting you to let go of judgements about ageing.",
-   "Clients enjoy a deeply relaxing hour that leaves skin looking fresh and the face softer — with no needles and no downtime. Sunaina tailors each treatment to you."
+   "Clients enjoy a deeply relaxing hour that leaves skin looking fresh and the face softer — with no needles and no downtime."
   ],
   "benefits": [
    [
@@ -768,7 +1013,7 @@
   "glance": [
    [
     "Duration",
-    "60 minutes"
+    "90 minutes"
    ],
    [
     "Format",
@@ -802,7 +1047,16 @@
    "access-bars",
    "personalised-meditation"
   ],
-  "pos": "50% 28%"
+  "prices": {
+   "sunaina": {
+    "amount": 21000,
+    "duration": "90 minutes"
+   },
+   "others": {
+    "amount": 8000,
+    "duration": "90 minutes"
+   }
+  }
  },
  {
   "slug": "business-mentoring",
@@ -813,8 +1067,6 @@
   "desc": "Business mentoring by Sunaina Aggarwal in Gurugram and Delhi. Gain clarity, clear mindset blocks and balance workplace energy with practical guidance.",
   "h1": "Business Mentoring in Gurugram & Delhi",
   "tag": "Shift from stress and scarcity to clarity, focus and confident growth.",
-  "img": "counseling-session-sunaina-aggarwal.webp",
-  "alt": "A one-to-one mentoring conversation at a desk",
   "intro": [
    "Many entrepreneurs build their businesses from stress, friction and anxiety. Business mentoring with Sunaina helps founders, professionals and business owners align their vision with ease — working with mindset blocks around money, visibility and self-doubt.",
    "Sessions combine honest conversation, mindset work and energy balancing, supported by Feng Shui insights for your workplace. It is practical, confidential and focused on the next right step.",
@@ -887,9 +1139,14 @@
   "related": [
    "feng-shui-home-office",
    "personalised-meditation",
-   "access-consciousness-facilitator"
+   "access-bars"
   ],
-  "pos": "50% 30%"
+  "prices": {
+   "sunaina": {
+    "amount": 10000,
+    "duration": "60 minutes"
+   }
+  }
  },
  {
   "slug": "astrology",
@@ -941,7 +1198,7 @@
   "glance": [
    [
     "Duration",
-    "45–60 minutes"
+    "30 minutes"
    ],
    [
     "Format",
@@ -982,7 +1239,13 @@
     "The twelve zodiac signs with their rulers and elements",
     "The zodiac: signs, rulers and elements"
    ]
-  ]
+  ],
+  "prices": {
+   "others": {
+    "amount": 3000,
+    "duration": "30 minutes"
+   }
+  }
  },
  {
   "slug": "tarot-reading",
@@ -1096,8 +1359,8 @@
   "desc": "Book a numerology reading in Delhi, Gurugram or online. Explore your life path, name and personal year numbers with an experienced numerologist.",
   "h1": "Numerology Reading in Delhi NCR",
   "tag": "Discover the patterns in your name and date of birth.",
-  "img": "numerology-number-grid-poster.webp",
-  "alt": "Numerology poster showing the numbers one to nine with their planetary symbols",
+  "img": "numerology-letter-number-chart.webp",
+  "alt": "Numerology chart matching each letter of the alphabet to a number from one to eight",
   "intro": [
    "Numerology looks at the numbers in your date of birth and name — such as your life path number and personal year — to reflect on your temperament, strengths and the themes of the year ahead.",
    "A reading is a friendly, practical conversation. Your numerologist explains what your numbers suggest and how you might use that insight in everyday decisions. It is offered for guidance and self-understanding, not as a guarantee."
@@ -1137,7 +1400,7 @@
   "glance": [
    [
     "Duration",
-    "30–45 minutes"
+    "20–30 minutes"
    ],
    [
     "Format",
@@ -1174,10 +1437,26 @@
   "note": "Astrology, tarot and numerology are offered for guidance and reflection. They are not a substitute for medical, legal or financial advice, and no outcome is guaranteed.",
   "extra": [
    [
+    "numerology-calculation-notebook.webp",
+    "A numerologist’s handwritten notebook with name and date-of-birth calculations",
+    "A reading is worked out by hand"
+   ],
+   [
     "numerology-for-beginners-poster.webp",
     "Numerology for beginners — numbers one to nine arranged in a circle under a starry sky",
     "Numerology for beginners"
    ]
-  ]
+  ],
+  "pos": "50% 50%",
+  "prices": {
+   "sunaina": {
+    "amount": 5000,
+    "duration": "20 minutes"
+   },
+   "others": {
+    "amount": 2500,
+    "duration": "30 minutes"
+   }
+  }
  }
 ]

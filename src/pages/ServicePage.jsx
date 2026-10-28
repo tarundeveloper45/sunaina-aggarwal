@@ -5,7 +5,7 @@ import { Cta, Faq, PageHero, Picture, SectionHead } from '../components/ui';
 import { SITE, abs, dims } from '../config';
 import { SERVICE_BY } from '../data/content';
 import { HealerCard } from '../components/people';
-import { HEALERS } from '../data/healers';
+import { HEALERS, fmtPrice } from '../data/healers';
 import NotFound from './NotFound';
 
 const STEPS = [
@@ -42,7 +42,7 @@ export default function ServicePage() {
       <section>
         <div className="container svc-layout">
           <div className="svc-main">
-            <Picture className="svc-cover reveal" file={s.img} alt={s.alt} w={dims(s.img)[0]} h={dims(s.img)[1]} />
+            {s.img && <Picture className="svc-cover reveal" file={s.img} alt={s.alt} w={dims(s.img)[0]} h={dims(s.img)[1]} />}
             <h2 className="reveal">About {s.name}</h2>
             {s.intro.map((p) => <p className="reveal" key={p}>{p}</p>)}
             <h2 className="reveal">Who it is for</h2>
@@ -58,7 +58,12 @@ export default function ServicePage() {
           </div>
           <aside className="glance reveal">
             <h3>At a glance</h3>
-            <dl>{s.glance.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
+            <dl>
+              {s.glance.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}
+              {!s.prices && <div className="fee"><dt>Fee</dt><dd>On request</dd></div>}
+              {s.prices && s.prices.sunaina &&<div className="fee"><dt>Sunaina Aggarwal</dt><dd>{fmtPrice(s.prices.sunaina)}</dd></div>}
+              {s.prices && s.prices.others && <div className="fee"><dt>{s.prices.sunaina ? 'Other practitioners' : 'Fee'}</dt><dd>{fmtPrice(s.prices.others)}</dd></div>}
+            </dl>
             <Link className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} to={`/book/?service=${s.slug}`}>Book Now</Link>
             <a className="glance-link" href={`tel:${SITE.phoneRaw}`}>or call {SITE.phone}</a>
           </aside>

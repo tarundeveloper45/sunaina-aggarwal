@@ -3,9 +3,9 @@ import Seo from '../components/Seo';
 import { Icon } from '../components/Icon';
 import { Faq, PageHero, SectionHead } from '../components/ui';
 import { SITE, abs } from '../config';
-import { faqContact } from '../data/content';
+import { SERVICES, faqContact } from '../data/content';
 
-const SERVICES_OPT = ['Not sure yet', 'Counselling', 'Healing', 'Pranic Healing', 'Access Bars Session', 'Access Body Process', 'Business Mentoring', 'Personalised Meditation', 'Feng Shui Consultation', 'Energetic Facial & Beauty Treatment', 'Classes / Workshops'];
+const SERVICES_OPT = ['Not sure yet', ...SERVICES.map((x) => x.name), 'Classes / Workshops'];
 
 function sendToWhatsApp(e) {
   e.preventDefault();

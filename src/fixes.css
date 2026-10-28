@@ -16,3 +16,9 @@
 .formats{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;list-style:none;padding:0;margin:36px 0 0}
 .formats li{display:inline-flex;align-items:center;gap:10px;padding:.6em 1.3em;border:1px solid rgba(255,255,255,.25);border-radius:999px;color:#F3E3D3;font-size:var(--fs-card)}
 .formats svg{width:20px;height:20px;color:var(--gold)}
+
+/* hero photo is light: stronger dark overlay on the text side */
+.hero::before{background:linear-gradient(95deg,rgba(20,9,4,.9) 0%,rgba(20,9,4,.72) 42%,rgba(20,9,4,.18) 100%)}
+.hero>img{object-position:70% center}
+@media (max-width:900px){.hero::before{background:linear-gradient(180deg,rgba(20,9,4,.78),rgba(20,9,4,.86))}}
+.glance dl .fee dd{font-weight:600;color:var(--ember-dark)}

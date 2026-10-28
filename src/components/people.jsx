@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { img } from '../config';
 import { SCHEDULE } from '../data/content';
-import { rupees } from '../data/healers';
+import { fmtPrice, startingPrice } from '../data/healers';
 
 export function Avatar({ h, large }) {
   if (h.photo) return <img className={'avatar-img' + (large ? ' lg' : '')} src={img(h.photo)} alt={`${h.name}, ${h.role}`} width="160" height="200" loading="lazy" />;
@@ -19,7 +19,7 @@ export function HealerCard({ h, compact }) {
       <p className="hc-since">{h.founder ? 'Founder · ' : ''}Practising since {h.since}</p>
       <ul className="tags">{h.tags.map((t) => <li key={t}>{t}</li>)}</ul>
       <div className="hc-foot">
-        <span className="hc-price">from <b>{rupees(h.price)}</b></span>
+        <span className="hc-price"><b>{fmtPrice(startingPrice(h) && { ...startingPrice(h), from: true })}</b></span>
         <span className="hc-actions">
           <Link className="btn btn-outline" to={`/healers/${h.slug}/`}>Profile</Link>
           <Link className="btn btn-primary" to={`/book/?healer=${h.slug}`}>Book</Link>

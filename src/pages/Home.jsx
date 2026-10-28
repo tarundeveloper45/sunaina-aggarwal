@@ -46,7 +46,7 @@ export default function Home() {
       />
 
       <section className="hero">
-        <img src={img('energy-healing-hands-banner.webp')} alt="Two hands reaching toward a glowing ball of healing energy" width="1920" height="1294" fetchpriority="high" />
+        <img src={img('healing-singing-bowls-crystals-banner.webp')} alt="Singing bowls, crystals and candles arranged for a calm healing session at sunrise" width="1600" height="684" fetchpriority="high" />
         <div className="container">
           <div className="hero-inner">
             <span className="eyebrow">A circle of {HEALERS.length} practitioners · Delhi, Gurugram &amp; Online</span>
@@ -115,11 +115,11 @@ export default function Home() {
         <div className="container">
           <SectionHead eyebrow="Find what’s right for you" title="Healing & counseling services" text="Would you like to choose something that ignites enthusiasm within you, that gives you confidence, that creates space to explore? Start with the path that calls to you." />
           <div className="grid g3">
-            {['counseling', 'healing', 'energetic-facials'].map((slug) => {
+            {['counseling', 'healing', 'pranic-healing'].map((slug) => {
               const s = SERVICES.find((x) => x.slug === slug);
               return (
                 <article className="card svc-card reveal" key={slug}>
-                  <Picture file={s.img} alt={s.alt} w={1100} h={825} style={s.pos ? { objectPosition: s.pos } : undefined} />
+                  <Picture file={s.img} alt={s.alt} w={dims(s.img)[0]} h={dims(s.img)[1]} style={s.pos ? { objectPosition: s.pos } : undefined} />
                   <div className="body">
                     <h3>{s.name}</h3><p>{s.tag}</p>
                     <Link className="more" to={`/services/${slug}/`}>Explore {s.name.toLowerCase()}</Link>

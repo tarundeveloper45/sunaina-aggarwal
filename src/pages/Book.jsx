@@ -6,7 +6,7 @@ import { Avatar } from '../components/people';
 import { PageHero } from '../components/ui';
 import { SITE } from '../config';
 import { CONCERNS, SERVICE_BY } from '../data/content';
-import { HEALERS, HEALER_BY, rupees } from '../data/healers';
+import { HEALERS, HEALER_BY, cheapestFor, fmtPrice, priceFor, startingPrice } from '../data/healers';
 import { PLACES, addDays, dayInfo, placesOn, prettyDate, slotsFor, toIso } from '../data/availability';
 
 const STEPS = ['Healer', 'Service', 'Date', 'Time', 'Your details'];
@@ -15,7 +15,7 @@ const MAX_DAYS = 56;
 
 const cleanPhone = (v) => v.replace(/[\s()-]/g, '').replace(/^(\+?91|0)/, '');
 const phoneOk = (v) => /^[6-9]\d{9}$/.test(cleanPhone(v));
-const durationOf = (slug) => { const g = SERVICE_BY[slug] && SERVICE_BY[slug].glance.find(([k]) => k === 'Duration'); return g ? g[1] : ''; };
+const durationOf = (slug, p) => { if (p && p.duration) return p.duration; const g = SERVICE_BY[slug] && SERVICE_BY[slug].glance.find(([k]) => k === 'Duration'); return g ? g[1] : ''; };
 
 export default function Book() {
   const [params] = useSearchParams();
@@ -50,7 +50,8 @@ export default function Book() {
   }, [healer]);
   const suggested = concern ? concern.services : [];
   const healers = f.service && !params.get('healer') ? HEALERS.filter((h) => h.services.includes(f.service)) : HEALERS;
-  const fee = healer ? healer.price : 1500;
+  // price for the chosen healer + service (or the cheapest for that service while it is still open)
+  const pickedPrice = f.service ? (healer ? priceFor(healer, f.service) : cheapestFor(f.service) && { ...cheapestFor(f.service), from: true }) : (healer ? startingPrice(healer) && { ...startingPrice(healer), from: true } : null);
   const places = f.date ? placesOn(f.date) : [];
   const slots = f.date && f.place ? slotsFor(f.place, f.date) : [];
   const placeShort = (PLACES.find((p) => p.id === f.place) || {}).short || '';
@@ -111,7 +112,7 @@ export default function Book() {
 
   const summary = [
     ['With', healer ? healer.name : f.healer === 'any' ? 'We will match you' : '', 0],
-    ['Session', serviceName ? `${serviceName}${durationOf(f.service) ? ' · ' + durationOf(f.service) : ''}` : '', 1],
+    ['Session', serviceName ? `${serviceName}${durationOf(f.service, healer ? priceFor(healer, f.service) : null) ? ' · ' + durationOf(f.service, healer ? priceFor(healer, f.service) : null) : ''}` : '', 1],
     ['Date', f.date ? prettyDate(f.date) : '', 2],
     ['Time', f.time ? `${f.time} · ${placeShort}` : '', 3],
   ];
@@ -152,7 +153,7 @@ export default function Book() {
                     {healers.map((h) => (
                       <button type="button" key={h.slug} className={'opt hp' + (f.healer === h.slug ? ' on' : '')} onClick={() => pickHealer(h.slug)}>
                         <span className="opt-av"><Avatar h={h} /></span>
-                        <span className="opt-t"><b>{h.name}</b><small>{h.role}</small><small>Since {h.since} · from {rupees(h.price)}</small></span>
+                        <span className="opt-t"><b>{h.name}</b><small>{h.role}</small><small>Since {h.since}{startingPrice(h) ? ' · from ₹' + startingPrice(h).amount.toLocaleString('en-IN') : ''}</small></span>
                       </button>
                     ))}
                     {healers.length === 0 && <p className="bk-hint" style={{ gridColumn: '1 / -1' }}>No practitioner is listed for this service yet — choose “Match me” and we will arrange the right person.</p>}
@@ -177,7 +178,7 @@ export default function Book() {
                           <span className="opt-ico"><Icon name={s.ico} /></span>
                           <span className="opt-t">
                             <b>{s.name}{suggested.includes(slug) && <i className="rec"> · Suggested for you</i>}</b>
-                            <small>{durationOf(slug)} · from {rupees(fee)}</small>
+                            <small>{durationOf(slug, healer ? priceFor(healer, slug) : null)} · {fmtPrice(healer ? priceFor(healer, slug) : (cheapestFor(slug) && { ...cheapestFor(slug), from: true }))}</small>
                           </span>
                         </button>
                       );
@@ -295,7 +296,7 @@ export default function Book() {
                     {v && step > s && <button type="button" className="linkbtn" onClick={() => go(s)}>Change</button>}
                   </div>
                 ))}
-                <div className="total"><dt>Total</dt><dd>from {rupees(fee)}</dd></div>
+                <div className="total"><dt>Fee</dt><dd>{pickedPrice ? fmtPrice(pickedPrice) : 'Shared on confirmation'}</dd></div>
               </dl>
               <p className="bk-hint">{step < 4 ? 'Make your choice and we will take you to the next step.' : 'Fill in your details and confirm to send your request.'}</p>
             </aside>
