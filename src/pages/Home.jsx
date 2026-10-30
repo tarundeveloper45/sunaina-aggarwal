@@ -73,7 +73,7 @@ export default function Home() {
               <h2>You don’t have to carry the struggle alone</h2>
               <p>Life can gather invisible baggage: chronic stress, friction in relationships, restless sleep, or tension that check-ups cannot explain. At EL Healing Centre we look at the energetic patterns that keep those blocks in place — and release them gently.</p>
               <p><strong>Transformation doesn’t require endless suffering — ease is your natural state.</strong></p>
-              <Link className="btn btn-outline" to="/about-us/">About EL Healing Centre</Link>
+              <Link className="btn btn-outline" to="/services/">Services</Link>
             </div>
             <div className="reveal">
               <SectionHead eyebrow="Where are you feeling stuck today?" title="Choose your concern" />
@@ -115,7 +115,7 @@ export default function Home() {
         <div className="container">
           <SectionHead eyebrow="Find what’s right for you" title="Healing & counseling services" text="Would you like to choose something that ignites enthusiasm within you, that gives you confidence, that creates space to explore? Start with the path that calls to you." />
           <div className="grid g3">
-            {['counseling', 'healing', 'pranic-healing'].map((slug) => {
+            {['counseling', 'healing', 'energetic-facials'].map((slug) => {
               const s = SERVICES.find((x) => x.slug === slug);
               return (
                 <article className="card svc-card reveal" key={slug}>

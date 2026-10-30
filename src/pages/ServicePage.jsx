@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import Seo from '../components/Seo';
 import { Icon } from '../components/Icon';
-import { Cta, Faq, PageHero, Picture, SectionHead } from '../components/ui';
+import { CoverVideo, Cta, Faq, PageHero, Picture, SectionHead } from '../components/ui';
 import { SITE, abs, dims } from '../config';
 import { SERVICE_BY } from '../data/content';
 import { HealerCard } from '../components/people';
@@ -42,7 +42,8 @@ export default function ServicePage() {
       <section>
         <div className="container svc-layout">
           <div className="svc-main">
-            {s.img && <Picture className="svc-cover reveal" file={s.img} alt={s.alt} w={dims(s.img)[0]} h={dims(s.img)[1]} />}
+            {s.video && <CoverVideo video={s.video} alt={s.alt} />}
+            {!s.video && s.img && <Picture className="svc-cover reveal" file={s.img} alt={s.alt} w={dims(s.img)[0]} h={dims(s.img)[1]} />}
             <h2 className="reveal">About {s.name}</h2>
             {s.intro.map((p) => <p className="reveal" key={p}>{p}</p>)}
             <h2 className="reveal">Who it is for</h2>

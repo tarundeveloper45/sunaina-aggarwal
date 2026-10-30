@@ -267,6 +267,38 @@ export function ReadMore({ children }) {
   );
 }
 
+// Portrait/landscape video used as a service-page cover. Muted + looping; plays only while visible; tap the speaker for sound.
+export function CoverVideo({ video, alt }) {
+  const ref = useRef(null);
+  const [muted, setMuted] = useState(true);
+  const base = import.meta.env.BASE_URL + 'assets/video/' + video.name;
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return undefined;
+    v.muted = true;
+    if (!('IntersectionObserver' in window)) return undefined;
+    const io = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) { const p = v.play(); if (p && p.catch) p.catch(() => {}); } else v.pause();
+    }, { threshold: 0.4 });
+    io.observe(v);
+    return () => io.disconnect();
+  }, []);
+  const toggle = () => { const v = ref.current; v.muted = !v.muted; setMuted(v.muted); if (!v.muted) { const p = v.play(); if (p && p.catch) p.catch(() => {}); } };
+  return (
+    <div className="svc-video reveal" style={{ aspectRatio: video.w + ' / ' + video.h, width: 'min(100%, ' + Math.round(640 * video.w / video.h) + 'px)' }}>
+      <video ref={ref} poster={base + '-poster.jpg'} muted loop playsInline autoPlay preload="none" aria-label={alt}>
+        <source src={base + '.mp4'} type="video/mp4" />
+      </video>
+      <button type="button" className="vsound" onClick={toggle} aria-label={muted ? 'Turn sound on' : 'Mute video'} aria-pressed={!muted}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M11 5L6 9H3v6h3l5 4z" />
+          {muted ? <path d="M16 9l5 6M21 9l-5 6" /> : <path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" />}
+        </svg>
+      </button>
+    </div>
+  );
+}
+
 export const Picture = ({ file, alt, w, h, eager, style, className }) => (
   <img src={img(file)} alt={alt} width={w} height={h} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={eager ? 'high' : undefined} style={style} className={className} />
 );

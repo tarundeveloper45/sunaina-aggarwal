@@ -8,8 +8,8 @@
   "desc": "Confidential one-to-one counseling with Sunaina Aggarwal in Delhi and Gurugram for stress, relationships and life decisions. Practical, compassionate guidance.",
   "h1": "Individual & Couples Counselling in Delhi & Gurugram",
   "tag": "Compassionate listening and gentle energetic clearing for you and your relationships.",
-  "img": "counseling-session-sunaina-aggarwal.webp",
-  "alt": "Sunaina Aggarwal in a one-to-one counseling session with a client",
+  "img": "counselling-session-video-poster.webp",
+  "alt": "A counselling session at EL Healing Centre",
   "intro": [
    "Relationships and personal identities go through rough seasons. Our counsellor combines compassionate listening with subconscious, energetic clearing to help restore closeness, open communication and ease old family patterns.",
    "Sessions are private, unhurried and focused on you — or on the two of you. You leave with understanding, simple tools and a clear next step, not generic advice."
@@ -83,7 +83,6 @@
    "feng-shui-home-office",
    "personalised-meditation"
   ],
-  "pos": "50% 30%",
   "prices": {
    "sunaina": {
     "amount": 6000
@@ -91,6 +90,11 @@
    "others": {
     "amount": 2000
    }
+  },
+  "video": {
+   "name": "counselling-session",
+   "w": 576,
+   "h": 1024
   }
  },
  {
@@ -102,8 +106,8 @@
   "desc": "Book Pranic Healing and Crystal Healing sessions with Sunaina Aggarwal in Delhi and Gurugram. Gentle energy healing for body, mind and spirit.",
   "h1": "Healing Practice Sessions in Delhi & Gurugram",
   "tag": "Pranic Healing and Crystal Healing — gentle energy work to release stress and feel like yourself again.",
-  "img": "chakra-energy-healing-session.webp",
-  "alt": "Client resting during an energy healing session, with the chakras shown as glowing crystals",
+  "img": "counseling-session-sunaina-aggarwal.webp",
+  "alt": "Sunaina Aggarwal in a one-to-one session with a client in the EL Healing Centre consulting room",
   "intro": [
    "Every body carries an energy field. When stress, emotional hurt or illness disturbs it, we feel tired, heavy, anxious or stuck. Healing sessions at EL Healing Centre work on that energy field — calmly, safely and without any invasive procedure.",
    "Sunaina Aggarwal has practised healing since 2005 and teaches several modalities. Each session begins by understanding your concern, then selecting the right combination of Pranic Healing or crystals for you. Clients visit from across Delhi, Gurugram and NCR, and many also book online sessions."
@@ -195,7 +199,7 @@
    "access-bars",
    "energetic-facials"
   ],
-  "pos": "50% 40%",
+  "pos": "50% 30%",
   "prices": {
    "sunaina": {
     "amount": 1500,
@@ -212,9 +216,9 @@
   "desc": "No-touch Pranic Healing and aura cleansing with Sunaina Aggarwal in Gurugram and Delhi, in person or by distance. Gentle energy work for vitality and calm.",
   "h1": "Pranic Healing & Aura Cleansing in Delhi NCR",
   "tag": "Cleanse energetic congestion and support the body’s natural recovery.",
-  "img": "pranic-healing-energy-hands-over-client.webp",
-  "alt": "Healer’s hands held over a relaxed client during an energy healing session",
-  "pos": "50% 35%",
+  "img": "counseling-session-sunaina-aggarwal.webp",
+  "alt": "Sunaina Aggarwal in a one-to-one session with a client in the EL Healing Centre consulting room",
+  "pos": "50% 30%",
   "intro": [
    "Pranic Healing is a precise, no-touch energy discipline that uses prana — universal life force — to support emotional and physical vitality. By scanning your aura and major chakras, Sunaina finds depleted or congested energy, cleanses it and energises the area.",
    "Sunaina is a former Pranic Healing instructor with many years of practice. Sessions are available in person at our Gurugram and Delhi centres, and as distance energy healing over a call."
@@ -576,7 +580,10 @@
     "amount": 3000,
     "duration": "30–40 minutes"
    }
-  }
+  },
+  "img": "access-body-process-hands-healing-session.webp",
+  "alt": "Healer’s hands held over a relaxed client during a hands-on body-focused session",
+  "pos": "50% 35%"
  },
  {
   "group": "healing",
@@ -1056,6 +1063,13 @@
     "amount": 8000,
     "duration": "90 minutes"
    }
+  },
+  "img": "energetic-facial-treatment-video-poster.webp",
+  "alt": "An energetic facial and beauty treatment session",
+  "video": {
+   "name": "energetic-facial-treatment",
+   "w": 576,
+   "h": 1024
   }
  },
  {
@@ -1440,11 +1454,6 @@
     "numerology-calculation-notebook.webp",
     "A numerologist’s handwritten notebook with name and date-of-birth calculations",
     "A reading is worked out by hand"
-   ],
-   [
-    "numerology-for-beginners-poster.webp",
-    "Numerology for beginners — numbers one to nine arranged in a circle under a starry sky",
-    "Numerology for beginners"
    ]
   ],
   "pos": "50% 50%",

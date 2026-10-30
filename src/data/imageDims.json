@@ -43,6 +43,10 @@
   720,
   1280
  ],
+ "counselling-session-video-poster.webp": [
+  562,
+  1000
+ ],
  "el-healing-centre-logo.png": [
   500,
   138
@@ -50,6 +54,10 @@
  "el-healing-centre-logo.webp": [
   500,
   138
+ ],
+ "energetic-facial-treatment-video-poster.webp": [
+  562,
+  1000
  ],
  "energetic-synthesis-of-being-session.webp": [
   577,
@@ -91,10 +99,6 @@
   1000,
   1333
  ],
- "numerology-for-beginners-poster.webp": [
-  736,
-  1104
- ],
  "numerology-letter-number-chart.webp": [
   1100,
   751
@@ -114,10 +118,6 @@
  "pranic-healing-course-students-with-certificates.webp": [
   1100,
   825
- ],
- "pranic-healing-energy-hands-over-client.webp": [
-  417,
-  626
  ],
  "pranic-healing-session-delhi.webp": [
   720,
@@ -162,5 +162,9 @@
  "zodiac-signs-wheel-chart.webp": [
   736,
   1104
+ ],
+ "access-body-process-hands-healing-session.webp": [
+  417,
+  626
  ]
 }
