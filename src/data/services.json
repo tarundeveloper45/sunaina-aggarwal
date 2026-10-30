@@ -476,8 +476,8 @@
   "desc": "Book a gentle Reiki healing session with an experienced practitioner at EL Healing Centre in Delhi and Gurugram. A calm, hands-on-or-near-body practice for relaxation.",
   "h1": "Reiki Healing in Delhi & Gurugram",
   "tag": "A calm, gentle practice for deep relaxation and balance.",
-  "img": "healing-singing-bowls-crystals-banner.webp",
-  "alt": "Singing bowls, crystals and candles arranged for a calm healing session at sunrise",
+  "img": "reiki-healing-hands-over-client.webp",
+  "alt": "A Reiki practitioner holding her hands above a relaxed client in a calm, candle-lit room",
   "pos": "50% 50%",
   "intro": [
    "Reiki is a gentle practice in which a practitioner places hands lightly on or near the body to channel universal life energy and support deep relaxation. You rest fully clothed while the session unfolds quietly.",
@@ -1160,7 +1160,10 @@
     "amount": 10000,
     "duration": "60 minutes"
    }
-  }
+  },
+  "img": "business-mentoring-one-to-one-session.webp",
+  "alt": "A one-to-one business mentoring conversation at a desk at EL Healing Centre",
+  "pos": "50% 30%"
  },
  {
   "slug": "astrology",
