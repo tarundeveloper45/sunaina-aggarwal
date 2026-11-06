@@ -153,7 +153,7 @@ export default function Book() {
                     {healers.map((h) => (
                       <button type="button" key={h.slug} className={'opt hp' + (f.healer === h.slug ? ' on' : '')} onClick={() => pickHealer(h.slug)}>
                         <span className="opt-av"><Avatar h={h} /></span>
-                        <span className="opt-t"><b>{h.name}</b><small>{h.role}</small><small>Since {h.since}{startingPrice(h) ? ' · from ₹' + startingPrice(h).amount.toLocaleString('en-IN') : ''}</small></span>
+                        <span className="opt-t"><b>{h.name}</b><small>{h.role}</small><small>Since {h.since}{f.service ? ' · ' + fmtPrice(priceFor(h, f.service)) : (startingPrice(h) ? ' · from ₹' + startingPrice(h).amount.toLocaleString('en-IN') : '')}</small></span>
                       </button>
                     ))}
                     {healers.length === 0 && <p className="bk-hint" style={{ gridColumn: '1 / -1' }}>No practitioner is listed for this service yet — choose “Match me” and we will arrange the right person.</p>}

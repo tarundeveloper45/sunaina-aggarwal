@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import { HealerCard, useUpcoming } from '../components/people';
 import Seo from '../components/Seo';
 import { Icon } from '../components/Icon';
-import { Cta, Faq, Gallery, Marquee, Picture, ReadMore, SectionHead, TestimonialSlider, Video, VideoTestimonials } from '../components/ui';
+import { Cta, Faq, Gallery, Marquee, Picture, ReadMore, SectionHead, ServiceCard, TestimonialSlider, Video, VideoTestimonials } from '../components/ui';
 import { SITE, dims, img } from '../config';
 import { GALLERY, SERVICES, TESTIMONIALS, TRIAGE, VIDEOS, faqHome, longDate } from '../data/content';
 import { HEALERS, filterTags } from '../data/healers';
 
+// Services that can be taken online / at a distance (read from each service's "Format" line)
+const isGlobal = (x) => /online|distan/i.test(((x.glance || []).find(([k]) => k === 'Format') || [0, ''])[1]);
 const HOME_FILTERS = ['All', ...filterTags(5)];
 const BOOK_STEPS = [['Choose a healer', 'Browse profiles and pick who you would like to sit with.'], ['Pick a service', 'See what each healer offers, with duration and fees.'], ['Select a date', 'Choose a day that works for you.'], ['Choose a time', 'Pick Gurugram, Delhi or online, and a time.'], ['Share your details', 'Send your request — we confirm personally.']];
 
@@ -131,6 +133,14 @@ export default function Home() {
           <ul className="chip-list" style={{ justifyContent: 'center' }}>
             {['Individual Session', 'Business Consultation', 'Meditation', 'Access Bars', 'Access Body Process', 'Feng Shui', 'Pranic Healing', 'Crystal Healing'].map((c) => <li key={c}>{c}</li>)}
           </ul>
+        </div>
+      </section>
+
+      <section className="alt">
+        <div className="container">
+          <SectionHead eyebrow="Global services" title="Sessions you can take from anywhere" text="Many of our sessions are available online or by distance, so you can work with a practitioner from anywhere in the world." />
+          <div className="grid g3">{SERVICES.filter(isGlobal).map((x) => <ServiceCard key={x.slug} s={x} />)}</div>
+          <p style={{ textAlign: 'center', margin: '34px 0 0' }}><Link className="btn btn-primary" to="/book/">Book an online session</Link></p>
         </div>
       </section>
 

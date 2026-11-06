@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Seo from '../components/Seo';
 import { Icon } from '../components/Icon';
 import { Faq, PageHero, SectionHead } from '../components/ui';
-import { SITE, abs } from '../config';
+import { SITE, abs, addrLines } from '../config';
 import { SERVICES, faqContact } from '../data/content';
 
 const SERVICES_OPT = ['Not sure yet', ...SERVICES.map((x) => x.name), 'Classes / Workshops'];
@@ -67,7 +67,7 @@ export default function Contact() {
             {SITE.locs.map((l) => (
               <article className="loc reveal" key={l.name}>
                 <h3>{l.name}</h3>
-                <p>{l.street},<br />{l.locality}{l.region === 'Delhi' ? ' – ' : `, ${l.region} `}{l.postal}</p>
+                <p>{addrLines(l)[0]}<br />{addrLines(l)[1]}</p>
                 <p><a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a> · <a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
                 <div className="map-wrap"><iframe src={l.map} title={l.title} loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" /></div>
                 <a className="btn btn-outline" style={{ marginTop: 14 }} target="_blank" rel="noopener noreferrer"

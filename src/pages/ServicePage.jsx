@@ -5,7 +5,7 @@ import { CoverVideo, Cta, Faq, PageHero, Picture, SectionHead } from '../compone
 import { SITE, abs, dims } from '../config';
 import { SERVICE_BY } from '../data/content';
 import { HealerCard } from '../components/people';
-import { HEALERS, fmtPrice } from '../data/healers';
+import { HEALERS, cheapestFor, fmtPrice } from '../data/healers';
 import NotFound from './NotFound';
 
 const STEPS = [
@@ -61,9 +61,7 @@ export default function ServicePage() {
             <h3>At a glance</h3>
             <dl>
               {s.glance.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}
-              {!s.prices && <div className="fee"><dt>Fee</dt><dd>On request</dd></div>}
-              {s.prices && s.prices.sunaina &&<div className="fee"><dt>Sunaina Aggarwal</dt><dd>{fmtPrice(s.prices.sunaina)}</dd></div>}
-              {s.prices && s.prices.others && <div className="fee"><dt>{s.prices.sunaina ? 'Other practitioners' : 'Fee'}</dt><dd>{fmtPrice(s.prices.others)}</dd></div>}
+              {s.prices ? <div className="fee"><dt>Fee</dt><dd>{fmtPrice({ ...cheapestFor(s.slug), from: true })}</dd></div> : <div className="fee"><dt>Fee</dt><dd>On request</dd></div>}
             </dl>
             <Link className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} to={`/book/?service=${s.slug}`}>Book Now</Link>
             <a className="glance-link" href={`tel:${SITE.phoneRaw}`}>or call {SITE.phone}</a>

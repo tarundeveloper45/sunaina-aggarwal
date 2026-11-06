@@ -14,11 +14,11 @@ export const HEALERS = [
   },
   { slug: 'amol-kunte', name: 'Amol Kunte', initials: 'AK', role: 'Associate Certified Pranic Healer', since: 2010, tags: ['Pranic Healing'], services: ['pranic-healing'] },
   { slug: 'gobinda-kumar', name: 'Gobinda Kumar', initials: 'GK', role: 'Pranic Healer', since: 2015, tags: ['Pranic Healing'], services: ['pranic-healing'] },
-  { slug: 'karishma-duggal', name: 'Karishma Duggal', initials: 'KD', role: 'MSc IT · Pranic Healer · Arhatic Practitioner', since: 2025, tags: ['Pranic Healing', 'Arhatic Yoga'], services: ['pranic-healing', 'personalised-meditation'] },
+  { slug: 'karishma-duggal', name: 'Karishma Duggal', initials: 'KD', role: 'Pranic Healer · Arhatic Practitioner', since: 2025, tags: ['Pranic Healing'], services: ['pranic-healing', 'personalised-meditation'] },
   { slug: 'sakshi-mundra', name: 'Sakshi Mundra', initials: 'SM', role: 'Access Bars Facilitator', since: 2023, tags: ['Access Bars'], services: ['access-bars'] },
   { slug: 'shalini-upadhyay', name: 'Shalini Upadhyay', initials: 'SU', role: 'Pranic Healing · Access Bars · Tarot', since: 2015, tags: ['Pranic Healing', 'Access Bars', 'Tarot'], services: ['pranic-healing', 'access-bars', 'tarot-reading'] },
-  { slug: 'sumiti-malhotra', name: 'Sumiti Malhotra', initials: 'SM', role: 'Pranic Healer · Access Bars Practitioner · Reiki Healer', since: 2019, tags: ['Pranic Healing', 'Access Bars', 'Reiki'], services: ['pranic-healing', 'access-bars', 'reiki'] },
-  { slug: 'versha', name: 'Versha', initials: 'V', role: 'Reiki Healing · Access Bars · Numerology', since: 2025, tags: ['Reiki', 'Access Bars', 'Numerology'], services: ['reiki', 'access-bars', 'numerology'] },
+  { slug: 'sumiti-malhotra', name: 'Sumiti Malhotra', initials: 'SM', role: 'Pranic Healer · Access Bars Practitioner', since: 2019, tags: ['Pranic Healing', 'Access Bars'], services: ['pranic-healing', 'access-bars'] },
+  { slug: 'versha', name: 'Versha', initials: 'V', role: 'Reiki Healing · Access Bars · Astrology', since: 2025, tags: ['Reiki', 'Access Bars', 'Astrology'], services: ['reiki', 'access-bars', 'astrology'] },
 ];
 
 /*

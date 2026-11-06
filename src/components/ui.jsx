@@ -214,7 +214,7 @@ export function Gallery({ items, animate = true }) {
 // One muted, looping video that plays only while it is on screen. Tap the speaker to hear it.
 const WIDE_VIDEOS = [3]; // landscape clips: shown letter-boxed inside the portrait card
 
-function ClientVideo({ n }) {
+function ClientVideo({ n, sound }) {
   const ref = useRef(null);
   const [muted, setMuted] = useState(true);
   const base = import.meta.env.BASE_URL + 'assets/video/client-testimonial-' + n;
@@ -238,20 +238,24 @@ function ClientVideo({ n }) {
       <video ref={ref} poster={base + '-poster.jpg'} muted loop playsInline autoPlay preload="none" aria-label={`Client video testimonial ${n}`}>
         <source src={base + '.mp4'} type="video/mp4" />
       </video>
-      <button type="button" className="vsound" onClick={toggle} aria-label={muted ? 'Turn sound on' : 'Mute video'} aria-pressed={!muted}>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M11 5L6 9H3v6h3l5 4z" />
-          {muted ? <path d="M16 9l5 6M21 9l-5 6" /> : <path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" />}
-        </svg>
-      </button>
+      {sound && (
+        <button type="button" className="vsound" onClick={toggle} aria-label={muted ? 'Turn sound on' : 'Mute video'} aria-pressed={!muted}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M11 5L6 9H3v6h3l5 4z" />
+            {muted ? <path d="M16 9l5 6M21 9l-5 6" /> : <path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" />}
+          </svg>
+        </button>
+      )}
     </div>
   );
 }
 
-export function VideoTestimonials({ count = 4 }) {
+// Only the video with spoken words keeps a sound button.
+const CLIENT_VIDEOS = [{ n: 2, sound: true }, { n: 3, sound: false }, { n: 4, sound: false }];
+export function VideoTestimonials() {
   return (
     <div className="vgrid">
-      {Array.from({ length: count }, (_, i) => <ClientVideo key={i} n={i + 1} />)}
+      {CLIENT_VIDEOS.map((v) => <ClientVideo key={v.n} n={v.n} sound={v.sound} />)}
     </div>
   );
 }

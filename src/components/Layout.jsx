@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { SITE, img, MENU_SERVICES } from '../config';
+import { SITE, addrLines, img, MENU_SERVICES } from '../config';
 import { SERVICE_BY } from '../data/content';
 import { Icon, WhatsAppIcon, SOCIAL_ICONS } from './Icon';
 
@@ -109,7 +109,7 @@ function Footer() {
             <ul>
               <li><a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a></li>
               <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
-              {SITE.locs.map((l) => <li key={l.name}><strong style={{ color: '#fff' }}>{l.name}:</strong> {l.street}, {l.locality} {l.postal}</li>)}
+              {SITE.locs.map((l) => <li key={l.name}><strong style={{ color: '#fff' }}>{l.name}:</strong> {addrLines(l).join(' ')}</li>)}
             </ul>
             <Link className="btn btn-primary" style={{ marginTop: 10 }} to="/contact-us/">Get in Touch</Link>
           </div>

@@ -53,7 +53,7 @@
    ],
    [
     "Format",
-    "In-person or online"
+    "In-person or online/distant"
    ],
    [
     "Level",
@@ -485,9 +485,90 @@
   ],
   "prices": {
    "others": {
-    "amount": 3000
+    "amount": 1500,
+    "from": true
    }
   }
+ },
+ {
+  "slug": "entity-clearing-session",
+  "group": "healing",
+  "ico": "spark",
+  "name": "Entity Clearing Session",
+  "title": "Entity Clearing Session in Delhi NCR",
+  "desc": "An Entity Clearing Session is a spiritual energy healing practice for clearing perceived unwanted energetic attachments and returning to lightness, clarity and peace. Delhi, Gurugram and online.",
+  "h1": "Entity Clearing Session",
+  "tag": "Release perceived unwanted energies and return to lightness, clarity and peace.",
+  "intro": [
+   "An Entity Clearing Session is a spiritual energy healing practice focused on clearing perceived unwanted energetic attachments and influences from a person’s energy field. The session aims to release stagnant or disturbing energies, promote energetic balance, and support a greater sense of lightness, clarity, peace, and emotional well-being.",
+   "It helps individuals reconnect with their inner harmony and feel more grounded, balanced, and positive. An individual experience may vary."
+  ],
+  "benefits": [
+   [
+    "Lightness",
+    "A feeling of release from heavy or stagnant energy."
+   ],
+   [
+    "Clarity",
+    "A calmer, clearer mind."
+   ],
+   [
+    "Peace",
+    "More ease and inner quiet."
+   ],
+   [
+    "Emotional well-being",
+    "Support for emotional balance."
+   ],
+   [
+    "Grounded & balanced",
+    "Feel steadier and more centred."
+   ],
+   [
+    "Positive outlook",
+    "Reconnect with your inner harmony."
+   ]
+  ],
+  "who": [
+   "People who feel energetically heavy, drained or unsettled",
+   "Anyone wanting to release stagnant energies",
+   "Those seeking more lightness, clarity and peace",
+   "People looking for a spiritual approach to well-being"
+  ],
+  "glance": [
+   [
+    "Format",
+    "In-person or online/distant"
+   ],
+   [
+    "Level",
+    "All levels"
+   ],
+   [
+    "Location",
+    "Delhi, Gurugram & online"
+   ]
+  ],
+  "faq": [
+   [
+    "What is an Entity Clearing Session?",
+    "A spiritual energy healing practice focused on clearing perceived unwanted energetic attachments and influences from a person’s energy field, to support lightness, clarity, peace and emotional well-being."
+   ],
+   [
+    "Will everyone have the same experience?",
+    "No. An individual experience may vary."
+   ],
+   [
+    "Is it a medical or psychological treatment?",
+    "No. It is a complementary spiritual practice and does not replace medical or psychological care."
+   ]
+  ],
+  "related": [
+   "healing",
+   "pranic-healing",
+   "personalised-meditation"
+  ],
+  "note": "An individual experience may vary. This is a complementary spiritual practice and not a substitute for medical or psychological care."
  },
  {
   "slug": "access-body-process",
@@ -825,7 +906,7 @@
    ],
    [
     "Format",
-    "In-person or online"
+    "In-person or online/distant"
    ],
    [
     "Level",
@@ -920,7 +1001,7 @@
    ],
    [
     "Level",
-    "Homes & workplaces"
+    "Homes & workplaces / factory"
    ],
    [
     "Location",
@@ -1125,7 +1206,7 @@
    ],
    [
     "Format",
-    "In-person or online"
+    "In-person or online/distant"
    ],
    [
     "Level",
@@ -1219,7 +1300,7 @@
    ],
    [
     "Format",
-    "In-person or online"
+    "In-person or online/distant"
    ],
    [
     "You will need",
@@ -1318,7 +1399,7 @@
    ],
    [
     "Format",
-    "In-person or online"
+    "In-person or online/distant"
    ],
    [
     "Preparation",
@@ -1421,7 +1502,7 @@
    ],
    [
     "Format",
-    "In-person or online"
+    "In-person or online/distant"
    ],
    [
     "You will need",
